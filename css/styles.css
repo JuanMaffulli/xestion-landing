@@ -31,13 +31,16 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: var(--gris-fondo);
 }
 
 body {
     font-family: 'Nunito', sans-serif;
     color: var(--negro-suave);
     line-height: 1.6;
-    background-color: var(--blanco);
+    background-color: var(--gris-fondo);
+    overflow-x: hidden;
 }
 
 .container {
@@ -627,7 +630,6 @@ p {
     .galeria-horizontal {
         margin-left: -20px;
         margin-right: -20px;
-        width: calc(100% + 40px);
     }
     
     .galeria-flecha {
@@ -1508,7 +1510,6 @@ p {
         margin-left: -20px;
         margin-right: -20px;
         padding: 0 20px;
-        width: calc(100% + 40px);
     }
     
     .comparativa-container::after {
@@ -1573,6 +1574,68 @@ p {
     color: var(--gris-texto);
     margin-top: 15px;
     font-style: italic;
+}
+
+/* Wrapper genérico para tablas con scroll (usado en Suscripción mensual) */
+.tabla-wrapper {
+    margin-top: 26px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.soporte-scroll-hint {
+    display: none;
+}
+
+/* Tabla específica de suscripción: 5 columnas → necesita scroll cómodo */
+.tabla-comparativa.soporte-tabla {
+    min-width: 980px;
+}
+
+.tabla-comparativa.soporte-tabla th:not(:first-child),
+.tabla-comparativa.soporte-tabla td:not(:first-child) {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tabla-comparativa.soporte-tabla td:first-child {
+    white-space: normal;
+    min-width: 280px;
+}
+
+/* Primera columna fija para que se entienda mientras desliza */
+.tabla-comparativa.soporte-tabla th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 4;
+}
+
+.tabla-comparativa.soporte-tabla td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    background: var(--blanco);
+}
+
+.tabla-comparativa.soporte-tabla th:first-child,
+.tabla-comparativa.soporte-tabla td:first-child {
+    box-shadow: 10px 0 16px rgba(0,0,0,0.06);
+}
+
+.tabla-comparativa.soporte-tabla tr:hover td:first-child {
+    background-color: var(--gris-fondo);
+}
+
+@media (max-width: 900px) {
+    .tabla-wrapper {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding: 0 20px;
+    }
+
+    .soporte-scroll-hint {
+        display: flex;
+    }
 }
 
 /* ============================================
