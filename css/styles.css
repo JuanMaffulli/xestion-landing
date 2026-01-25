@@ -1130,6 +1130,29 @@ p {
     z-index: 50;
 }
 
+/* En desktop: que entren las 3 cards completas sin “corte” */
+@media (min-width: 1100px) {
+    .planes-carrusel {
+        gap: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        overflow-x: hidden;
+        justify-content: center;
+    }
+
+    .plan-card {
+        width: 340px;
+    }
+}
+
+/* En pantallas medianas: mantener carrusel con scroll (sin recortar hover) */
+@media (max-width: 1099px) {
+    .planes-carrusel {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+}
+
 .plan-card:hover {
     transform: translateY(-10px);
     z-index: 100;
