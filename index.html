@@ -628,15 +628,13 @@
                         <label>1. ¿A qué se dedica tu negocio?</label>
                         <select id="quiz-rubro">
                             <option value="">Elegí tu rubro...</option>
-                            <option value="comercio">Comercio / Local / Showroom</option>
-                            <option value="servicios">Servicios profesionales</option>
-                            <option value="gastronomia">Gastronomía / Bar / Resto</option>
-                            <option value="grafica">Gráfica / Imprenta</option>
-                            <option value="taller">Taller mecánico / Service</option>
-                            <option value="distribucion">Distribución / Mayorista</option>
-                            <option value="otro">Otro (escribilo abajo)</option>
+                            <option value="venta_compra">Venta y compra de artículos</option>
+                            <option value="venta_productos">Venta de productos (comercios, locales, distribuidores)</option>
+                            <option value="fabricacion">Fabricación propia (muebles, herrería, aberturas, producción)</option>
+                            <option value="grafica_servicios">Gráfica o servicios por pedido (diseño, imprenta, reparaciones)</option>
+                            <option value="otro">Otro / No estoy seguro</option>
                         </select>
-                        <input type="text" id="quiz-rubro-otro" class="quiz-input-otro" placeholder="Escribí tu rubro acá..." style="display:none">
+                        <input type="text" id="quiz-rubro-otro" class="quiz-input-otro" placeholder="Escribí tu rubro acá..." style="display:none" aria-hidden="true" tabindex="-1">
                     </div>
 
                     <!-- Pregunta 2: Uso -->
@@ -698,7 +696,7 @@
                 <div class="plan-card plan-borde-blanco" id="plan-emprendedor">
                     <span class="plan-badge plan-badge-light">🚀 Para arrancar rápido</span>
                     
-                    <div class="plan-nombre">Excel listo (Puesta a punto)</div>
+                    <div class="plan-nombre">Excel armado</div>
                     <p class="plan-descripcion" align="center">Listo para usar y adaptado a tu negocio</p>
                     
                     <!-- PRECIO -->
@@ -761,7 +759,7 @@
                 <div class="plan-card plan-borde-blanco" id="plan-empresa">
                     <span class="plan-badge plan-badge-light">🖥️ Varias compus</span>
                     
-                    <div class="plan-nombre">Multiusuario en nube</div>
+                    <div class="plan-nombre">Excel en nube</div>
                     <p class="plan-descripcion" align="center">Para equipos trabajando a la vez</p>
                     
                     <!-- PRECIO -->
@@ -1033,7 +1031,7 @@
         <div class="container">
             
             <!-- LOGO FOOTER -->
-            <img src="img/logo.png" alt="Xestion" class="logo-footer">
+            <img src="img/logo2.png" alt="Xestion" class="logo-footer">
             
             <p>© 2026 Xestion - Sistemas de Gestión sobre Excel</p>
             <p style="margin-top: 10px;">Argentina | Latinoamérica 🇦🇷</p>
@@ -1094,12 +1092,10 @@
         
         // Rubros estándar (editá esta lista para agregar rubros)
         const rubrosEstandar = [
-            'comercio',
-            'servicios', 
-            'gastronomia',
-            'grafica',
-            'taller',
-            'distribucion'
+            'venta_compra',
+            'venta_productos',
+            'fabricacion',
+            'grafica_servicios'
         ];
 
         const quizRubro = document.getElementById('quiz-rubro');
@@ -1113,19 +1109,12 @@
         const quizWhatsapp = document.getElementById('quiz-whatsapp');
         const quizReiniciar = document.getElementById('quiz-reiniciar');
 
-        // Mostrar/ocultar input "Otro"
+        // Para "Otro / No estoy seguro" no pedimos texto: se deriva a reunión
         quizRubro.addEventListener('change', function() {
-            if (this.value === 'otro') {
-                quizRubroOtro.style.display = 'block';
-                quizRubroOtro.focus();
-            } else {
-                quizRubroOtro.style.display = 'none';
-                quizRubroOtro.value = '';
-            }
+            quizRubroOtro.style.display = 'none';
+            quizRubroOtro.value = '';
             verificarQuiz();
         });
-
-        quizRubroOtro.addEventListener('input', verificarQuiz);
 
         // Verificar radios
         document.querySelectorAll('input[name="quiz-uso"]').forEach(radio => {
@@ -1134,11 +1123,10 @@
 
         function verificarQuiz() {
             const rubroSeleccionado = quizRubro.value;
-            const rubroOtroTexto = quizRubroOtro.value.trim();
             const usoSeleccionado = document.querySelector('input[name="quiz-uso"]:checked');
             
-            // Rubro válido: seleccionó algo, y si es "otro" debe escribir algo
-            const rubroValido = rubroSeleccionado && (rubroSeleccionado !== 'otro' || rubroOtroTexto.length > 0);
+            // Rubro válido: seleccionó algo
+            const rubroValido = !!rubroSeleccionado;
             
             if (rubroValido && usoSeleccionado) {
                 quizBtn.classList.remove('quiz-btn-disabled');
@@ -1152,14 +1140,10 @@
         // Calcular recomendación
         quizBtn.addEventListener('click', function() {
             const rubroSeleccionado = quizRubro.value;
-            const rubroOtroTexto = quizRubroOtro.value.trim();
             const usoSeleccionado = document.querySelector('input[name="quiz-uso"]:checked').value;
             
             // Determinar rubro final (texto para WhatsApp)
             let rubroTexto = quizRubro.options[quizRubro.selectedIndex].text;
-            if (rubroSeleccionado === 'otro') {
-                rubroTexto = rubroOtroTexto;
-            }
             
             // Determinar uso texto
             let usoTexto = '';
@@ -1173,23 +1157,23 @@
             let porque2 = '';
             let planId = '';
 
-            // Si necesitan varias compus a la vez -> Multiusuario en nube
+            // Si necesitan varias compus a la vez -> Excel en nube
             if (usoSeleccionado === 'simultaneo') {
-                planRecomendado = 'Multiusuario en nube';
-                porque1 = 'Necesitás que varias personas trabajen al mismo tiempo.';
-                porque2 = 'Así evitás conflictos y cada uno entra desde su PC.';
+                planRecomendado = 'Excel en nube';
+                porque1 = 'Lo van a usar en varias compus al mismo tiempo.';
+                porque2 = 'Así evitás que se pisen y cada uno entra desde su PC.';
                 planId = 'plan-empresa';
             }
-            // Si rubro NO está en la lista estándar -> Excel a medida
-            else if (rubroSeleccionado === 'otro' || !rubrosEstandar.includes(rubroSeleccionado)) {
+            // Si el rubro es "Otro / No estoy seguro" y NO es simultáneo -> Excel a medida
+            else if (rubroSeleccionado === 'otro') {
                 planRecomendado = 'Excel a medida';
-                porque1 = 'Tu rubro requiere un Excel adaptado a tu forma de trabajar.';
-                porque2 = 'Si lo usan 1-2 personas, va bárbaro (sin simultáneo).';
+                porque1 = 'Como tu rubro no encaja en el Excel armado, conviene hacerlo a medida.';
+                porque2 = 'Ideal si lo usan 1-2 personas (sin simultáneo).';
                 planId = 'plan-pyme';
             }
-            // Si rubro está en lista y 1 compu o turnos -> Excel listo
+            // Si rubro está en lista y 1 compu o turnos -> Excel armado
             else {
-                planRecomendado = 'Excel listo (Puesta a punto)';
+                planRecomendado = 'Excel armado';
                 porque1 = 'Tu rubro encaja perfecto para arrancar con un Excel listo.';
                 porque2 = 'Opcional: podés sumar acompañamiento mensual para mejoras y beneficios.';
                 planId = 'plan-emprendedor';
