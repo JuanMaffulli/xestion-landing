@@ -1,0 +1,1416 @@
+/* ============================================
+   XESTION - ESTILOS PRINCIPALES
+   Archivo: css/styles.css
+   ============================================ */
+
+/* ============================================
+   VARIABLES DE COLORES - EDITÁ ACÁ LOS COLORES
+   ============================================ */
+:root {
+    --verde-excel: #217346;
+    --verde-oscuro: #1a5c38;
+    --verde-hover: #155c32;
+    --blanco: #FFFFFF;
+    --gris-fondo: #f8faf9ba;
+    --gris-texto: #555555;
+    --gris-claro: #E8E8E8;
+    --negro-suave: #2D3748;
+    --amarillo-accent: #2D3748;
+    --rojo-suave: #2D3748;
+    --azul-accent: #3498DB;
+}
+
+/* ============================================
+   ESTILOS BASE
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--negro-suave);
+    line-height: 1.6;
+    background-color: var(--blanco);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+}
+
+/* ============================================
+   TIPOGRAFÍA
+   ============================================ */
+h1, h2, h3, h4 {
+    font-weight: 700;
+    color: var(--negro-suave);
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+p {
+    color: var(--gris-texto);
+    font-size: 1.1rem;
+}
+
+.subtitulo {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1.15rem;
+}
+
+.verde {
+    color: var(--verde-excel);
+}
+
+/* ============================================
+   ICONOS ANIMADOS
+   ============================================ */
+.icono-animado {
+    display: inline-flex;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.icono-bounce {
+    animation: bounce 1s ease infinite;
+}
+
+.icono-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+.icono-shake:hover {
+    animation: shake 0.5s ease;
+}
+
+/* ============================================
+   EMOJIS ANIMADOS
+   ============================================ */
+.emoji {
+    display: inline-block;
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+
+.emoji-bounce {
+    animation: bounce 2s ease-in-out infinite;
+}
+
+/* ============================================
+   BOTONES
+   ============================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-principal {
+    background-color: var(--verde-excel);
+    color: var(--blanco);
+}
+
+.btn-principal:hover {
+    background-color: var(--verde-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(33, 115, 70, 0.3);
+}
+
+.btn-secundario {
+    background-color: var(--blanco);
+    color: var(--verde-excel);
+    border: 2px solid var(--verde-excel);
+}
+
+.btn-secundario:hover {
+    background-color: var(--verde-excel);
+    color: var(--blanco);
+}
+
+/* WhatsApp con verde oscuro Excel */
+.btn-whatsapp {
+    background-color: var(--verde-excel);
+    color: var(--blanco);
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--verde-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(33, 115, 70, 0.3);
+}
+
+.btn-whatsapp svg {
+    fill: currentColor;
+}
+
+.botones-grupo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* ============================================
+   HEADER / HERO
+   ============================================ */
+.hero {
+    background: linear-gradient(135deg, var(--gris-fondo) 0%, var(--blanco) 100%);
+    padding: 40px 0 100px;
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 40px;
+}
+
+.logo {
+    max-height: 60px;
+    width: auto;
+}
+
+.hero-contenido {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero h1 {
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    color: var(--gris-texto);
+}
+
+.hero-badge {
+    display: inline-block;
+    background-color: var(--verde-excel);
+    color: var(--blanco);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* Badge de sistemas implementados */
+.badge-sistemas {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 2px solid var(--verde-excel);
+    color: var(--verde-excel);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    animation: pulseSubtle 2s ease-in-out infinite;
+}
+
+.badge-sistemas i {
+    color: var(--verde-excel);
+}
+
+@keyframes pulseSubtle {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(33, 115, 70, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 0 8px rgba(33, 115, 70, 0);
+    }
+}
+
+/* ============================================
+   SECCIÓN PROBLEMA
+   ============================================ */
+.problema {
+    background-color: var(--blanco);
+}
+
+.problema-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.problema-item {
+    background: var(--gris-fondo);
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problema-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Iconos con colores pasteles sutiles */
+.problema-item .icono-pastel {
+    flex-shrink: 0;
+}
+
+.problema-item .icono-pastel i {
+    width: 32px;
+    height: 32px;
+}
+
+/* Colores pasteles para cada icono */
+.icono-pastel.pastel-naranja i { color: #E67E22; }
+.icono-pastel.pastel-azul i { color: #5DADE2; }
+.icono-pastel.pastel-rojo i { color: #E74C3C; }
+.icono-pastel.pastel-morado i { color: #9B59B6; }
+.icono-pastel.pastel-verde i { color: #27AE60; }
+.icono-pastel.pastel-amarillo i { color: #F39C12; }
+
+.problema-item p {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.problema-cierre {
+    text-align: center;
+    margin-top: 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, var(--verde-excel), var(--verde-oscuro));
+    border-radius: 16px;
+    color: var(--blanco);
+}
+
+.problema-cierre p {
+    color: var(--blanco);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ============================================
+   SECCIÓN SOLUCIÓN (DOS ÁREAS)
+   ============================================ */
+.solucion {
+    background-color: var(--gris-fondo);
+}
+
+.areas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.area-card {
+    background: var(--blanco);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.area-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--verde-excel);
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icono de área sin fondo verde */
+.area-icono-simple {
+    margin-bottom: 20px;
+}
+
+.area-icono-simple i {
+    width: 48px;
+    height: 48px;
+}
+
+.area-icono-simple.pastel-azul i { color: #5DADE2; }
+.area-icono-simple.pastel-verde i { color: #27AE60; }
+
+.area-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--verde-excel);
+}
+
+.area-card ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.area-card ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    color: var(--gris-texto);
+}
+
+.area-card ul li i {
+    color: var(--verde-excel);
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+/* ============================================
+   CARRUSEL DE SISTEMAS (FOTOS)
+   ============================================ */
+.sistemas {
+    background-color: var(--blanco);
+}
+
+/* ============================================
+   GALERÍA HORIZONTAL DE FOTOS
+   ============================================ */
+.galeria-horizontal {
+    margin-top: 50px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Flechas de navegación */
+.galeria-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--blanco);
+    border: 2px solid var(--verde-excel);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.galeria-flecha:hover {
+    background: var(--verde-excel);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.galeria-flecha:hover i {
+    color: var(--blanco);
+}
+
+.galeria-flecha i {
+    color: var(--verde-excel);
+    transition: color 0.3s ease;
+}
+
+.galeria-flecha.izquierda {
+    left: 10px;
+}
+
+.galeria-flecha.derecha {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .galeria-flecha {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .galeria-flecha i {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+.galeria-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--verde-excel) var(--gris-fondo);
+}
+
+.galeria-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.galeria-scroll::-webkit-scrollbar-track {
+    background: var(--gris-fondo);
+    border-radius: 10px;
+}
+
+.galeria-scroll::-webkit-scrollbar-thumb {
+    background: var(--verde-excel);
+    border-radius: 10px;
+}
+
+.galeria-scroll::-webkit-scrollbar-thumb:hover {
+    background: var(--verde-oscuro);
+}
+
+.foto-item {
+    flex: 0 0 auto;
+    height: 400px;
+    width: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--gris-fondo);
+    cursor: pointer;
+}
+
+.foto-item.vertical {
+    height: 500px;
+}
+
+.foto-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(33, 115, 70, 0.2);
+}
+
+.foto-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .foto-item {
+        height: 300px;
+    }
+    
+    .foto-item.vertical {
+        height: 400px;
+    }
+}
+
+@media (max-width: 600px) {
+    .foto-item {
+        height: 250px;
+    }
+    
+    .foto-item.vertical {
+        height: 350px;
+    }
+    
+    .galeria-scroll {
+        gap: 15px;
+    }
+}
+
+/* ============================================
+   SECCIÓN POR QUÉ EXCEL
+   ============================================ */
+.porque-excel {
+    background-color: var(--gris-fondo);
+}
+
+.excel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.excel-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 25px;
+    background: var(--blanco);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.excel-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* Iconos simples sin fondo para Excel */
+.excel-item .icono-simple {
+    flex-shrink: 0;
+}
+
+.excel-item .icono-simple i {
+    width: 28px;
+    height: 28px;
+}
+
+.icono-simple.pastel-azul i { color: #5DADE2; }
+.icono-simple.pastel-verde i { color: #27AE60; }
+.icono-simple.pastel-naranja i { color: #E67E22; }
+.icono-simple.pastel-morado i { color: #9B59B6; }
+.icono-simple.pastel-rojo i { color: #E74C3C; }
+.icono-simple.pastel-amarillo i { color: #F39C12; }
+
+.excel-item h4 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.excel-item p {
+    color: var(--gris-texto);
+}
+}
+
+.excel-item p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   SECCIÓN PROCESO
+   ============================================ */
+.proceso {
+    background-color: var(--blanco);
+}
+
+.proceso-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.proceso-paso {
+    display: flex;
+    gap: 25px;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.proceso-paso:last-child {
+    padding-bottom: 0;
+}
+
+.proceso-paso:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 55px;
+    width: 3px;
+    height: calc(100% - 55px);
+    background: linear-gradient(to bottom, var(--verde-excel), var(--verde-oscuro));
+    border-radius: 2px;
+}
+
+.paso-numero {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--verde-excel), var(--verde-oscuro));
+    color: var(--blanco);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(33, 115, 70, 0.3);
+}
+
+.paso-contenido h4 {
+    color: var(--verde-excel);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.paso-contenido p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .proceso-paso {
+        gap: 15px;
+    }
+    
+    .paso-numero {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}
+
+/* ============================================
+   SECCIÓN PLANES Y PRECIOS
+   ============================================ */
+.planes {
+    background: linear-gradient(135deg, var(--verde-excel) 0%, var(--verde-oscuro) 100%);
+    color: var(--blanco);
+}
+
+.planes h2, .planes .subtitulo {
+    color: var(--blanco);
+}
+
+.planes .subtitulo {
+    opacity: 0.9;
+}
+
+.planes-carrusel {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 10px 40px;
+    scrollbar-width: none;
+    justify-content: center;
+}
+
+.planes-carrusel::-webkit-scrollbar {
+    display: none;
+}
+
+.plan-card {
+    flex: 0 0 auto;
+    width: 340px;
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 35px 30px;
+    scroll-snap-align: center;
+    color: var(--negro-suave);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .plan-card {
+        width: 300px;
+        padding: 30px 25px;
+    }
+    .planes-carrusel {
+        justify-content: flex-start;
+    }
+}
+
+.plan-destacado {
+    position: relative;
+    border: 3px solid #5DADE2;
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(93, 173, 226, 0.3);
+}
+
+.plan-destacado:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 30px rgba(93, 173, 226, 0.4);
+}
+
+.plan-borde-blanco {
+    border: 3px solid var(--blanco);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--verde-excel);
+    color: var(--blanco);
+    padding: 5px 20px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.plan-nombre {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--verde-excel);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+}
+
+.youtube-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF0000;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    opacity: 0.8;
+}
+
+.youtube-link:hover {
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.youtube-link i {
+    width: 24px;
+    height: 24px;
+}
+
+.plan-descripcion {
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+    margin-bottom: 20px;
+    min-height: 45px;
+}
+
+.plan-precio {
+    margin-bottom: 25px;
+}
+
+.precio-valor {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--verde-excel);
+}
+
+.precio-moneda {
+    font-size: 1.2rem;
+    font-weight: 600;
+    vertical-align: super;
+}
+
+.precio-periodo {
+    font-size: 1rem;
+    color: var(--gris-texto);
+    font-weight: 500;
+}
+
+.precio-extra {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+    margin-top: 5px;
+}
+
+.plan-features {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+}
+
+.plan-features i {
+    color: var(--verde-excel);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.plan-card .btn {
+    width: 100%;
+    justify-content: center;
+}
+
+/* ============================================
+   TABLA COMPARATIVA SOLUCIONES
+   ============================================ */
+.comparativa {
+    background-color: var(--gris-fondo);
+}
+
+.comparativa-container {
+    margin-top: 50px;
+    overflow-x: auto;
+}
+
+.tabla-comparativa {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--blanco);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.tabla-comparativa th,
+.tabla-comparativa td {
+    padding: 18px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--gris-claro);
+}
+
+.tabla-comparativa th {
+    background: var(--verde-excel);
+    color: var(--blanco);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.tabla-comparativa th.caracteristica {
+    color: var(--blanco);
+}
+
+.tabla-comparativa th:first-child {
+    border-radius: 16px 0 0 0;
+}
+
+.tabla-comparativa th:last-child {
+    border-radius: 0 16px 0 0;
+}
+
+.tabla-comparativa tr:hover {
+    background-color: var(--gris-fondo);
+}
+
+.tabla-comparativa tr:last-child td {
+    border-bottom: none;
+}
+
+.tabla-comparativa .caracteristica {
+    font-weight: 600;
+    color: var(--negro-suave);
+}
+
+.tabla-comparativa .check {
+    color: var(--verde-excel);
+    font-weight: bold;
+}
+
+.tabla-comparativa .no {
+    color: var(--rojo-suave);
+}
+
+.tabla-comparativa .advertencia {
+    color: var(--amarillo-accent);
+}
+
+.tabla-nota {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* ============================================
+   SECCIÓN SOPORTE MENSUAL
+   ============================================ */
+.soporte-section {
+    background: linear-gradient(135deg, var(--verde-excel) 0%, var(--verde-oscuro) 100%);
+    color: var(--blanco);
+}
+
+.soporte-section h2,
+.soporte-section .soporte-intro p {
+    color: var(--blanco);
+}
+
+.soporte-intro {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.soporte-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+@media (max-width: 992px) {
+    .soporte-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .soporte-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.soporte-card {
+    background: var(--blanco);
+    border-radius: 20px;
+    padding: 35px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    color: var(--negro-suave);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.soporte-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 20px 70px rgba(0,0,0,0.25);
+}
+
+.soporte-card.destacado {
+    background: linear-gradient(135deg, var(--verde-excel), var(--verde-oscuro));
+    color: var(--blanco);
+}
+
+.soporte-card.destacado-azul {
+    border: 3px solid #5DADE2;
+    box-shadow: 0 0 25px rgba(93, 173, 226, 0.4);
+}
+
+.soporte-card.destacado-azul:hover {
+    box-shadow: 0 0 35px rgba(93, 173, 226, 0.5);
+}
+
+.soporte-card.destacado .soporte-nombre,
+.soporte-card.destacado .soporte-precio,
+.soporte-card.destacado p,
+.soporte-card.destacado li {
+    color: var(--blanco);
+}
+
+.soporte-card.destacado .soporte-badge {
+    background: var(--blanco);
+    color: var(--verde-excel);
+}
+
+.soporte-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--verde-excel);
+    color: var(--blanco);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.soporte-emoji {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.soporte-nombre {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--verde-excel);
+    margin-bottom: 10px;
+}
+
+.soporte-precio {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--verde-excel);
+    margin-bottom: 5px;
+}
+
+.soporte-card p {
+    color: var(--gris-texto);
+}
+
+.soporte-card ul {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.soporte-card ul li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: var(--gris-texto);
+}
+
+.soporte-card ul li i {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.soporte-card.destacado ul li i {
+    color: var(--blanco);
+}
+
+/* ============================================
+   SECCIÓN TESTIMONIOS
+   ============================================ */
+.testimonios {
+    background-color: var(--gris-fondo);
+}
+
+.testimonios-carrusel {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px 10px;
+    scrollbar-width: none;
+}
+
+.testimonios-carrusel::-webkit-scrollbar {
+    display: none;
+}
+
+.testimonio-item {
+    flex: 0 0 auto;
+    width: 380px;
+    scroll-snap-align: center;
+    background: var(--blanco);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .testimonio-item {
+        width: 320px;
+    }
+}
+
+.testimonio-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.testimonio-logo {
+    width: 60px;
+    height: 60px;
+    background: var(--gris-fondo);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.testimonio-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+
+.testimonio-logo-placeholder {
+    color: var(--gris-texto);
+    opacity: 0.4;
+}
+
+.testimonio-info h4 {
+    margin: 0 0 3px 0;
+    font-size: 1.1rem;
+    color: var(--negro-suave);
+}
+
+.testimonio-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--gris-texto);
+}
+
+.testimonio-estrellas {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 15px;
+}
+
+.testimonio-estrellas i {
+    color: #F6C23E;
+    width: 18px;
+    height: 18px;
+}
+
+.testimonio-texto {
+    color: var(--gris-texto);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+/* ============================================
+   SECCIÓN PARA QUIÉN
+   ============================================ */
+.para-quien {
+    background-color: var(--gris-fondo);
+}
+
+.para-quien-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.para-quien-lista {
+    background: var(--blanco);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.para-quien-lista h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+}
+
+.para-quien-lista.positivo h3 {
+    color: var(--verde-excel);
+}
+
+.para-quien-lista.negativo h3 {
+    color: var(--rojo-suave);
+}
+
+.para-quien-lista ul {
+    list-style: none;
+}
+
+.para-quien-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: var(--gris-texto);
+}
+
+.para-quien-lista li i {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.para-quien-lista.positivo li i {
+    color: var(--verde-excel);
+}
+
+.para-quien-lista.negativo li i {
+    color: var(--rojo-suave);
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+.cta-final {
+    background: linear-gradient(135deg, var(--verde-excel) 0%, var(--verde-oscuro) 100%);
+    color: var(--blanco);
+    text-align: center;
+}
+
+.cta-final h2 {
+    color: var(--blanco);
+}
+
+.cta-final p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.cta-final .btn-whatsapp {
+    font-size: 1.1rem;
+    padding: 18px 40px;
+    background: var(--blanco);
+    color: var(--verde-excel);
+}
+
+.cta-final .btn-whatsapp:hover {
+    background: var(--gris-fondo);
+    transform: translateY(-2px);
+}
+
+.cta-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.cta-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cta-info-item i {
+    opacity: 0.9;
+}
+
+.cta-info-item span {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+    background-color: var(--negro-suave);
+    color: var(--blanco);
+    padding: 40px 0;
+    text-align: center;
+}
+
+footer p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+footer .logo-footer {
+    max-height: 40px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   SCROLL INDICATOR PARA CARRUSELES
+   ============================================ */
+.scroll-hint {
+    text-align: center;
+    padding: 15px;
+    color: var(--gris-texto);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.planes .scroll-hint {
+    color: rgba(255,255,255,0.7);
+}
+
+/* ============================================
+   UTILIDADES
+   ============================================ */
+.text-center {
+    text-align: center;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
