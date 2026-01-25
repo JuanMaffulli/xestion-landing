@@ -550,6 +550,41 @@
 
 
     <!-- ============================================
+         4.5 SECCIÓN NUESTRO EQUIPO
+         ============================================ -->
+    <section class="equipo" id="equipo">
+        <div class="container">
+
+            <h2>Nuestro equipo</h2>
+            <p class="subtitulo">Somos pocos, pero estamos encima. Te atendemos nosotros, sin intermediarios.</p>
+
+            <div class="equipo-grid">
+
+                <div class="equipo-card">
+                    <div class="equipo-foto">
+                        <img src="img/equipo/leo.jpg" alt="Leonardo Alegre - Especialista y desarrollador de sistemas en Excel">
+                    </div>
+                    <h3 class="equipo-nombre">Leonardo Alegre</h3>
+                    <p class="equipo-rol">Especialista y desarrollador de sistemas en Excel</p>
+                    <p class="equipo-desc">Encargado del desarrollo de tu sistema en Excel y las funciones más prácticas e intuitivas para el uso.</p>
+                </div>
+
+                <div class="equipo-card">
+                    <div class="equipo-foto">
+                        <img src="img/equipo/juan2.jpeg" alt="Juan Pablo Maffulli - Especialista en análisis de datos y programación en Excel">
+                    </div>
+                    <h3 class="equipo-nombre">Juan Pablo Maffulli</h3>
+                    <p class="equipo-rol">Especialista en análisis de datos y programación en Excel</p>
+                    <p class="equipo-desc">Encargado de tomar los requerimientos que necesites y de transformar tus ideas para simplificar tu trabajo de la forma más fácil posible dentro de los sistemas. También encargado del desarrollo de tu sistema en Excel.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ============================================
          5. SECCIÓN PROCESO
          ============================================ -->
     <section class="proceso">
@@ -800,43 +835,43 @@
     <section class="comparativa">
         <div class="container">
             
-            <h2>¿Qué solución te conviene?</h2>
-            <p class="subtitulo">Depende de cuántas personas usen el sistema y cómo trabajes.</p>
+            <h2>Tabla comparativa</h2>
+            <p class="subtitulo">Compará Excel común vs Excel multiusuario y elegí lo que te conviene.</p>
 
             <div class="comparativa-container">
                 <table class="tabla-comparativa">
                     <thead>
                         <tr>
                             <th class="caracteristica">Característica</th>
-                            <th>Excel + OneDrive<br><small>Ideal para empezar y con pocos usuarios</small></th>
-                            <th>Excel Multiusuario<br><small>Ideal para equipos y uso simultáneo</small></th>
+                            <th>Excel común<br><small>1-2 personas (sin simultáneo)</small></th>
+                            <th>Excel multiusuario<br><small>Varias compus a la vez</small></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="caracteristica">Ideal para...</td>
-                            <td>Emprendedores y negocios pequeños con 1-2 personas</td>
-                            <td>PyMEs con equipos de 3+ personas que necesitan acceso remoto</td>
+                            <td>Negocios con 1-2 personas que trabajan por turnos</td>
+                            <td>Equipos que necesitan trabajar al mismo tiempo</td>
                         </tr>
                         <tr>
                             <td class="caracteristica">Usuarios simultáneos</td>
-                            <td>1 a 2 (máx. 3 con cuidado)</td>
+                            <td>1 (o 2 si se turnan)</td>
                             <td>2 a 10 simultáneos</td>
                         </tr>
                         <tr>
-                            <td class="caracteristica">Privacidad de datos</td>
-                            <td class="check">✅ Tus archivos en OneDrive</td>
-                            <td class="check">✅ <strong>Privacidad total: los datos son tuyos, no de la nube</strong></td>
+                            <td class="caracteristica">Acceso desde varias PCs</td>
+                            <td class="advertencia">⚠️ Solo si se turnan</td>
+                            <td class="check">✅ Sí (a la vez)</td>
                         </tr>
                         <tr>
                             <td class="caracteristica">Acceso remoto</td>
-                            <td class="advertencia">⚠️ Solo OneDrive compartido</td>
+                            <td class="advertencia">⚠️ Limitado</td>
                             <td class="check">✅ Desde cualquier PC</td>
                         </tr>
                         <tr>
                             <td class="caracteristica">Funciona sin internet</td>
                             <td class="check">✅ Sí</td>
-                            <td class="no">❌ Necesita conexión</td>
+                            <td class="advertencia">⚠️ Depende del esquema</td>
                         </tr>
                         <tr>
                             <td class="caracteristica">Roles y permisos</td>
@@ -849,6 +884,11 @@
                             <td class="check">✅ Alta</td>
                         </tr>
                         <tr>
+                            <td class="caracteristica">Complejidad de implementación</td>
+                            <td class="check">✅ Baja</td>
+                            <td class="advertencia">⚠️ Media (se configura para el equipo)</td>
+                        </tr>
+                        <tr>
                             <td class="caracteristica">Costo inicial</td>
                             <td><strong>Desde USD 300</strong></td>
                             <td><strong>Desde USD 1.200</strong></td>
@@ -858,14 +898,8 @@
                             <td>Windows + Office 365</td>
                             <td>Windows + Office 2013+</td>
                         </tr>
-                        <tr>
-                            <td class="caracteristica">Hosting (solo nube)</td>
-                            <td>No aplica</td>
-                            <td><strong>ARS 45.000 /mes</strong></td>
-                        </tr>
                     </tbody>
                 </table>
-                <p class="tabla-nota">* El hosting (ARS 45.000/mes) es necesario para soluciones con SQL Server y está incluido en el plan "Infraestructura Gestión".</p>
             </div>
 
 
@@ -880,56 +914,160 @@
     <section class="soporte-section">
         <div class="container">
             
-            <h2>Acompañamiento mensual</h2>
+            <h2><span class="soporte-opcional">OPCIONAL</span> Suscripción mensual</h2>
             <div class="soporte-intro">
-                <p>Porque un sistema no es solo armarlo, es que funcione siempre. Elegí cuánto nos necesitás a tu lado.</p>
+                <p>Si querés, podés sumarte a un plan mensual para que el sistema esté siempre prolijo, rápido y actualizado. Y si no querés plan, no pasa nada: seguís usando tu sistema y <strong>los cambios/mejoras se cotizan aparte</strong>.</p>
             </div>
 
             <div class="soporte-grid">
 
-                <!-- SIN PLAN -->
+                <!-- PLAN 1 -->
                 <div class="soporte-card">
-                    <span class="soporte-emoji">📝</span>
-                    <div class="soporte-nombre">Sin Plan</div>
-                    <div class="soporte-precio">Por hora</div>
-                    <p>Pagás solo cuando necesitás algo</p>
+                    <span class="soporte-emoji">🧩</span>
+                    <div class="soporte-nombre">Plan Celda</div>
+                    <div class="soporte-precio">ARS 25.000 <small>/mes</small></div>
+                    <p>Para negocios chicos que quieren estar tranquilos</p>
                     <ul>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Sin compromiso mensual</li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Respuesta según disponibilidad</li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Se cotiza por hora de soporte o desarollo requerido</li>
+                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Soporte por WhatsApp o email (respuesta dentro de 24 hs hábiles)</li>
+                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Corrección de errores del sistema</li>
+                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Ajustes menores / mejoras simples mensuales</li>
+                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Revisión y optimización (mensual o anual si lo pedís)</li>
                     </ul>
                 </div>
 
-                <!-- TE DOY UNA MANO - DESTACADO -->
+                <!-- PLAN 2 - DESTACADO -->
                 <div class="soporte-card destacado-azul">
                     <span class="soporte-badge">⭐ Más elegido</span>
-                    <span class="soporte-emoji">📈​</span>
-                    <div class="soporte-nombre">Plan impulso</div>
-                    <div class="soporte-precio">ARS 25.000 <small>/mes</small></div>
-                    <p>Para que te quedes tranquilo</p>
+                    <span class="soporte-emoji">📊</span>
+                    <div class="soporte-nombre">Plan Tabla</div>
+                    <div class="soporte-precio">ARS 40.000 <small>/mes</small></div>
+                    <p>Para el que quiere mejoras y prioridad</p>
                     <ul>
-                        <li><i data-lucide="check" width="16" height="16"></i> Si tenés una duda o algo no te sale, nos mandás un WhatsApp y lo resolvemos.</li>
-                        <li><i data-lucide="check" width="16" height="16"></i> Hacemos optimizaciones del archivo para que siempre vuele.</li>
-                        <li><i data-lucide="check" width="16" height="16"></i> Ajustes menores por mes</li>
-                        <li><i data-lucide="check" width="16" height="16"></i> No incluye reformas de modulos completos</li>
+                        <li><i data-lucide="check" width="16" height="16"></i> Todo lo del Plan Celda</li>
+                        <li><i data-lucide="check" width="16" height="16"></i> Acceso prioritario a nuevas funcionalidades</li>
+                        <li><i data-lucide="check" width="16" height="16"></i> Importación o limpieza de datos (servicio anual incluido)</li>
+                        <li><i data-lucide="check" width="16" height="16"></i> Soporte por temas externos (OneDrive/Office/red) dentro de lo razonable</li>
                     </ul>
                 </div>
 
-                <!-- SOCIO TECNOLÓGICO -->
+                <!-- PLAN 3 -->
                 <div class="soporte-card">
-                    <span class="soporte-emoji">🤝</span>
-                    <div class="soporte-nombre">Plan macro</div>
-                    <div class="soporte-precio">ARS 50.000 <small>/mes</small></div>
-                    <p>Nos encargamos de todo</p>
+                    <span class="soporte-emoji">☁️</span>
+                    <div class="soporte-nombre">Plan Macro</div>
+                    <div class="soporte-precio">ARS 90.000 <small>/mes</small></div>
+                    <p>Para sistemas multiusuario con base de datos</p>
                     <ul>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Nos encargamos de que el sistema esté siempre al 100%.</li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Nos ocupamos de las copias de seguridad y de que la base de datos no falle nunca.</li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Vos solo ocupate de vender.</li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> <strong>Hosting incluido (ARS 45.000)</strong></li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Ajustes ilimitados</li>
+                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Hosting en servidor (base de datos) + backups semanales</li>
+                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Acceso multiusuario por red o remoto</li>
+                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Revisión y optimización mensual (si lo solicitás)</li>
+                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Soporte directo + corrección de errores</li>
                     </ul>
                 </div>
 
+            </div>
+
+            <div class="tabla-wrapper" style="margin-top: 26px;">
+                <table class="tabla-comparativa soporte-tabla">
+                    <thead>
+                        <tr>
+                            <th>Función / Servicio</th>
+                            <th>Plan Celda</th>
+                            <th>Plan Tabla</th>
+                            <th>Plan Macro</th>
+                            <th>Sin suscripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="caracteristica">Soporte por WhatsApp o email (24 hs hábiles)</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                        </tr>
+                        <tr>
+                            <td class="caracteristica">Corrección de errores del sistema</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                        </tr>
+                        <tr>
+                            <td class="caracteristica">Ajustes menores / mejoras simples mensuales</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="no">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="caracteristica">Backups automáticos</td>
+                            <td class="na">⚪ No aplica</td>
+                            <td class="na">⚪ No aplica</td>
+                            <td class="check">✅</td>
+                            <td class="no">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="caracteristica">Hosting en servidor (base de datos)</td>
+                            <td class="na">⚪ No aplica</td>
+                            <td class="na">⚪ No aplica</td>
+                            <td class="check">✅</td>
+                            <td class="no">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="caracteristica">Revisión y optimización (mensual o anual si se solicita)</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="no">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="caracteristica">Acceso prioritario a nuevas funcionalidades</td>
+                            <td class="no">❌</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="no">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="caracteristica">Importación o limpieza de datos (servicio anual incluido)</td>
+                            <td class="no">❌</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="no">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="caracteristica">Acceso multiusuario por red o remoto</td>
+                            <td class="na">⚪ No aplica</td>
+                            <td class="na">⚪ No aplica</td>
+                            <td class="check">✅</td>
+                            <td class="no">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="caracteristica">Transformaciones complejas o nuevos módulos</td>
+                            <td class="no">❌</td>
+                            <td class="no">❌</td>
+                            <td class="no">❌</td>
+                            <td class="no">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="caracteristica">Soporte por problemas externos (red, OneDrive, Office, etc.)</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="check">✅</td>
+                            <td class="no">❌</td>
+                        </tr>
+                        <tr>
+                            <td class="caracteristica">Valor mensual</td>
+                            <td><strong>ARS 25.000</strong></td>
+                            <td><strong>ARS 40.000</strong></td>
+                            <td><strong>ARS 90.000</strong></td>
+                            <td><strong>Sin costo</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="soporte-nota">
+                <p><strong>No incluye</strong> (se cotiza aparte): módulos nuevos, cambios estructurales grandes, automatizaciones complejas o cualquier cosa que esté fuera del sistema original.</p>
             </div>
 
         </div>

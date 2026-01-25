@@ -745,13 +745,88 @@ p {
 }
 
 .excel-item p {
-    color: var(--gris-texto);
-}
-}
-
-.excel-item p {
     margin: 0;
     font-size: 0.95rem;
+    color: var(--gris-texto);
+}
+
+/* ============================================
+   SECCIÓN EQUIPO
+   ============================================ */
+.equipo {
+    background-color: var(--gris-fondo);
+}
+
+.equipo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.equipo-card {
+    background: var(--blanco);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.equipo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.10);
+}
+
+.equipo-foto {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 14px;
+    border: 3px solid rgba(33, 115, 70, 0.18);
+    background: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.equipo-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.equipo-nombre {
+    margin: 0 0 4px;
+    font-size: 1.15rem;
+    color: var(--negro-suave);
+}
+
+.equipo-rol {
+    margin: 0 0 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--verde-excel);
+}
+
+.equipo-desc {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--gris-texto);
+}
+
+@media (max-width: 480px) {
+    .equipo-card {
+        padding: 22px 18px;
+    }
+
+    .equipo-foto {
+        width: 76px;
+        height: 76px;
+    }
 }
 
 /* ============================================
@@ -1504,13 +1579,22 @@ p {
    SECCIÓN SOPORTE MENSUAL
    ============================================ */
 .soporte-section {
-    background: linear-gradient(135deg, var(--verde-excel) 0%, var(--verde-oscuro) 100%);
-    color: var(--blanco);
+    background-color: var(--gris-fondo);
+    color: var(--negro-suave);
 }
 
-.soporte-section h2,
-.soporte-section .soporte-intro p {
-    color: var(--blanco);
+.soporte-opcional {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(37, 99, 235, 0.14);
+    color: #2563EB;
+    vertical-align: middle;
+    margin-right: 10px;
+    border: 1px solid rgba(37, 99, 235, 0.22);
 }
 
 .soporte-intro {
@@ -1545,12 +1629,12 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     color: var(--negro-suave);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .soporte-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 20px 70px rgba(0,0,0,0.25);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 45px rgba(0,0,0,0.12);
 }
 
 .soporte-card.destacado {
@@ -1643,8 +1727,31 @@ p {
     margin-top: 3px;
 }
 
+.soporte-card .btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
 .soporte-card.destacado ul li i {
     color: var(--blanco);
+}
+
+.tabla-comparativa .na {
+    color: var(--gris-texto);
+    font-weight: 600;
+}
+
+.soporte-nota {
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.03);
+    color: var(--gris-texto);
+}
+
+.soporte-nota p {
+    margin: 0;
 }
 
 /* ============================================
