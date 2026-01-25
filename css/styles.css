@@ -954,6 +954,53 @@ p {
     margin-top: 5px;
 }
 
+/* Opciones de precio doble (Sistema a medida) */
+.plan-opciones-precio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.opcion-precio {
+    text-align: center;
+    padding: 15px;
+    background: rgba(33, 115, 70, 0.08);
+    border-radius: 12px;
+    flex: 1;
+    min-width: 120px;
+}
+
+.opcion-tipo {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--gris-texto);
+    margin-bottom: 5px;
+}
+
+.opcion-valor {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--verde-excel);
+}
+
+.opcion-detalle {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--gris-texto);
+    margin-top: 3px;
+}
+
+.opcion-separador {
+    font-size: 1rem;
+    color: var(--gris-texto);
+    font-weight: 500;
+}
+
 .plan-features {
     list-style: none;
     margin-bottom: 30px;
