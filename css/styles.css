@@ -11,7 +11,7 @@
     --verde-oscuro: #1a5c38;
     --verde-hover: #155c32;
     --blanco: #FFFFFF;
-    --gris-fondo: #f8faf9ba;
+    --gris-fondo: #E5E7EB;
     --gris-texto: #555555;
     --gris-claro: #E8E8E8;
     --negro-suave: #2D3748;
@@ -190,6 +190,23 @@ p {
     color: var(--blanco);
 }
 
+/* Botón YouTube rojo */
+.btn-youtube {
+    background-color: #FF0000;
+    color: var(--blanco);
+    margin-top: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-youtube:hover {
+    background-color: #CC0000;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3);
+}
+
 /* WhatsApp con verde oscuro Excel */
 .btn-whatsapp {
     background-color: var(--verde-excel);
@@ -288,10 +305,11 @@ p {
 }
 
 /* ============================================
+/* ============================================
    SECCIÓN PROBLEMA
    ============================================ */
 .problema {
-    background-color: var(--blanco);
+    background-color: var(--gris-fondo);
 }
 
 .problema-grid {
@@ -302,13 +320,26 @@ p {
 }
 
 .problema-item {
-    background: var(--gris-fondo);
+    background: var(--blanco);
     padding: 30px;
     border-radius: 16px;
     display: flex;
     align-items: flex-start;
     gap: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.problema-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--verde-excel);
 }
 
 .problema-item:hover {
@@ -807,6 +838,9 @@ p {
 .planes {
     background: linear-gradient(135deg, var(--verde-excel) 0%, var(--verde-oscuro) 100%);
     color: var(--blanco);
+    overflow: visible;
+    position: relative;
+    z-index: 1;
 }
 
 .planes h2, .planes .subtitulo {
@@ -821,11 +855,14 @@ p {
     display: flex;
     gap: 25px;
     overflow-x: auto;
+    overflow-y: visible;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    padding: 20px 10px 40px;
+    padding: 40px 10px 60px;
     scrollbar-width: none;
     justify-content: center;
+    position: relative;
+    z-index: 5;
 }
 
 .planes-carrusel::-webkit-scrollbar {
@@ -833,6 +870,7 @@ p {
 }
 
 .plan-card {
+    position: relative;
     flex: 0 0 auto;
     width: 340px;
     background: var(--blanco);
@@ -841,11 +879,14 @@ p {
     scroll-snap-align: center;
     color: var(--negro-suave);
     box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 50;
 }
 
 .plan-card:hover {
-    transform: scale(1.02);
+    transform: scale(1.05);
+    z-index: 100;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3);
 }
 
 @media (max-width: 768px) {
@@ -860,14 +901,16 @@ p {
 
 .plan-destacado {
     position: relative;
-    border: 3px solid #5DADE2;
+    border: 3px solid #2563EB;
     transform: scale(1.02);
-    box-shadow: 0 0 20px rgba(93, 173, 226, 0.3);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+    z-index: 55;
 }
 
 .plan-destacado:hover {
-    transform: scale(1.04);
-    box-shadow: 0 0 30px rgba(93, 173, 226, 0.4);
+    transform: scale(1.07);
+    box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
+    z-index: 100;
 }
 
 .plan-borde-blanco {
@@ -886,6 +929,21 @@ p {
     font-size: 0.8rem;
     font-weight: 700;
     white-space: nowrap;
+    z-index: 200;
+}
+
+/* Badge azul para ambos planes */
+.plan-badge-light {
+    background: #2563EB;
+    color: var(--blanco);
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
+}
+
+/* Badge azul eléctrico para plan destacado */
+.plan-destacado .plan-badge {
+    background: #2563EB;
+    color: var(--blanco);
+    box-shadow: 0 2px 10px rgba(37, 99, 235, 0.4);
 }
 
 .plan-nombre {
@@ -954,8 +1012,20 @@ p {
     margin-top: 5px;
 }
 
-/* Opciones de precio doble (Sistema a medida) */
-.plan-opciones-precio {
+/* Precios simples (Sistema a medida) */
+.plan-precios-simple {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.plan-precios-simple p {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: var(--verde-excel);
+}
+
+/* Precios destacados con cajas */
+.plan-precios-destacados {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -964,40 +1034,40 @@ p {
     flex-wrap: wrap;
 }
 
-.opcion-precio {
-    text-align: center;
-    padding: 15px;
-    background: rgba(33, 115, 70, 0.08);
+.precio-opcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.15);
     border-radius: 12px;
-    flex: 1;
-    min-width: 120px;
+    min-width: 130px;
 }
 
-.opcion-tipo {
-    display: block;
+.precio-label {
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--gris-texto);
-    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 3px;
 }
 
-.opcion-valor {
-    display: block;
-    font-size: 1.4rem;
+.precio-desde {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.precio-valor-grande {
+    font-size: 1.5rem;
     font-weight: 800;
-    color: var(--verde-excel);
-}
-
-.opcion-detalle {
-    display: block;
-    font-size: 0.75rem;
-    color: var(--gris-texto);
+    color: var(--blanco);
     margin-top: 3px;
 }
 
-.opcion-separador {
+.precio-separador {
     font-size: 1rem;
-    color: var(--gris-texto);
+    color: rgba(255, 255, 255, 0.5);
     font-weight: 500;
 }
 
@@ -1021,16 +1091,37 @@ p {
     margin-top: 2px;
 }
 
+/* Nota pequeña debajo de features */
+.plan-nota {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: var(--gris-texto);
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.plan-nota i {
+    color: var(--verde-excel);
+}
+
 .plan-card .btn {
     width: 100%;
     justify-content: center;
+    position: relative;
+    z-index: 50;
 }
 
+/* ============================================
 /* ============================================
    TABLA COMPARATIVA SOLUCIONES
    ============================================ */
 .comparativa {
     background-color: var(--gris-fondo);
+    position: relative;
+    z-index: 0;
 }
 
 .comparativa-container {
@@ -1198,12 +1289,12 @@ p {
 }
 
 .soporte-card.destacado-azul {
-    border: 3px solid #5DADE2;
-    box-shadow: 0 0 25px rgba(93, 173, 226, 0.4);
+    border: 3px solid #2563EB;
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.4);
 }
 
 .soporte-card.destacado-azul:hover {
-    box-shadow: 0 0 35px rgba(93, 173, 226, 0.5);
+    box-shadow: 0 0 35px rgba(37, 99, 235, 0.5);
 }
 
 .soporte-card.destacado .soporte-nombre,
@@ -1218,6 +1309,12 @@ p {
     color: var(--verde-excel);
 }
 
+/* Badge azul para plan mensual destacado */
+.soporte-card.destacado-azul .soporte-badge {
+    background: #2563EB;
+    color: var(--blanco);
+}
+
 .soporte-badge {
     position: absolute;
     top: -12px;
@@ -1229,6 +1326,7 @@ p {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 700;
+    z-index: 100;
 }
 
 .soporte-emoji {
