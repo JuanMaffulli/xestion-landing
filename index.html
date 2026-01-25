@@ -947,6 +947,11 @@
         </div>
     </footer>
 
+    <!-- Lightbox para ver imágenes en grande -->
+    <div class="lightbox" id="lightbox" onclick="cerrarLightbox()">
+        <button class="lightbox-close" onclick="cerrarLightbox()">✕</button>
+        <img src="" alt="Imagen ampliada" id="lightbox-img">
+    </div>
 
     <!-- Inicializar iconos Lucide -->
     <script>
@@ -957,12 +962,37 @@
     <script>
         function scrollGaleria(direccion) {
             const galeria = document.getElementById('galeriaScroll');
-            const scrollAmount = 420; // Ancho aproximado de una foto + gap
+            const scrollAmount = 320;
             galeria.scrollBy({
                 left: direccion * scrollAmount,
                 behavior: 'smooth'
             });
         }
+
+        // Lightbox - abrir imagen en grande
+        document.querySelectorAll('.foto-item img').forEach(img => {
+            img.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const lightbox = document.getElementById('lightbox');
+                const lightboxImg = document.getElementById('lightbox-img');
+                lightboxImg.src = this.src;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function cerrarLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cerrar con tecla Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                cerrarLightbox();
+            }
+        });
     </script>
 
 </body>
