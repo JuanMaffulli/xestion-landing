@@ -1126,12 +1126,12 @@ p {
     scroll-snap-align: center;
     color: var(--negro-suave);
     box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
     z-index: 50;
 }
 
 .plan-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px);
     z-index: 100;
     box-shadow: 0 30px 80px rgba(0,0,0,0.3);
 }
@@ -1149,13 +1149,13 @@ p {
 .plan-destacado {
     position: relative;
     border: 3px solid #2563EB;
-    transform: scale(1.02);
+    transform: none;
     box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
     z-index: 55;
 }
 
 .plan-destacado:hover {
-    transform: scale(1.07);
+    transform: translateY(-12px);
     box-shadow: 0 0 40px rgba(37, 99, 235, 0.5);
     z-index: 100;
 }
