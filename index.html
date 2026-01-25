@@ -613,14 +613,89 @@
         <div class="container">
             
             <h2>Elegí cómo querés arrancar</h2>
-            <p class="subtitulo">Dos formas de trabajar. Vos elegís la que mejor se adapta a tu negocio.</p>
+            <p class="subtitulo">Completá este mini cuestionario y te recomendamos el plan ideal.</p>
 
-            <div class="planes-carrusel">
+            <!-- ============================================
+                 CUESTIONARIO RECOMENDADOR
+                 ============================================ -->
+            <div class="quiz-recomendador" id="quiz-box">
+                <div class="quiz-contenido" id="quiz-preguntas">
+                    <h3><i data-lucide="clipboard-list" width="24" height="24"></i> ¿Qué plan te conviene?</h3>
+                    <p class="quiz-bajada">Respondé 2 preguntas y te decimos por dónde arrancar.</p>
+                    
+                    <!-- Pregunta 1: Rubro -->
+                    <div class="quiz-pregunta">
+                        <label>1. ¿A qué se dedica tu negocio?</label>
+                        <select id="quiz-rubro">
+                            <option value="">Elegí tu rubro...</option>
+                            <option value="comercio">Comercio / Local / Showroom</option>
+                            <option value="servicios">Servicios profesionales</option>
+                            <option value="gastronomia">Gastronomía / Bar / Resto</option>
+                            <option value="grafica">Gráfica / Imprenta</option>
+                            <option value="taller">Taller mecánico / Service</option>
+                            <option value="distribucion">Distribución / Mayorista</option>
+                            <option value="otro">Otro (escribilo abajo)</option>
+                        </select>
+                        <input type="text" id="quiz-rubro-otro" class="quiz-input-otro" placeholder="Escribí tu rubro acá...">
+                    </div>
+
+                    <!-- Pregunta 2: Uso -->
+                    <div class="quiz-pregunta">
+                        <label>2. ¿Cómo lo van a usar?</label>
+                        <div class="quiz-opciones">
+                            <label class="quiz-opcion">
+                                <input type="radio" name="quiz-uso" value="solo">
+                                <span>Solo yo (una compu)</span>
+                            </label>
+                            <label class="quiz-opcion">
+                                <input type="radio" name="quiz-uso" value="turnos">
+                                <span>Somos 2 pero nos turnamos</span>
+                            </label>
+                            <label class="quiz-opcion">
+                                <input type="radio" name="quiz-uso" value="simultaneo">
+                                <span>Varias compus a la vez</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button id="quiz-btn" class="btn btn-principal quiz-btn-disabled">
+                        <i data-lucide="sparkles" width="18" height="18"></i>
+                        Ver mi recomendación
+                    </button>
+                </div>
+
+                <!-- Resultado -->
+                <div class="quiz-resultado" id="quiz-resultado">
+                    <div class="quiz-resultado-icon">
+                        <i data-lucide="check-circle" width="48" height="48"></i>
+                    </div>
+                    <h4>Tu plan recomendado:</h4>
+                    <span class="quiz-plan-nombre" id="quiz-plan-nombre"></span>
+                    <ul class="quiz-porque">
+                        <li id="quiz-porque-1"></li>
+                        <li id="quiz-porque-2"></li>
+                    </ul>
+                    <a id="quiz-whatsapp" href="#" class="btn btn-whatsapp" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Hablar por WhatsApp
+                    </a>
+                    <button id="quiz-reiniciar" class="btn btn-secundario">
+                        <i data-lucide="refresh-cw" width="16" height="16"></i>
+                        Cambiar respuestas
+                    </button>
+                </div>
+            </div>
+
+            <p class="quiz-skip">¿Preferís elegir vos? <a href="#planes-carrusel">Mirá los 3 planes abajo</a></p>
+
+            <div class="planes-carrusel" id="planes-carrusel">
 
                 <!-- ================================================
                      PLAN IMPULSO - Borde blanco
                      ================================================ -->
-                <div class="plan-card plan-borde-blanco">
+                <div class="plan-card plan-borde-blanco" id="plan-emprendedor">
                     <span class="plan-badge plan-badge-light">🚀 Ideal para empezar</span>
                     
                     <div class="plan-nombre">Puesta a punto</div>
@@ -653,7 +728,7 @@
                 <!-- ================================================
                      PLAN A MEDIDA - Excel Estándar
                      ================================================ -->
-                <div class="plan-card plan-borde-blanco">
+                <div class="plan-card plan-borde-blanco" id="plan-amedida">
                     <span class="plan-badge plan-badge-light">✨ Personalización total</span>
                     
                     <div class="plan-nombre">Sistema a medida</div>
@@ -683,7 +758,7 @@
                 <!-- ================================================
                      PLAN A MEDIDA - Multi-usuario (Destacado)
                      ================================================ -->
-                <div class="plan-card plan-destacado">
+                <div class="plan-card plan-destacado" id="plan-multiusuario">
                     <span class="plan-badge">🚀 Más elegido</span>
                     
                     <div class="plan-nombre">Sistema a medida</div>
@@ -1012,6 +1087,152 @@
                 cerrarLightbox();
             }
         });
+
+        // ============================================
+        // QUIZ RECOMENDADOR DE PLANES
+        // ============================================
+        
+        // Rubros estándar (editá esta lista para agregar rubros)
+        const rubrosEstandar = [
+            'comercio',
+            'servicios', 
+            'gastronomia',
+            'grafica',
+            'taller',
+            'distribucion'
+        ];
+
+        const quizRubro = document.getElementById('quiz-rubro');
+        const quizRubroOtro = document.getElementById('quiz-rubro-otro');
+        const quizBtn = document.getElementById('quiz-btn');
+        const quizPreguntas = document.getElementById('quiz-preguntas');
+        const quizResultado = document.getElementById('quiz-resultado');
+        const quizPlanNombre = document.getElementById('quiz-plan-nombre');
+        const quizPorque1 = document.getElementById('quiz-porque-1');
+        const quizPorque2 = document.getElementById('quiz-porque-2');
+        const quizWhatsapp = document.getElementById('quiz-whatsapp');
+        const quizReiniciar = document.getElementById('quiz-reiniciar');
+
+        // Mostrar/ocultar input "Otro"
+        quizRubro.addEventListener('change', function() {
+            if (this.value === 'otro') {
+                quizRubroOtro.style.display = 'block';
+                quizRubroOtro.focus();
+            } else {
+                quizRubroOtro.style.display = 'none';
+                quizRubroOtro.value = '';
+            }
+            verificarQuiz();
+        });
+
+        quizRubroOtro.addEventListener('input', verificarQuiz);
+
+        // Verificar radios
+        document.querySelectorAll('input[name="quiz-uso"]').forEach(radio => {
+            radio.addEventListener('change', verificarQuiz);
+        });
+
+        function verificarQuiz() {
+            const rubroSeleccionado = quizRubro.value;
+            const rubroOtroTexto = quizRubroOtro.value.trim();
+            const usoSeleccionado = document.querySelector('input[name="quiz-uso"]:checked');
+            
+            // Rubro válido: seleccionó algo, y si es "otro" debe escribir algo
+            const rubroValido = rubroSeleccionado && (rubroSeleccionado !== 'otro' || rubroOtroTexto.length > 0);
+            
+            if (rubroValido && usoSeleccionado) {
+                quizBtn.classList.remove('quiz-btn-disabled');
+                quizBtn.disabled = false;
+            } else {
+                quizBtn.classList.add('quiz-btn-disabled');
+                quizBtn.disabled = true;
+            }
+        }
+
+        // Calcular recomendación
+        quizBtn.addEventListener('click', function() {
+            const rubroSeleccionado = quizRubro.value;
+            const rubroOtroTexto = quizRubroOtro.value.trim();
+            const usoSeleccionado = document.querySelector('input[name="quiz-uso"]:checked').value;
+            
+            // Determinar rubro final (texto para WhatsApp)
+            let rubroTexto = quizRubro.options[quizRubro.selectedIndex].text;
+            if (rubroSeleccionado === 'otro') {
+                rubroTexto = rubroOtroTexto;
+            }
+            
+            // Determinar uso texto
+            let usoTexto = '';
+            if (usoSeleccionado === 'solo') usoTexto = 'Solo yo (una compu)';
+            if (usoSeleccionado === 'turnos') usoTexto = 'Somos 2 pero nos turnamos';
+            if (usoSeleccionado === 'simultaneo') usoTexto = 'Varias compus a la vez';
+
+            // LÓGICA DE RECOMENDACIÓN
+            let planRecomendado = '';
+            let porque1 = '';
+            let porque2 = '';
+            let planId = '';
+
+            // Si necesitan varias compus a la vez -> Multi-usuario
+            if (usoSeleccionado === 'simultaneo') {
+                planRecomendado = 'Sistema a medida Multi-usuario';
+                porque1 = 'Necesitás que varias personas trabajen al mismo tiempo.';
+                porque2 = 'Con multiusuario evitás conflictos y datos duplicados.';
+                planId = 'plan-multiusuario';
+            }
+            // Si rubro NO está en la lista estándar -> A medida
+            else if (rubroSeleccionado === 'otro' || !rubrosEstandar.includes(rubroSeleccionado)) {
+                planRecomendado = 'Sistema a medida';
+                porque1 = 'Tu rubro requiere un sistema diseñado a tu forma de trabajar.';
+                porque2 = 'En la reunión definimos si conviene Excel o solución en la nube.';
+                planId = 'plan-amedida';
+            }
+            // Si rubro está en lista y 1 compu o turnos -> Puesta a punto
+            else {
+                planRecomendado = 'Puesta a punto';
+                porque1 = 'Tu rubro encaja perfecto en nuestro sistema estándar.';
+                porque2 = 'Lo tenés funcionando rápido y a buen precio.';
+                planId = 'plan-emprendedor';
+            }
+
+            // Mostrar resultado
+            quizPlanNombre.textContent = planRecomendado;
+            quizPorque1.textContent = porque1;
+            quizPorque2.textContent = porque2;
+
+            // Armar link WhatsApp
+            const mensaje = `Hola! Hice el cuestionario de Xestion.
+
+Mi rubro: ${rubroTexto}
+Uso: ${usoTexto}
+
+Me recomendaron: ${planRecomendado}
+
+¿Me contás los próximos pasos?`;
+            
+            quizWhatsapp.href = 'https://wa.me/5491128839719?text=' + encodeURIComponent(mensaje);
+
+            // Ocultar preguntas, mostrar resultado
+            quizPreguntas.style.display = 'none';
+            quizResultado.style.display = 'block';
+            
+            // Reiniciar iconos de lucide en el resultado
+            lucide.createIcons();
+        });
+
+        // Reiniciar quiz
+        quizReiniciar.addEventListener('click', function() {
+            quizRubro.value = '';
+            quizRubroOtro.value = '';
+            quizRubroOtro.style.display = 'none';
+            document.querySelectorAll('input[name="quiz-uso"]').forEach(r => r.checked = false);
+            quizBtn.classList.add('quiz-btn-disabled');
+            quizBtn.disabled = true;
+            
+            quizPreguntas.style.display = 'block';
+            quizResultado.style.display = 'none';
+        });
+
     </script>
 
 </body>
