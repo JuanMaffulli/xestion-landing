@@ -7,10 +7,10 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "dev": "astro dev",
-    "postinstall": "chmod +x node_modules/.bin/astro || true",
-    "build": "astro build",
-    "preview": "astro preview"
+    "dev": "npx astro dev",
+    "postinstall": "chmod +x node_modules/.bin/* 2>/dev/null || true",
+    "build": "npx astro build",
+    "preview": "npx astro preview"
   },
   "dependencies": {
     "astro": "^5.3.0",
