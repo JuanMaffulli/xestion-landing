@@ -8,6 +8,7 @@
   },
   "scripts": {
     "dev": "astro dev",
+    "postinstall": "chmod +x node_modules/.bin/astro || true",
     "build": "astro build",
     "preview": "astro preview"
   },
