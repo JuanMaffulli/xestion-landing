@@ -1,0 +1,85 @@
+---
+const positivo = [
+  { text: 'Usás computadora o notebook con Windows', bold: true },
+  'Tenés Excel instalado (Office 365 o versión de escritorio)',
+  'Tu información está desordenada y querés control',
+  'Valorás soluciones simples que funcionan',
+  'Buscás un socio tecnológico, no un proveedor',
+  'Estás dispuesto a invertir en ordenar tu negocio',
+];
+
+const negativo = [
+  'Necesitás algo para usar desde el celular',
+  'Buscás una planilla simple para algo puntual',
+  'Usás Mac o Linux (solo funciona en Windows)',
+  'Querés un sistema 100% web',
+  'Buscás la opción más barata del mercado',
+  'Esperás resultados sin invertir tiempo',
+];
+---
+
+<section class="py-20 sm:py-28 bg-slate-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14">
+      <h2 class="reveal text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+        ¿Es Xestion para vos?
+      </h2>
+      <p class="reveal section-subheading !mb-0">
+        Queremos ser claros desde el principio. No somos para todos, y está bien.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+
+      {/* Positivo */}
+      <div class="reveal-left bg-white rounded-2xl border border-emerald-100 p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-emerald-800">Xestion es para vos si...</h3>
+        </div>
+        <ul class="space-y-3">
+          {positivo.map((item) => {
+            const text = typeof item === 'string' ? item : item.text;
+            const bold = typeof item !== 'string' && item.bold;
+            return (
+              <li class="flex items-start gap-3 text-sm text-slate-600">
+                <svg class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class={bold ? 'font-bold text-slate-700' : ''}>{text}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+      {/* Negativo */}
+      <div class="reveal-right bg-white rounded-2xl border border-red-100 p-7 shadow-sm">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
+            <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-red-800">No es para vos si...</h3>
+        </div>
+        <ul class="space-y-3">
+          {negativo.map((item) => (
+            <li class="flex items-start gap-3 text-sm text-slate-600">
+              <svg class="w-4 h-4 text-red-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>

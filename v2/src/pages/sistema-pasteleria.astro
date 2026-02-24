@@ -1,0 +1,14 @@
+---
+import SistemaDetalle from '@components/SistemaDetalle.astro';
+import { SISTEMAS, CAPTURAS_PASTELERIA } from '@data/config';
+
+const sistema = SISTEMAS.find(s => s.slug === 'sistema-pasteleria')!;
+
+const caracteristicas = [
+  { titulo: 'Recetas con costos automáticos', descripcion: 'Cada producto tiene su receta con insumos y cantidades. El sistema calcula costos en tiempo real.' },
+  { titulo: 'Control de stock de insumos', descripcion: 'Registro de compras, consumos por producción y stock disponible de materias primas.' },
+  { titulo: 'Acompañamiento permanente', descripcion: 'Soporte, mejoras y seguimiento mes a mes. Tu sistema siempre actualizado al 100%.' },
+];
+---
+
+<SistemaDetalle sistema={sistema} capturas={CAPTURAS_PASTELERIA} caracteristicas={caracteristicas} />

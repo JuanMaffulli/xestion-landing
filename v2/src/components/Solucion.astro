@@ -1,0 +1,65 @@
+---
+/**
+ * Sección Solución: dos áreas de enfoque
+ */
+const areas = [
+  {
+    emoji: '⚙️',
+    titulo: 'Gestión Operativa',
+    descripcion: 'Ordenamos lo operativo para que tu equipo trabaje más tranquilo, sin pasos de más y con todo a mano.',
+    puntos: [
+      'Un solo lugar para ventas, compras y stock',
+      'Menos planillas sueltas y menos confusiones',
+      'Tareas claras para cada persona del equipo',
+      'Datos consistentes para que no se pierda información',
+      'Procesos que se repiten bien, todos los días',
+    ],
+  },
+  {
+    emoji: '📈',
+    titulo: 'Reportes e Inteligencia',
+    descripcion: 'Te damos claridad para decidir: ver qué pasa, por qué pasa y qué conviene hacer.',
+    puntos: [
+      'Paneles simples con lo que necesitás mirar',
+      'Márgenes, productos y clientes que más rinden',
+      'Alertas cuando algo se sale de control',
+      'Comparativos mensuales sin trabajo extra',
+      'Informes listos para compartir o imprimir',
+    ],
+  },
+];
+---
+
+<section class="py-20 sm:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14 max-w-3xl mx-auto">
+      <h2 class="reveal text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+        Transformamos tu Excel en un <span class="text-brand-500">Sistema de Gestión</span>
+      </h2>
+      <p class="reveal section-subheading !mb-0">
+        No tocamos tu archivo actual. Armamos un sistema nuevo, claro y ordenado, pensado para el día a día real de un negocio.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {areas.map((area, i) => (
+        <div class={`reveal${i === 0 ? '-left' : '-right'} card-elevated p-8`}>
+          <div class="text-3xl mb-4">{area.emoji}</div>
+          <h3 class="text-xl font-bold text-slate-800 mb-2">{area.titulo}</h3>
+          <p class="text-slate-500 text-sm mb-6">{area.descripcion}</p>
+          <ul class="space-y-3">
+            {area.puntos.map((punto) => (
+              <li class="flex items-start gap-3 text-sm text-slate-600">
+                <svg class="w-5 h-5 text-brand-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                {punto}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

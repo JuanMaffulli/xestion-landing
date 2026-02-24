@@ -1,0 +1,14 @@
+---
+import SistemaDetalle from '@components/SistemaDetalle.astro';
+import { SISTEMAS, CAPTURAS_GRAFICA } from '@data/config';
+
+const sistema = SISTEMAS.find(s => s.slug === 'sistema-grafica')!;
+
+const caracteristicas = [
+  { titulo: 'Entrega rápida', descripcion: 'Listo para operar en 3-5 días hábiles con tus datos base y personalización.' },
+  { titulo: 'Ideal para equipos pequeños', descripcion: 'Perfecto para 1-4 personas que trabajan por turnos. Multiusuario opcional.' },
+  { titulo: 'Acompañamiento permanente', descripcion: 'Soporte, mejoras y seguimiento mes a mes. Tu sistema siempre actualizado al 100%.' },
+];
+---
+
+<SistemaDetalle sistema={sistema} capturas={CAPTURAS_GRAFICA} caracteristicas={caracteristicas} />

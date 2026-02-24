@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Sistema para Grafica | Xestion</title>
+    <meta name="description" content="Sistema de gestion en Excel para graficas. Ventas, produccion, caja y cuentas corrientes en un solo archivo.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css?v=2026022109">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Auto-actualizacion - Detecta cambios y recarga automaticamente
+        (function() {
+            const VERSION = '2026022109';
+            const STORED_VERSION = localStorage.getItem('siteVersion');
+            
+            if (STORED_VERSION && STORED_VERSION !== VERSION) {
+                // Nueva version detectada - limpiar cache y recargar
+                localStorage.setItem('siteVersion', VERSION);
+                window.location.reload(true);
+            } else if (!STORED_VERSION) {
+                // Primera visita - guardar version
+                localStorage.setItem('siteVersion', VERSION);
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <section class="hero sistema-hero">
+        <div class="container">
+            <div class="sistema-hero-top">
+                <a class="btn btn-ghost" href="sistemas.html">
+                    <i data-lucide="arrow-left" width="18" height="18"></i>
+                    Volver al catalogo
+                </a>
+                <div class="sistema-badges">
+                    <span class="sistema-badge">
+                        <i data-lucide="cloud" width="16" height="16"></i>
+                        OneDrive compartido
+                    </span>
+                    <span class="sistema-badge">
+                        <i data-lucide="refresh-cw" width="16" height="16"></i>
+                        Pago unico
+                    </span>
+                </div>
+            </div>
+
+            <div class="hero-contenido sistema-hero-contenido sistema-hero-centrado">
+                <h1>Sistema para Grafica</h1>
+                <p class="sistema-descripcion">Un Excel profesional para ordenar ventas, produccion y caja. Listo para usar y con ajustes breves incluidos.</p>
+
+                <!-- Tarjeta de Precio Mejorada -->
+                <div class="sistema-precio-destacado">
+                    <div class="precio-main">
+                        <div class="precio-izquierda">
+                            <div class="precio-tag">Pago unico</div>
+                            <div class="precio-monto">
+                                <span class="moneda">$</span>
+                                <span class="valor">150.000</span>
+                                <span class="divisa">ARS</span>
+                            </div>
+                            <p class="precio-texto">Implementacion completa con entrega lista para usar</p>
+                        </div>
+                        <div class="precio-derecha">
+                            <div class="precio-imagen">
+                                <img src="img/sistemas/grafica/presentacion.png" alt="Sistema para Grafica">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="precio-acompanamiento">
+                        <h4>¿Que significa pago unico?</h4>
+                        <p>Pagas una sola vez y te llevas el sistema completamente configurado para tu negocio. Hacemos la instalacion, dejamos todo funcionando y te acompanamos en la puesta en marcha para que lo empieces a usar sin fricciones.</p>
+                    </div>
+                    
+                    <div class="precio-incluye">
+                        <h4><i data-lucide="package" width="20" height="20"></i> Que incluye el pago unico</h4>
+                        <div class="incluye-grid-2col">
+                            <div class="incluye-bloque">
+                                <div class="incluye-bloque-texto">
+                                    <h5>Puesta en marcha</h5>
+                                    <p>Instalamos y configuramos el sistema completo con tus datos base para que empieces a operar desde el dia uno.</p>
+                                </div>
+                            </div>
+                            <div class="incluye-bloque">
+                                <div class="incluye-bloque-texto">
+                                    <h5>Personalizacion inicial</h5>
+                                    <p>Ajustamos estructura, campos y flujos clave segun tu operacion real para que el sistema te quede comodo.</p>
+                                </div>
+                            </div>
+                            <div class="incluye-bloque">
+                                <div class="incluye-bloque-texto">
+                                    <h5>Capacitacion guiada</h5>
+                                    <p>Te mostramos paso a paso como usarlo vos y tu equipo, con enfoque practico para el trabajo diario.</p>
+                                </div>
+                            </div>
+                            <div class="incluye-bloque">
+                                <div class="incluye-bloque-texto">
+                                    <h5>Soporte de arranque</h5>
+                                    <p>Durante los primeros dias resolvemos dudas operativas para asegurar una implementacion estable.</p>
+                                </div>
+                            </div>
+                            <div class="incluye-bloque">
+                                <div class="incluye-bloque-texto">
+                                    <h5>Documentacion basica</h5>
+                                    <p>Te entregamos una guia simple con el circuito principal para que cualquiera del equipo lo siga.</p>
+                                </div>
+                            </div>
+                            <div class="incluye-bloque">
+                                <div class="incluye-bloque-texto">
+                                    <h5>Base preparada para crecer</h5>
+                                    <p>El sistema queda ordenado y listo para sumar mejoras futuras cuando tu negocio lo necesite.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="precio-nota">
+                        <i data-lucide="info" width="16" height="16"></i>
+                        <span>Mejoras nuevas, modulos extra o cambios estructurales se cotizan aparte segun alcance.</span>
+                    </div>
+                </div>
+
+                <!-- Botones Mejorados -->
+                <div class="sistema-actions-grid">
+                    <a class="btn btn-whatsapp" href="https://wa.me/5491128839719" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        Consultar por WhatsApp
+                    </a>
+                    <a class="btn btn-youtube" href="https://youtube.com" target="_blank">
+                        <i data-lucide="play-circle" width="20" height="20"></i>
+                        Mirar en YouTube
+                    </a>
+                </div>
+
+                <!-- Lista de Caracteristicas Clave - CARRUSEL -->
+                <div class="caracteristicas-carrusel-wrapper">
+                    <h3 class="carrusel-titulo">Caracteristicas clave</h3>
+                    
+                    <div class="mini-carrusel" id="caracteristicasCarrusel">
+                        <button class="mini-nav prev" onclick="cambiarCaracteristica(-1)" aria-label="Anterior">
+                            <i data-lucide="chevron-left" width="24" height="24"></i>
+                        </button>
+
+                        <div class="mini-slides">
+                            <div class="checklist-item active">
+                                <div class="check-content">
+                                    <h4>Entrega rapida</h4>
+                                    <p>Listo para operar en 3-5 dias habiles con tus datos base y personalizacion.</p>
+                                </div>
+                            </div>
+
+                            <div class="checklist-item">
+                                <div class="check-content">
+                                    <h4>Ideal para equipos pequeños</h4>
+                                    <p>Perfecto para 1-4 personas que trabajan por turnos. Multi-usuario opcional.</p>
+                                </div>
+                            </div>
+
+                            <div class="checklist-item">
+                                <div class="check-content">
+                                    <h4>Acompanamiento permanente</h4>
+                                    <p>Soporte, mejoras y seguimiento mes a mes. Tu sistema siempre actualizado y funcionando al 100%.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="mini-nav next" onclick="cambiarCaracteristica(1)" aria-label="Siguiente">
+                            <i data-lucide="chevron-right" width="24" height="24"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="mini-indicadores" id="indicadoresCaracteristicas"></div>
+                </div>
+
+                <!-- Disponibilidad y Requisitos - CARRUSEL -->
+                <div class="disponibilidad-carrusel-wrapper">
+                    <h3 class="carrusel-titulo">Disponibilidad y Requisitos</h3>
+                    
+                    <div class="mini-carrusel" id="disponibilidadCarrusel">
+                        <button class="mini-nav prev" onclick="cambiarDisponibilidad(-1)" aria-label="Anterior">
+                            <i data-lucide="chevron-left" width="24" height="24"></i>
+                        </button>
+
+                        <div class="mini-slides">
+                            <!-- Disponible -->
+                            <div class="disponibilidad-card disponible active">
+                                <div class="disponibilidad-header">
+                                    <i data-lucide="check-circle" width="24" height="24"></i>
+                                    <span class="badge-estado disponible">Disponible</span>
+                                </div>
+                                <h4>Excel para Windows</h4>
+                                <p>Sistema funcional en computadoras con Windows y Excel instalado.</p>
+                                <div class="requisitos-lista">
+                                    <div class="requisito-item">
+                                        <i data-lucide="laptop" width="16" height="16"></i>
+                                        <span>Windows 10 o superior</span>
+                                    </div>
+                                    <div class="requisito-item">
+                                        <i data-lucide="file-spreadsheet" width="16" height="16"></i>
+                                        <span>Microsoft Excel 2016+</span>
+                                    </div>
+                                    <div class="requisito-item">
+                                        <i data-lucide="user" width="16" height="16"></i>
+                                        <span>Uso individual o por turnos</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- OneDrive Compartido -->
+                            <div class="disponibilidad-card compartido">
+                                <div class="disponibilidad-header">
+                                    <i data-lucide="cloud" width="24" height="24"></i>
+                                    <span class="badge-estado compartido">Con Microsoft 365</span>
+                                </div>
+                                <h4>Compartido por OneDrive</h4>
+                                <p>Uso compartido para 1 a 2 usuarios con baja concurrencia y sincronizacion en la nube.</p>
+                                <div class="requisitos-lista">
+                                    <div class="requisito-item">
+                                        <i data-lucide="shield-check" width="16" height="16"></i>
+                                        <span>Microsoft 365 (suscripcion activa)</span>
+                                    </div>
+                                    <div class="requisito-item">
+                                        <i data-lucide="monitor" width="16" height="16"></i>
+                                        <span>1-2 computadoras con poca concurrencia</span>
+                                    </div>
+                                    <div class="requisito-item">
+                                        <i data-lucide="wifi" width="16" height="16"></i>
+                                        <span>Conexion a internet estable</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Versión Nube -->
+                            <div class="disponibilidad-card proximamente">
+                                <div class="disponibilidad-header">
+                                    <i data-lucide="clock" width="24" height="24"></i>
+                                    <span class="badge-estado proximamente">Proximamente</span>
+                                </div>
+                                <h4>Version Nube</h4>
+                                <p>Sistema en servidor con acceso simultaneo real para equipos grandes.</p>
+                                <div class="requisitos-lista">
+                                    <div class="requisito-item">
+                                        <i data-lucide="users-2" width="16" height="16"></i>
+                                        <span>5+ usuarios simultaneos</span>
+                                    </div>
+                                    <div class="requisito-item">
+                                        <i data-lucide="database" width="16" height="16"></i>
+                                        <span>Base de datos centralizada</span>
+                                    </div>
+                                    <div class="requisito-item">
+                                        <i data-lucide="globe" width="16" height="16"></i>
+                                        <span>Acceso desde cualquier lugar</span>
+                                    </div>
+                                </div>
+                                <div class="proximamente-tag">
+                                    <i data-lucide="rocket" width="16" height="16"></i>
+                                    En desarrollo - Consultar fecha estimada
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="mini-nav next" onclick="cambiarDisponibilidad(1)" aria-label="Siguiente">
+                            <i data-lucide="chevron-right" width="24" height="24"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="mini-indicadores" id="indicadoresDisponibilidad"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sistema-galeria">
+        <div class="container">
+            <h2>Capturas del Sistema</h2>
+            <p class="subtitulo">Explora visualmente todos los modulos y pantallas del sistema de gestion.</p>
+
+            <!-- Carrusel Grande con Lightbox -->
+            <div class="carrusel-capturas">
+                
+                <button class="carrusel-nav prev" onclick="cambiarCaptura(-1)" aria-label="Anterior">
+                    <i data-lucide="chevron-left" width="32" height="32"></i>
+                </button>
+
+                <div class="carrusel-contenedor">
+                    
+                    <!-- Captura 1: Nueva Venta -->
+                    <div class="captura-slide active">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/venta-nueva.png" alt="Modulo Nueva Venta">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="shopping-cart" width="24" height="24"></i>
+                                </div>
+                                <h3>Nueva Venta / Pedido</h3>
+                            </div>
+                            <p>Formulario para crear nuevas ventas y pedidos. Seleccion de cliente, productos, calculo automatico de totales, descuentos y gestion de estados.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 2: Historial de Ventas -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/venta-historial.png" alt="Historial de Ventas">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="list" width="24" height="24"></i>
+                                </div>
+                                <h3>Historial de Ventas</h3>
+                            </div>
+                            <p>Lista completa de todas las ventas realizadas con filtros por fecha, cliente, estado y moneda. Exportacion y busqueda avanzada incluida.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 3: Gestion de Clientes -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/cliente-lista.png" alt="Gestion de Clientes">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="users" width="24" height="24"></i>
+                                </div>
+                                <h3>Gestion de Clientes</h3>
+                            </div>
+                            <p>ABM completo de clientes con datos de contacto, condicion fiscal, localidad y estado. Busqueda rapida por nombre y filtros.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 4: Cuenta Corriente Clientes -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/cliente-cuenta-corriente.png" alt="Cuenta Corriente Clientes">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="credit-card" width="24" height="24"></i>
+                                </div>
+                                <h3>Cuenta Corriente de Clientes</h3>
+                            </div>
+                            <p>Seguimiento detallado de cuenta corriente por cliente con movimientos, cobros, saldos y vencimientos. Alertas de deuda incluidas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 5: Catalogo de Productos -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/producto-lista.png" alt="Catalogo de Productos">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="package" width="24" height="24"></i>
+                                </div>
+                                <h3>Catalogo de Productos</h3>
+                            </div>
+                            <p>Gestion completa de productos con precios, costos, categorias, monedas y tipos de precio. Filtros por categoria y busqueda avanzada.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 6: Control de Caja -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/caja-movimientos.png" alt="Control de Caja">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="wallet" width="24" height="24"></i>
+                                </div>
+                                <h3>Control de Caja y Movimientos</h3>
+                            </div>
+                            <p>Registro de ingresos y egresos diarios con saldos actualizados por moneda. Incluye transferencias internas entre cuentas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 7: Presupuestos y Cotizaciones -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/cotizacion-historial.png" alt="Presupuestos">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="file-text" width="24" height="24"></i>
+                                </div>
+                                <h3>Presupuestos y Cotizaciones</h3>
+                            </div>
+                            <p>Historial de presupuestos realizados con seguimiento de estado. Conversion rapida de cotizacion a venta con un clic.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 8: Historial de Compras -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/compra-historial.png" alt="Historial de Compras">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="shopping-bag" width="24" height="24"></i>
+                                </div>
+                                <h3>Historial de Compras</h3>
+                            </div>
+                            <p>Lista de todas las compras realizadas a proveedores con filtros por fecha, proveedor y estado. Control de pagos pendientes.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 9: Gestion de Proveedores -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/proveedor-lista.png" alt="Gestion de Proveedores">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="truck" width="24" height="24"></i>
+                                </div>
+                                <h3>Gestion de Proveedores</h3>
+                            </div>
+                            <p>ABM de proveedores con datos de contacto, condicion fiscal y estado. Busqueda y filtros para gestion rapida.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 10: Cuenta Corriente Proveedores -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/proveedor-cuenta-corriente.png" alt="Cuenta Corriente Proveedores">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="receipt" width="24" height="24"></i>
+                                </div>
+                                <h3>Cuenta Corriente de Proveedores</h3>
+                            </div>
+                            <p>Seguimiento de deuda con proveedores, pagos realizados, compras pendientes y saldos. Alertas de vencimientos.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 11: Historial de Gastos -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/gasto-historial.png" alt="Historial de Gastos">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="dollar-sign" width="24" height="24"></i>
+                                </div>
+                                <h3>Historial de Gastos</h3>
+                            </div>
+                            <p>Registro detallado de gastos operativos con categorias, cuentas y fechas. Reportes de gastos por categoria y periodo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 12: Gestion de Tareas/Produccion -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/tarea-lista.png" alt="Gestion de Tareas">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="clipboard-check" width="24" height="24"></i>
+                                </div>
+                                <h3>Gestion de Tareas y Produccion</h3>
+                            </div>
+                            <p>Control de tareas de produccion con asignacion de personal, fechas, estados y seguimiento. Ideal para workflow de produccion.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 13: Gestion de Personal -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/personal-lista.png" alt="Gestion de Personal">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="users-2" width="24" height="24"></i>
+                                </div>
+                                <h3>Gestion de Personal</h3>
+                            </div>
+                            <p>ABM de empleados con departamentos, puestos, sueldos y pagos. Control de personal activo e inactivo.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 14: Lista de Insumos -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/insumo-lista.png" alt="Lista de Insumos">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="box" width="24" height="24"></i>
+                                </div>
+                                <h3>Lista de Insumos</h3>
+                            </div>
+                            <p>Catalogo de insumos y materiales con precios, unidades de medida y categorias. Vinculacion con productos terminados.</p>
+                        </div>
+                    </div>
+
+                    <!-- Captura 15: Reportes Personalizados -->
+                    <div class="captura-slide">
+                        <div class="captura-imagen-grande" onclick="abrirLightbox(this)">
+                            <img src="img/sistemas/grafica/reporte.png" alt="Reportes Personalizados">
+                        </div>
+                        <div class="captura-descripcion">
+                            <div class="captura-header">
+                                <div class="captura-icono">
+                                    <i data-lucide="bar-chart-3" width="24" height="24"></i>
+                                </div>
+                                <h3>Reportes Personalizados</h3>
+                            </div>
+                            <p>Analisis de rentabilidad mensual y anual, productos mas vendidos, margenes de ganancia y estadisticas clave. Reportes totalmente personalizables segun tus necesidades.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carrusel-nav next" onclick="cambiarCaptura(1)" aria-label="Siguiente">
+                    <i data-lucide="chevron-right" width="32" height="32"></i>
+                </button>
+
+            </div>
+
+            <!-- Indicadores de progreso -->
+            <div class="carrusel-indicadores" id="indicadores"></div>
+
+            <p class="sistema-nota-capturas">
+                <i data-lucide="info" width="18" height="18"></i>
+                Hace clic en las imagenes para verlas en tamaño completo. Usa las flechas o desliza para navegar.
+            </p>
+        </div>
+    </section>
+
+    <section class="catalogo-sistemas">
+        <div class="container">
+            <h2>Modulos principales</h2>
+            <p class="subtitulo">Lo esencial para una grafica: ventas, produccion, compras y control de caja.</p>
+
+            <div class="modulos-grid">
+                <div class="modulo-card">
+                    <div class="modulo-icono">
+                        <i data-lucide="shopping-cart" width="24" height="24"></i>
+                    </div>
+                    <h4>Ventas y pedidos</h4>
+                    <p>Alta de pedidos, productos y seguimiento del estado hasta la entrega.</p>
+                </div>
+                <div class="modulo-card">
+                    <div class="modulo-icono">
+                        <i data-lucide="file-text" width="24" height="24"></i>
+                    </div>
+                    <h4>Presupuestos y cotizaciones</h4>
+                    <p>Arma presupuestos rapidos y guarda historicos para seguimiento.</p>
+                </div>
+                <div class="modulo-card">
+                    <div class="modulo-icono">
+                        <i data-lucide="package" width="24" height="24"></i>
+                    </div>
+                    <h4>Produccion</h4>
+                    <p>Control de tareas, avance y tiempos para ordenes en proceso.</p>
+                </div>
+                <div class="modulo-card">
+                    <div class="modulo-icono">
+                        <i data-lucide="user-check" width="24" height="24"></i>
+                    </div>
+                    <h4>Clientes y cuentas corrientes</h4>
+                    <p>Registro de saldos, cobros y vencimientos por cliente.</p>
+                </div>
+                <div class="modulo-card">
+                    <div class="modulo-icono">
+                        <i data-lucide="truck" width="24" height="24"></i>
+                    </div>
+                    <h4>Proveedores y compras</h4>
+                    <p>Compras de insumos, pagos y cuenta corriente de proveedores.</p>
+                </div>
+                <div class="modulo-card">
+                    <div class="modulo-icono">
+                        <i data-lucide="box" width="24" height="24"></i>
+                    </div>
+                    <h4>Productos e insumos</h4>
+                    <p>Catalogo, costos, categorias y relacion insumo-producto.</p>
+                </div>
+                <div class="modulo-card">
+                    <div class="modulo-icono">
+                        <i data-lucide="wallet" width="24" height="24"></i>
+                    </div>
+                    <h4>Caja y movimientos</h4>
+                    <p>Ingresos, egresos, transferencias internas y control diario.</p>
+                </div>
+                <div class="modulo-card">
+                    <div class="modulo-icono">
+                        <i data-lucide="receipt" width="24" height="24"></i>
+                    </div>
+                    <h4>Gastos y categorias</h4>
+                    <p>Registro de gastos con clasificacion para ver en que se va el dinero.</p>
+                </div>
+                <div class="modulo-card">
+                    <div class="modulo-icono">
+                        <i data-lucide="clipboard-list" width="24" height="24"></i>
+                    </div>
+                    <h4>Remitos y entregas</h4>
+                    <p>Documentacion basica de entregas para orden y trazabilidad.</p>
+                </div>
+                <div class="modulo-card">
+                    <div class="modulo-icono">
+                        <i data-lucide="users-2" width="24" height="24"></i>
+                    </div>
+                    <h4>Personal y pagos</h4>
+                    <p>Control simple de sueldos y pagos al equipo.</p>
+                </div>
+                <div class="modulo-card">
+                    <div class="modulo-icono">
+                        <i data-lucide="bar-chart-3" width="24" height="24"></i>
+                    </div>
+                    <h4>Reportes clave</h4>
+                    <p>Resumen de ventas, costos y rentabilidad por periodo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solucion">
+        <div class="container">
+            <h2>Beneficios del sistema</h2>
+            <p class="subtitulo">Orden, control y decisiones mas claras desde el primer mes.</p>
+
+            <div class="beneficios-grid">
+                <div class="beneficio-item">
+                    <i data-lucide="check-circle" width="20" height="20"></i>
+                    <div>
+                        <h4>Todo en un solo archivo</h4>
+                        <p>Se termina el desorden de planillas sueltas y datos duplicados.</p>
+                    </div>
+                </div>
+                <div class="beneficio-item">
+                    <i data-lucide="check-circle" width="20" height="20"></i>
+                    <div>
+                        <h4>Mas control de caja</h4>
+                        <p>Ves ingresos, egresos y movimientos con claridad diaria.</p>
+                    </div>
+                </div>
+                <div class="beneficio-item">
+                    <i data-lucide="check-circle" width="20" height="20"></i>
+                    <div>
+                        <h4>Costos y rentabilidad</h4>
+                        <p>Entendes donde estas ganando y donde se te va la plata.</p>
+                    </div>
+                </div>
+                <div class="beneficio-item">
+                    <i data-lucide="check-circle" width="20" height="20"></i>
+                    <div>
+                        <h4>Seguimiento de pedidos</h4>
+                        <p>Sabes que esta en produccion, que esta listo y que falta entregar.</p>
+                    </div>
+                </div>
+                <div class="beneficio-item">
+                    <i data-lucide="check-circle" width="20" height="20"></i>
+                    <div>
+                        <h4>Trabajo con especialistas</h4>
+                        <p>Desarrollo y mejoras hechas por profesionales en Excel para negocios reales.</p>
+                    </div>
+                </div>
+                <div class="beneficio-item">
+                    <i data-lucide="check-circle" width="20" height="20"></i>
+                    <div>
+                        <h4>Asesoramiento claro</h4>
+                        <p>No estas solo: te guiamos para implementar y sostener el sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <h2>Listo para ordenar tu grafica</h2>
+            <p>Escribinos y te mostramos el sistema en detalle. Si hace falta, se ajusta a tu forma de trabajar.</p>
+            <div class="botones-grupo">
+                <a href="https://wa.me/5491128839719" class="btn btn-whatsapp" target="_blank">
+                    <i data-lucide="message-circle" width="18" height="18"></i>
+                    Hablar por WhatsApp
+                </a>
+                <a href="sistemas.html" class="btn btn-secundario">
+                    <i data-lucide="grid" width="18" height="18"></i>
+                    Volver al catalogo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="img/logo2.png" alt="Xestion" class="logo-footer">
+            <p>© 2026 Xestion - Sistemas de Gestion sobre Excel</p>
+            <p style="margin-top: 10px;">Argentina | Latinoamerica</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox para ver imagenes en grande -->
+    <div class="lightbox" id="lightbox" onclick="cerrarLightbox()">
+        <button class="lightbox-close" onclick="cerrarLightbox()">✕</button>
+        <img src="" alt="Imagen ampliada" id="lightbox-img">
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // === CARRUSEL DE CAPTURAS ===
+        let capturaActual = 0;
+        const slides = document.querySelectorAll('.captura-slide');
+        const totalCapturas = slides.length;
+        
+        // Crear indicadores
+        const indicadoresContainer = document.getElementById('indicadores');
+        for (let i = 0; i < totalCapturas; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'indicador' + (i === 0 ? ' active' : '');
+            dot.onclick = () => irACaptura(i);
+            indicadoresContainer.appendChild(dot);
+        }
+
+        function cambiarCaptura(direccion) {
+            slides[capturaActual].classList.remove('active');
+            document.querySelectorAll('#indicadores .indicador')[capturaActual].classList.remove('active');
+            
+            capturaActual += direccion;
+            
+            if (capturaActual >= totalCapturas) capturaActual = 0;
+            if (capturaActual < 0) capturaActual = totalCapturas - 1;
+            
+            slides[capturaActual].classList.add('active');
+            document.querySelectorAll('#indicadores .indicador')[capturaActual].classList.add('active');
+            
+            lucide.createIcons();
+            reiniciarAutoCapturas();
+        }
+
+        function irACaptura(index) {
+            slides[capturaActual].classList.remove('active');
+            document.querySelectorAll('#indicadores .indicador')[capturaActual].classList.remove('active');
+            
+            capturaActual = index;
+            
+            slides[capturaActual].classList.add('active');
+            document.querySelectorAll('#indicadores .indicador')[capturaActual].classList.add('active');
+            
+            lucide.createIcons();
+            reiniciarAutoCapturas();
+        }
+
+        // Soporte para swipe en móvil
+        let touchStartX = 0;
+        let touchStartY = 0;
+        let touchEndX = 0;
+        let touchEndY = 0;
+        let isSwipingCapturas = false;
+        let autoCapturasInterval = null;
+        const SWIPE_THRESHOLD = 45;
+        const VERTICAL_TOLERANCE = 70;
+        const carruselContainer = document.querySelector('.carrusel-contenedor');
+
+        function reiniciarAutoCapturas() {
+            if (autoCapturasInterval) clearInterval(autoCapturasInterval);
+            autoCapturasInterval = setInterval(() => cambiarCaptura(1), 4500);
+        }
+
+        function pausarAutoCapturas() {
+            if (autoCapturasInterval) clearInterval(autoCapturasInterval);
+        }
+        
+        carruselContainer.addEventListener('touchstart', e => {
+            touchStartX = e.changedTouches[0].screenX;
+            touchStartY = e.changedTouches[0].screenY;
+            touchEndX = touchStartX;
+            touchEndY = touchStartY;
+            isSwipingCapturas = false;
+            pausarAutoCapturas();
+        }, { passive: true });
+
+        carruselContainer.addEventListener('touchmove', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+
+            if (Math.abs(deltaX) > 10 && Math.abs(deltaX) > Math.abs(deltaY)) {
+                isSwipingCapturas = true;
+                e.preventDefault();
+            }
+        }, { passive: false });
+        
+        carruselContainer.addEventListener('touchend', e => {
+            touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
+            handleSwipe();
+            reiniciarAutoCapturas();
+            setTimeout(() => { isSwipingCapturas = false; }, 80);
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const deltaX = touchEndX - touchStartX;
+            const deltaY = touchEndY - touchStartY;
+
+            if (Math.abs(deltaY) > VERTICAL_TOLERANCE) return;
+            if (deltaX < -SWIPE_THRESHOLD) cambiarCaptura(1);
+            if (deltaX > SWIPE_THRESHOLD) cambiarCaptura(-1);
+        }
+
+        carruselContainer.addEventListener('mouseenter', pausarAutoCapturas);
+        carruselContainer.addEventListener('mouseleave', reiniciarAutoCapturas);
+        reiniciarAutoCapturas();
+
+        // === CARRUSEL DE CARACTERÍSTICAS ===
+        let caracteristicaActual = 0;
+        const caracteristicasSlides = document.querySelectorAll('#caracteristicasCarrusel .checklist-item');
+        const totalCaracteristicas = caracteristicasSlides.length;
+        
+        const indicadoresCaract = document.getElementById('indicadoresCaracteristicas');
+        for (let i = 0; i < totalCaracteristicas; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'indicador' + (i === 0 ? ' active' : '');
+            dot.onclick = () => irACaracteristica(i);
+            indicadoresCaract.appendChild(dot);
+        }
+
+        function cambiarCaracteristica(direccion) {
+            caracteristicasSlides[caracteristicaActual].classList.remove('active');
+            document.querySelectorAll('#indicadoresCaracteristicas .indicador')[caracteristicaActual].classList.remove('active');
+            
+            caracteristicaActual += direccion;
+            
+            if (caracteristicaActual >= totalCaracteristicas) caracteristicaActual = 0;
+            if (caracteristicaActual < 0) caracteristicaActual = totalCaracteristicas - 1;
+            
+            caracteristicasSlides[caracteristicaActual].classList.add('active');
+            document.querySelectorAll('#indicadoresCaracteristicas .indicador')[caracteristicaActual].classList.add('active');
+            
+            lucide.createIcons();
+        }
+
+        function irACaracteristica(index) {
+            caracteristicasSlides[caracteristicaActual].classList.remove('active');
+            document.querySelectorAll('#indicadoresCaracteristicas .indicador')[caracteristicaActual].classList.remove('active');
+            
+            caracteristicaActual = index;
+            
+            caracteristicasSlides[caracteristicaActual].classList.add('active');
+            document.querySelectorAll('#indicadoresCaracteristicas .indicador')[caracteristicaActual].classList.add('active');
+            
+            lucide.createIcons();
+        }
+
+        // === CARRUSEL DE DISPONIBILIDAD ===
+        let disponibilidadActual = 0;
+        const disponibilidadSlides = document.querySelectorAll('#disponibilidadCarrusel .disponibilidad-card');
+        const totalDisponibilidad = disponibilidadSlides.length;
+        
+        const indicadoresDisp = document.getElementById('indicadoresDisponibilidad');
+        for (let i = 0; i < totalDisponibilidad; i++) {
+            const dot = document.createElement('span');
+            dot.className = 'indicador' + (i === 0 ? ' active' : '');
+            dot.onclick = () => irADisponibilidad(i);
+            indicadoresDisp.appendChild(dot);
+        }
+
+        function cambiarDisponibilidad(direccion) {
+            disponibilidadSlides[disponibilidadActual].classList.remove('active');
+            document.querySelectorAll('#indicadoresDisponibilidad .indicador')[disponibilidadActual].classList.remove('active');
+            
+            disponibilidadActual += direccion;
+            
+            if (disponibilidadActual >= totalDisponibilidad) disponibilidadActual = 0;
+            if (disponibilidadActual < 0) disponibilidadActual = totalDisponibilidad - 1;
+            
+            disponibilidadSlides[disponibilidadActual].classList.add('active');
+            document.querySelectorAll('#indicadoresDisponibilidad .indicador')[disponibilidadActual].classList.add('active');
+            
+            lucide.createIcons();
+        }
+
+        function irADisponibilidad(index) {
+            disponibilidadSlides[disponibilidadActual].classList.remove('active');
+            document.querySelectorAll('#indicadoresDisponibilidad .indicador')[disponibilidadActual].classList.remove('active');
+            
+            disponibilidadActual = index;
+            
+            disponibilidadSlides[disponibilidadActual].classList.add('active');
+            document.querySelectorAll('#indicadoresDisponibilidad .indicador')[disponibilidadActual].classList.add('active');
+            
+            lucide.createIcons();
+        }
+
+        // === SOPORTE TÁCTIL PARA MINI-CARRUSELES ===
+        // Soporte swipe para carrusel de características
+        let touchStartXCaract = 0;
+        let touchEndXCaract = 0;
+        const caracteristicasContainer = document.getElementById('caracteristicasCarrusel');
+        
+        caracteristicasContainer.addEventListener('touchstart', e => {
+            touchStartXCaract = e.changedTouches[0].screenX;
+        });
+        
+        caracteristicasContainer.addEventListener('touchend', e => {
+            touchEndXCaract = e.changedTouches[0].screenX;
+            if (touchEndXCaract < touchStartXCaract - 50) cambiarCaracteristica(1);
+            if (touchEndXCaract > touchStartXCaract + 50) cambiarCaracteristica(-1);
+        });
+
+        // Soporte swipe para carrusel de disponibilidad
+        let touchStartXDisp = 0;
+        let touchEndXDisp = 0;
+        const disponibilidadContainer = document.getElementById('disponibilidadCarrusel');
+        
+        disponibilidadContainer.addEventListener('touchstart', e => {
+            touchStartXDisp = e.changedTouches[0].screenX;
+        });
+        
+        disponibilidadContainer.addEventListener('touchend', e => {
+            touchEndXDisp = e.changedTouches[0].screenX;
+            if (touchEndXDisp < touchStartXDisp - 50) cambiarDisponibilidad(1);
+            if (touchEndXDisp > touchStartXDisp + 50) cambiarDisponibilidad(-1);
+        });
+
+        // === LIGHTBOX ===
+        function abrirLightbox(elemento) {
+            if (isSwipingCapturas) return;
+            const imgSrc = elemento.querySelector('img').src;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = imgSrc;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function cerrarLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cerrar lightbox con Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') cerrarLightbox();
+        });
+
+        // Navegación en lightbox con flechas
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('lightbox');
+            if (lightbox.classList.contains('active')) {
+                if (e.key === 'ArrowLeft') cambiarCaptura(-1);
+                if (e.key === 'ArrowRight') cambiarCaptura(1);
+            }
+        });
+    </script>
+</body>
+</html>

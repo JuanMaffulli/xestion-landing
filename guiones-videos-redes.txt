@@ -1,0 +1,661 @@
+================================================================================
+  XESTION - GUIONES DE VIDEOS PROMOCIONALES PARA REDES SOCIALES
+  Fecha: Febrero 2026
+  Duración: 60-90 segundos cada uno
+================================================================================
+
+Nota general: Todos los videos están pensados para grabar con cámara al frente,
+hablando directo, sin filtros raros. Que se sienta real, cercano, como si le
+estuvieras hablando a un amigo que tiene un negocio y no sabe cómo ordenarse.
+Podés usar capturas de pantalla del sistema como recurso visual mientras hablás.
+
+
+================================================================================
+VIDEO 1 - SISTEMA PARA PASTELERÍA
+"La torta que te costó plata y no lo sabías"
+Duración estimada: 70 segundos
+Formato: Reel / TikTok / Short
+================================================================================
+
+[HOOK - Primeros 3 segundos]
+(Mirando a cámara, tono directo)
+"¿Cuánto te cuesta hacer una torta de tres pisos?"
+
+(Pausa de 1 segundo)
+
+"Si tardaste más de 2 segundos en responder... estás vendiendo a ciegas."
+
+---
+
+[DESARROLLO - Segundos 4 a 45]
+(Tono conversacional, como contando algo que viste mil veces)
+
+"Yo trabajo con pastelerías todos los días y siempre pasa lo mismo:
+
+Tienen las recetas en la cabeza, o en un cuadernito, o en las notas del celular.
+Los precios los ponen 'más o menos, por lo que cobran las demás'.
+Y cuando les preguntás cuánto ganaron este mes... silencio.
+
+No es que no les importe. Es que no tienen dónde verlo.
+
+Pensalo así: vos comprás harina, manteca, huevos, crema...
+Esos precios cambian todo el tiempo.
+Si no tenés un sistema que recalcule el costo de cada receta
+cuando sube el precio de un insumo,
+estás absorbiendo pérdidas sin darte cuenta.
+
+Y lo peor no es eso.
+Lo peor es que laburás 12 horas por día
+pensando que te está yendo bien...
+y a fin de mes no cierra."
+
+---
+
+[SOLUCIÓN - Segundos 45 a 60]
+(Mostrar capturas del sistema brevemente mientras hablás)
+
+"Por eso armamos un sistema en Excel que hace todo esto por vos:
+Cargás tus recetas una vez, con los insumos y las cantidades.
+Cuando actualizás un precio de proveedor,
+todos tus costos se recalculan solos.
+
+Ventas, pedidos, caja, stock de insumos, cuentas corrientes...
+todo en un solo archivo que ya está armado y listo para usar."
+
+---
+
+[CIERRE - Segundos 60 a 70]
+(Tono cercano, mirando a cámara)
+
+"No necesitás un sistema de la NASA.
+Necesitás saber cuánto te cuesta lo que hacés,
+cuánto ganás con cada torta,
+y tener todo ordenado para que tu negocio crezca en serio.
+
+Escribinos y te lo mostramos."
+
+(Texto en pantalla: Xestion - Sistemas de Gestión sobre Excel + WhatsApp)
+
+
+================================================================================
+VIDEO 2 - SISTEMA PARA PASTELERÍA
+"El cuaderno de pedidos"
+Duración estimada: 65 segundos
+Formato: Reel / TikTok / Short
+================================================================================
+
+[HOOK - Primeros 3 segundos]
+(Mostrando un cuaderno o el celular con notas desordenadas)
+"Este es el sistema de gestión de la mayoría de las pastelerías."
+
+(Pausa)
+
+"Un cuaderno. Notas en el celu. Y la memoria."
+
+---
+
+[DESARROLLO - Segundos 4 a 40]
+
+"Y funciona... hasta que no funciona.
+
+Hasta que te olvidás de un pedido para el sábado.
+Hasta que un cliente te dice 'pero yo te dije de chocolate'
+y vos no tenés dónde verificarlo.
+Hasta que producís un lote entero y no sabés si lo cobraste.
+
+Y no es que seas desorganizada.
+Es que estás haciendo malabares con 50 cosas a la vez:
+producción, delivery, compras, cobros, Instagram, la vida...
+
+El problema es que cada cosa está en un lugar distinto.
+Y cuando todo está separado, la información se pierde."
+
+---
+
+[SOLUCIÓN - Segundos 40 a 55]
+(Mostrar pantallas: pedidos, estado de pago, calendario)
+
+"Imaginate abrir UN solo archivo y tener:
+Todos los pedidos del mes con fecha de entrega,
+saber quién pagó y quién no,
+qué tenés que producir hoy,
+qué insumos te faltan,
+y cuánto te entró en caja esta semana.
+
+Eso es lo que hacemos. Un sistema en Excel,
+armado para pastelería, con TODO integrado."
+
+---
+
+[CIERRE - Segundos 55 a 65]
+
+"Seguir con el cuaderno no te hace más artesanal.
+Te hace perder plata y tiempo.
+
+Escribinos, te mostramos cómo funciona en 5 minutos."
+
+(Texto en pantalla: link de WhatsApp)
+
+
+================================================================================
+VIDEO 3 - SISTEMA PARA PASTELERÍA
+"La pregunta incómoda"
+Duración estimada: 60 segundos
+Formato: Reel / TikTok / Short
+================================================================================
+
+[HOOK - Primeros 3 segundos]
+(Tono serio pero amigable)
+"Te voy a hacer una pregunta que incomoda a todas las pastelerías."
+
+(Pausa)
+
+"¿Cuánto ganaste el mes pasado? El número exacto."
+
+---
+
+[DESARROLLO - Segundos 4 a 35]
+
+"No cuánto facturaste. No cuánto vendiste.
+Cuánto ganaste. Después de pagar insumos, gas, alquiler,
+packaging, delivery, monotributo... lo que te quedó a vos.
+
+La mayoría no lo sabe. Y no porque no le importe.
+Sino porque no tiene manera de calcularlo rápido.
+
+Porque una cosa es vender 40 tortas en un mes.
+Y otra muy distinta es saber si con esas 40 tortas
+cubriste tus costos y te quedó algo."
+
+---
+
+[SOLUCIÓN - Segundos 35 a 50]
+(Mostrar pantalla de reportes o la pantalla de caja)
+
+"Nuestro sistema te muestra eso:
+Cuánto entró, cuánto salió, cuánto ganaste.
+Pero no como un contador, sino como vos necesitás verlo:
+simple, claro, en una pantalla.
+
+Cargás las ventas, las compras, los gastos fijos...
+y el sistema hace la cuenta por vos."
+
+---
+
+[CIERRE - Segundos 50 a 60]
+
+"Un negocio que no mide, no crece.
+Y vos no abriste tu pastelería para sobrevivir.
+La abriste para vivir de lo que amás hacer.
+
+Dale, escribinos."
+
+(Texto en pantalla: WhatsApp + @xestion)
+
+
+================================================================================
+VIDEO 4 - SISTEMA PARA GRÁFICA
+"El presupuesto que se perdió"
+Duración estimada: 75 segundos
+Formato: Reel / TikTok / Short
+================================================================================
+
+[HOOK - Primeros 3 segundos]
+(Mirando a cámara, como contando algo que pasó)
+"Un cliente de una gráfica me dijo algo que me quedó grabado."
+
+(Pausa)
+
+"'Perdí un laburo de 200 lucas porque no encontraba
+el presupuesto que le había mandado hace 3 semanas.'"
+
+---
+
+[DESARROLLO - Segundos 4 a 45]
+
+"Y no es un caso raro. En las gráficas pasa todo el tiempo.
+
+Hacés un presupuesto en Word, lo mandás por WhatsApp,
+el cliente te contesta a los 15 días,
+y vos no tenés ni idea de cuánto le habías pasado,
+qué materiales habías cotizado, ni en qué quedaron.
+
+Después tenés los trabajos en producción:
+¿quién está haciendo qué? ¿Para cuándo es?
+¿El cliente ya pagó la seña? ¿Le debo algo al proveedor?
+
+Todo eso está en tu cabeza.
+O peor: en la cabeza de tu empleado.
+Y cuando tu empleado falta un día, se frena todo.
+
+El tema no es que te falte organización.
+El tema es que no tenés una herramienta
+que junte todo en un solo lugar."
+
+---
+
+[SOLUCIÓN - Segundos 45 a 65]
+(Mostrar capturas: ventas, cotizaciones, producción, caja)
+
+"Lo que armamos es esto:
+Un Excel profesional donde cargás el presupuesto,
+si el cliente acepta lo convertís en venta con un clic,
+ves el estado de producción de cada trabajo,
+controlás la cuenta corriente de cada cliente,
+y sabés exactamente cuánto tenés en caja.
+
+Todo conectado. Un archivo. Nada más."
+
+---
+
+[CIERRE - Segundos 65 a 75]
+
+"Si cada vez que buscás algo en tu gráfica
+sentís que perdés tiempo... es porque lo perdés.
+Y el tiempo en una gráfica es plata.
+
+Hablemos. Te mostramos cómo funciona."
+
+(Texto en pantalla: Xestion + WhatsApp)
+
+
+================================================================================
+VIDEO 5 - SISTEMA PARA GRÁFICA
+"Tu empleado sabe más que vos"
+Duración estimada: 70 segundos
+Formato: Reel / TikTok / Short
+================================================================================
+
+[HOOK - Primeros 3 segundos]
+(Tono provocador pero amigable)
+"Si mañana tu mejor empleado no viene a laburar...
+¿sabés en qué estado está cada trabajo de tu gráfica?"
+
+---
+
+[DESARROLLO - Segundos 4 a 40]
+
+"En muchas gráficas la información no está en el sistema.
+Está en las personas.
+
+'Preguntale a Marcos que él sabe en qué quedamos con ese cliente.'
+'Llamá a Lucía que ella tiene el Excel con los precios.'
+
+Y cuando esas personas no están, vos quedás en bolas.
+No sabés qué trabajos están pendientes,
+cuáles tienen seña, cuáles hay que entregar hoy.
+
+Eso es un negocio que depende de personas, no de procesos.
+Y si depende de personas, es frágil.
+
+No porque tu equipo sea malo.
+Sino porque nunca le diste una herramienta
+donde dejar registrado lo que hacen."
+
+---
+
+[SOLUCIÓN - Segundos 40 a 60]
+(Mostrar: historial de ventas, tareas, cuenta corriente)
+
+"Nuestro sistema es esa herramienta.
+
+Cada venta queda registrada con cliente, monto y estado.
+Cada trabajo tiene su etapa de producción visible.
+Cada cobro, cada pago, cada presupuesto: todo queda guardado.
+
+No importa quién esté ese día.
+La información está ahí, para cualquiera que la necesite."
+
+---
+
+[CIERRE - Segundos 60 a 70]
+
+"Tu gráfica no puede depender de la memoria de nadie.
+Ni siquiera de la tuya.
+
+Organizá tu negocio de verdad. Escribinos."
+
+(Texto en pantalla: WhatsApp + Xestion)
+
+
+================================================================================
+VIDEO 6 - SISTEMA PARA GRÁFICA
+"Las cuentas corrientes que nadie controla"
+Duración estimada: 65 segundos
+Formato: Reel / TikTok / Short
+================================================================================
+
+[HOOK - Primeros 3 segundos]
+(Directo a cámara)
+"¿Cuánta plata te deben tus clientes ahora mismo?"
+
+(Pausa)
+
+"Si no podés responder eso en menos de 10 segundos,
+te están debiendo más de lo que pensás."
+
+---
+
+[DESARROLLO - Segundos 4 a 35]
+
+"En las gráficas es re común trabajar con cuenta corriente.
+'Dejá, después me pagás.' 'Te mando la factura la semana que viene.'
+
+El problema es que después... nadie le hace seguimiento.
+
+Y cuando a fin de mes necesitás la plata,
+recién ahí te ponés a buscar: ¿quién me debe?
+Revisás WhatsApp, facturas, transferencias...
+y siempre te queda la duda de si te pagaron o no.
+
+Esa plata que te deben y no cobrás
+no es plata que perdiste. Es peor.
+Es plata que ya gastaste en material, en tiempo, en laburo.
+Y que todavía no volvió."
+
+---
+
+[SOLUCIÓN - Segundos 35 a 55]
+(Mostrar: cuenta corriente de cliente con saldo)
+
+"Nuestro sistema tiene cuenta corriente por cliente.
+Cada venta suma, cada cobro resta.
+El saldo se actualiza solo.
+Y vos sabés, en cualquier momento, quién te debe y cuánto.
+
+Sin buscar. Sin preguntar. Sin perder tiempo."
+
+---
+
+[CIERRE - Segundos 55 a 65]
+
+"Cobrar lo que te deben no es ser pesado.
+Es ser profesional.
+Y para cobrar bien, primero hay que tener el dato.
+
+Escribinos y arrancamos."
+
+(Texto en pantalla: Xestion + link)
+
+
+================================================================================
+VIDEO 7 - SISTEMAS A MEDIDA
+"Probaste todo y nada te sirve"
+Duración estimada: 80 segundos
+Formato: Reel / TikTok / Short
+================================================================================
+
+[HOOK - Primeros 3 segundos]
+(Enumerando con los dedos)
+"SAP, Odoo, Contabilium, una planilla de Google Sheets,
+un Excel que te armó tu contador, una app que encontraste..."
+
+(Pausa)
+
+"¿Y al final qué usás? Un Excel casero con 15 hojas
+que solo vos entendés."
+
+---
+
+[DESARROLLO - Segundos 4 a 45]
+
+"No te juzgo. Es lo que hace el 80% de las PyMEs.
+
+Y no es por falta de voluntad.
+Es porque cada sistema genérico que probaste
+te obligaba a adaptarte a ÉL.
+A cargar datos que no te importan,
+a hacer pasos que no tienen sentido para tu negocio,
+a pagar una suscripción por funciones que jamás usás.
+
+Y lo peor: nadie te ayudó a implementarlo.
+Te dieron un login, un videíto de YouTube y chau.
+'Arreglate.'
+
+Entonces volviste a tu Excel. Porque es tuyo.
+Porque lo entendés. Porque es flexible.
+
+¿Y sabés qué? Tenés razón.
+Excel ES la herramienta correcta para vos.
+Lo que estaba mal no era Excel.
+Era que estaba desorganizado."
+
+---
+
+[SOLUCIÓN - Segundos 45 a 70]
+(Mostrar capturas variadas de sistemas implementados)
+
+"Lo que hacemos nosotros es diferente:
+No te vendemos un software genérico.
+Nos sentamos con vos, entendemos tu negocio,
+y te armamos un sistema en Excel hecho 100% a tu medida.
+
+Con las pantallas que vos necesitás.
+Con los datos que vos usás.
+Con la lógica de TU negocio, no la de otro.
+
+Ventas, compras, stock, caja, reportes, lo que necesites.
+Y te acompañamos: instalación, capacitación,
+soporte, ajustes... no te dejamos solo."
+
+---
+
+[CIERRE - Segundos 70 a 80]
+
+"Si ya probaste de todo y nada te sirvió,
+no es que seas difícil.
+Es que nadie se tomó el tiempo de entender tu negocio.
+
+Nosotros sí. Hablemos."
+
+(Texto en pantalla: Xestion - Sistemas de Gestión sobre Excel)
+
+
+================================================================================
+VIDEO 8 - SISTEMAS A MEDIDA
+"La planilla Frankenstein"
+Duración estimada: 70 segundos
+Formato: Reel / TikTok / Short
+================================================================================
+
+[HOOK - Primeros 3 segundos]
+(Tono de humor, mostrando gesto de desastre)
+"¿Tenés un Excel con 23 hojas, colores por todos lados,
+fórmulas que si tocás algo se rompe todo,
+y que SOLO VOS sabés cómo funciona?"
+
+(Mirando a cámara)
+"Bienvenido al club."
+
+---
+
+[DESARROLLO - Segundos 4 a 40]
+
+"Te voy a contar cómo se llega a eso:
+
+Arrancás con una planilla simple. Ventas del mes.
+Después le agregás una hoja de gastos.
+Después una de clientes. Después una de stock.
+Después le metés unas fórmulas.
+Después un VLOOKUP que no sabés cómo funciona
+pero que si lo borrás explota todo.
+
+Y así, de a poquito, armaste un monstruo.
+Un monstruo que funciona... a veces.
+Y que si se rompe, no sabés cómo arreglarlo.
+
+¿Te identificás? Le pasa a todos.
+Porque Excel es tan flexible que te deja hacer cualquier cosa.
+Incluyendo cosas que no deberían hacerse."
+
+---
+
+[SOLUCIÓN - Segundos 40 a 60]
+
+"Lo que hacemos es tomar esa idea que vos ya tenés,
+eso que intentaste armar solo,
+y lo reconstruimos de forma profesional.
+
+Limpio, ordenado, con fórmulas sólidas,
+con pantallas fáciles de usar,
+y pensado para que cualquier persona lo pueda operar.
+
+No arrancamos de cero. Arrancamos de lo que vos ya sabés
+que tu negocio necesita. Y lo hacemos bien."
+
+---
+
+[CIERRE - Segundos 60 a 70]
+
+"Tu Excel Frankenstein fue el primer paso.
+Significa que sabés lo que necesitás.
+Ahora dejá que alguien lo arme como corresponde.
+
+Mandanos un mensaje. En 5 minutos te mostramos
+la diferencia."
+
+(Texto en pantalla: WhatsApp + Xestion)
+
+
+================================================================================
+VIDEO 9 - SISTEMAS A MEDIDA
+"Excel no es el problema"
+Duración estimada: 75 segundos
+Formato: Reel / TikTok / Short
+================================================================================
+
+[HOOK - Primeros 3 segundos]
+(Tono firme)
+"Todos te dicen que necesitás dejar Excel.
+Que necesitás un 'sistema de verdad'.
+Que Excel es para cosas simples."
+
+(Pausa, sonrisa)
+
+"Están equivocados."
+
+---
+
+[DESARROLLO - Segundos 4 a 40]
+
+"La realidad es que Excel mueve el mundo.
+No lo digo yo. Lo dicen los números.
+
+El 80% de las empresas del mundo usan Excel
+para algo importante.
+Bancos, fábricas, comercios, hospitales...
+Todos. Excel. Todos los días.
+
+El problema nunca fue Excel.
+El problema es usarlo sin estructura.
+Es tener 15 archivos distintos sin conexión.
+Es copiar y pegar datos entre planillas.
+Es perder media hora buscando un número
+que debería estar a un clic de distancia.
+
+Eso no se resuelve cambiando de herramienta.
+Se resuelve organizando la que ya tenés."
+
+---
+
+[SOLUCIÓN - Segundos 40 a 65]
+
+"Nosotros somos especialistas en eso.
+No hacemos apps. No hacemos software web. No hacemos de todo.
+Hacemos UNA cosa: convertir tu Excel
+en un sistema de gestión profesional.
+
+Con formularios de carga limpios.
+Con reportes que se arman solos.
+Con botones, filtros, alertas.
+Con todo conectado entre sí.
+
+Parece Excel. Funciona como un sistema.
+Y lo mejor: vos ya sabés usarlo."
+
+---
+
+[CIERRE - Segundos 65 a 75]
+
+"No necesitás aprender nada nuevo.
+Necesitás que alguien ordene lo que ya tenés
+y lo lleve al siguiente nivel.
+
+Eso hacemos. Hablemos."
+
+(Texto en pantalla: Xestion + WhatsApp)
+
+
+================================================================================
+  TIPS DE PRODUCCIÓN
+================================================================================
+
+1. GRABACIÓN:
+   - Celular en vertical (9:16) para Reels/TikTok/Shorts
+   - Buena luz natural, fondo limpio o la PC atrás
+   - Hablá mirando a cámara, como si le hablarás a un amigo
+   - No leás el guión literal, usalo como guía y hablá natural
+
+2. CAPTURAS DEL SISTEMA:
+   - Mostralas como B-roll mientras hablás de la solución
+   - No hace falta que se vea todo, que se vea lindo y profesional
+   - Usá las pantallas reales: ventas, caja, recetas, cuenta corriente
+
+3. TEXTOS EN PANTALLA:
+   - Poné subtítulos siempre (mucha gente ve sin audio)
+   - El hook (primeras palabras) ponelo en texto grande y llamativo
+   - Al final siempre: logo Xestion + link WhatsApp + @xestion
+
+4. MÚSICA:
+   - De fondo, bajita, algo motivacional o moderno
+   - No uses música con copyright, usá la biblioteca de Instagram/TikTok
+
+5. PUBLICACIÓN:
+   - Subir a Instagram Reels, TikTok y YouTube Shorts en paralelo
+   - Horarios recomendados: 8-9am, 12-13pm, 20-21pm
+   - Usar hashtags del rubro (#pasteleria #grafica #pyme #excel #gestion)
+
+6. FRECUENCIA SUGERIDA:
+   - 2-3 videos por semana
+   - Alternar entre los 3 rubros (pastelería, gráfica, a medida)
+   - Repetir conceptos con diferentes enfoques, no pasa nada
+
+
+================================================================================
+  IDEAS EXTRA PARA FUTUROS VIDEOS (SIN GUIÓN DESARROLLADO)
+================================================================================
+
+PASTELERÍA:
+- "Lo que Instagram no te muestra de tener una pastelería"
+  (Mostrar el backstage: costos, organización, la realidad vs la foto bonita)
+
+- "Cuántas tortas tenés que vender para cubrir tus gastos fijos"
+  (Usar el concepto de punto de equilibrio de manera simple)
+
+- "Subió la harina: ¿y ahora qué hago con mis precios?"
+  (Cómo el sistema recalcula costos automáticamente)
+
+GRÁFICA:
+- "El cliente que siempre dice 'después te pago'"
+  (Cómo gestionar cuentas corrientes profesionalmente)
+
+- "Cuántos trabajos podés hacer en un mes y no lo sabés"
+  (Planificación de producción y tareas)
+
+- "Tu gráfica crece pero vos laburás más: ¿por qué?"
+  (Falta de sistemas = el dueño hace todo, no delega porque no tiene proceso)
+
+SISTEMAS A MEDIDA:
+- "Lo que nadie te dice de los sistemas de gestión"
+  (Que la mayoría fracasan porque nadie te acompaña en la implementación)
+
+- "Tu negocio es único, ¿por qué tu sistema debería ser genérico?"
+  (Diferencia entre un software de caja y un sistema pensado para vos)
+
+- "¿Por qué cobramos mensualidad?"
+  (Video explicativo del modelo de acompañamiento, transparencia total)
+
+
+================================================================================
+  FIN DEL DOCUMENTO
+================================================================================

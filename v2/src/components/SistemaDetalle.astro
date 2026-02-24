@@ -1,0 +1,278 @@
+---
+import Layout from '@layouts/Layout.astro';
+import CtaFinal from '@components/CtaFinal.astro';
+import { CONTACTO, type SistemaCatalogo, type Captura } from '@data/config';
+
+interface Props {
+  sistema: SistemaCatalogo;
+  capturas: Captura[];
+  caracteristicas: { titulo: string; descripcion: string }[];
+}
+
+const { sistema, capturas, caracteristicas } = Astro.props;
+
+const incluye = [
+  { titulo: 'Puesta en marcha', desc: 'Instalamos y configuramos el sistema completo con tus datos base para que empieces a operar desde el día uno.' },
+  { titulo: 'Personalización inicial', desc: 'Ajustamos estructura, campos y flujos clave según tu operación real para que el sistema te quede cómodo.' },
+  { titulo: 'Capacitación guiada', desc: 'Te mostramos paso a paso cómo usarlo vos y tu equipo, con enfoque práctico para el trabajo diario.' },
+  { titulo: 'Soporte de arranque', desc: 'Durante los primeros días resolvemos dudas operativas para asegurar una implementación estable.' },
+  { titulo: 'Documentación básica', desc: 'Te entregamos una guía simple con el circuito principal para que cualquiera del equipo lo siga.' },
+  { titulo: 'Base preparada para crecer', desc: 'El sistema queda ordenado y listo para sumar mejoras futuras cuando tu negocio lo necesite.' },
+];
+
+const disponibilidad = [
+  {
+    estado: 'Disponible',
+    color: 'emerald',
+    titulo: 'Excel para Windows',
+    desc: 'Sistema funcional en computadoras con Windows y Excel instalado.',
+    requisitos: ['Windows 10 o superior', 'Microsoft Excel 2016+', 'Uso individual o por turnos'],
+  },
+  {
+    estado: 'Con Microsoft 365',
+    color: 'blue',
+    titulo: 'Compartido por OneDrive',
+    desc: 'Uso compartido para 1 a 2 usuarios con baja concurrencia y sincronización en la nube.',
+    requisitos: ['Microsoft 365 (suscripción activa)', '1-2 computadoras con poca concurrencia', 'Conexión a internet estable'],
+  },
+  {
+    estado: 'Próximamente',
+    color: 'amber',
+    titulo: 'Versión Nube',
+    desc: 'Sistema en servidor con acceso simultáneo real para equipos grandes.',
+    requisitos: ['5+ usuarios simultáneos', 'Base de datos centralizada', 'Acceso desde cualquier lugar'],
+  },
+];
+---
+
+<Layout title={`${sistema.nombre} | Xestion`} description={sistema.descripcion}>
+
+  <!-- Hero del sistema -->
+  <section class="pt-28 pb-16 sm:pt-36 sm:pb-20 bg-white relative overflow-hidden">
+    <!-- Background -->
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-brand-50/50 rounded-full blur-3xl"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+
+      <!-- Nav -->
+      <div class="reveal flex items-center justify-between mb-10">
+        <a href="/sistemas" class="btn-ghost text-sm">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+          </svg>
+          Volver al catálogo
+        </a>
+        <div class="flex gap-2">
+          <span class="badge-brand text-xs">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"></path>
+            </svg>
+            OneDrive compartido
+          </span>
+          <span class="badge-neutral text-xs">
+            Pago único
+          </span>
+        </div>
+      </div>
+
+      <!-- Title + description -->
+      <div class="reveal text-center mb-12">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-4">
+          {sistema.nombre}
+        </h1>
+        <p class="text-lg text-slate-500 max-w-xl mx-auto">
+          {sistema.descripcion}
+        </p>
+      </div>
+
+      <!-- Pricing card -->
+      <div class="reveal card-elevated overflow-hidden mb-12">
+        <!-- Price header -->
+        <div class="p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+          <div class="flex-1">
+            <div class="inline-block px-3 py-1 bg-brand-50 text-brand-700 text-xs font-bold rounded-full mb-3">
+              Pago único
+            </div>
+            <div class="flex items-baseline gap-1 mb-2">
+              <span class="text-2xl text-slate-400 font-medium">$</span>
+              <span class="text-5xl font-extrabold text-slate-900">{sistema.precio}</span>
+              <span class="text-lg text-slate-400 font-medium ml-1">{sistema.moneda}</span>
+            </div>
+            <p class="text-sm text-slate-500">Implementación completa con entrega lista para usar</p>
+          </div>
+          <div class="w-40 h-28 sm:w-52 sm:h-36 rounded-xl overflow-hidden bg-slate-100 shadow-md shrink-0">
+            <img src={sistema.imagen} alt={sistema.nombre} class="w-full h-full object-cover" />
+          </div>
+        </div>
+
+        <!-- ¿Qué significa pago único? -->
+        <div class="px-6 sm:px-8 py-5 bg-slate-50 border-t border-slate-100">
+          <h4 class="font-bold text-slate-800 mb-2">¿Qué significa pago único?</h4>
+          <p class="text-sm text-slate-500 leading-relaxed">
+            Pagás una sola vez y te llevás el sistema completamente configurado para tu negocio.
+            Hacemos la instalación, dejamos todo funcionando y te acompañamos en la puesta en marcha.
+          </p>
+        </div>
+
+        <!-- Qué incluye -->
+        <div class="p-6 sm:p-8 border-t border-slate-100">
+          <h4 class="font-bold text-slate-800 mb-5 flex items-center gap-2">
+            <svg class="w-5 h-5 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+            </svg>
+            Qué incluye el pago único
+          </h4>
+          <div class="grid sm:grid-cols-2 gap-5">
+            {incluye.map((item) => (
+              <div class="flex gap-3">
+                <div class="w-2 h-2 mt-2 rounded-full bg-brand-400 shrink-0"></div>
+                <div>
+                  <h5 class="font-semibold text-slate-700 text-sm">{item.titulo}</h5>
+                  <p class="text-xs text-slate-400 leading-relaxed mt-0.5">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Nota -->
+        <div class="px-6 sm:px-8 py-4 bg-amber-50 border-t border-amber-100 flex items-start gap-3">
+          <svg class="w-4 h-4 text-amber-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span class="text-xs text-amber-700">Mejoras nuevas, módulos extra o cambios estructurales se cotizan aparte según alcance.</span>
+        </div>
+      </div>
+
+      <!-- Action buttons -->
+      <div class="reveal flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <a href={CONTACTO.whatsappUrl} target="_blank" rel="noopener" class="btn-whatsapp">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
+          </svg>
+          Consultar por WhatsApp
+        </a>
+        {sistema.youtubeUrl && (
+          <a href={sistema.youtubeUrl} target="_blank" rel="noopener" class="btn-secondary">
+            <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+            </svg>
+            Mirar en YouTube
+          </a>
+        )}
+      </div>
+
+      <!-- Características clave -->
+      <div class="reveal mb-16">
+        <h3 class="text-xl font-bold text-slate-800 text-center mb-8">Características clave</h3>
+        <div class="grid sm:grid-cols-3 gap-5">
+          {caracteristicas.map((c) => (
+            <div class="bg-slate-50 rounded-xl p-5 text-center border border-slate-100 hover:border-brand-200 hover:shadow-md transition-all duration-300">
+              <h4 class="font-bold text-slate-800 mb-2 text-sm">{c.titulo}</h4>
+              <p class="text-xs text-slate-500 leading-relaxed">{c.descripcion}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Disponibilidad -->
+      <div class="reveal mb-16">
+        <h3 class="text-xl font-bold text-slate-800 text-center mb-8">Disponibilidad y Requisitos</h3>
+        <div class="grid sm:grid-cols-3 gap-5">
+          {disponibilidad.map((d) => (
+            <div class={`rounded-xl p-5 border transition-all duration-300 hover:shadow-md ${
+              d.color === 'emerald' ? 'bg-emerald-50/50 border-emerald-200' :
+              d.color === 'blue' ? 'bg-blue-50/50 border-blue-200' :
+              'bg-amber-50/50 border-amber-200'
+            }`}>
+              <div class="flex items-center gap-2 mb-3">
+                <span class={`text-xs font-bold px-2 py-0.5 rounded-full ${
+                  d.color === 'emerald' ? 'bg-emerald-100 text-emerald-700' :
+                  d.color === 'blue' ? 'bg-blue-100 text-blue-700' :
+                  'bg-amber-100 text-amber-700'
+                }`}>{d.estado}</span>
+              </div>
+              <h4 class="font-bold text-slate-800 text-sm mb-1">{d.titulo}</h4>
+              <p class="text-xs text-slate-500 mb-3">{d.desc}</p>
+              <ul class="space-y-1.5">
+                {d.requisitos.map((r) => (
+                  <li class="flex items-center gap-2 text-xs text-slate-600">
+                    <svg class="w-3.5 h-3.5 text-slate-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    {r}
+                  </li>
+                ))}
+              </ul>
+              {d.color === 'amber' && (
+                <div class="mt-3 flex items-center gap-1.5 text-xs text-amber-600 font-medium">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                  En desarrollo - Consultar fecha estimada
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Capturas del sistema -->
+  {capturas.length > 0 && (
+    <section class="py-16 sm:py-20 bg-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-12">
+          <h2 class="reveal text-3xl font-bold text-slate-900 mb-3">Capturas del Sistema</h2>
+          <p class="reveal text-slate-500">Explorá visualmente los módulos y pantallas del sistema.</p>
+        </div>
+
+        <div class="reveal-stagger grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          {capturas.map((cap) => (
+            <div class="card overflow-hidden cursor-pointer group" data-lightbox={cap.imagen}>
+              <div class="aspect-video bg-slate-100 overflow-hidden">
+                <img
+                  src={cap.imagen}
+                  alt={cap.alt}
+                  class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="p-4">
+                <h4 class="font-bold text-slate-800 text-sm mb-1">{cap.titulo}</h4>
+                <p class="text-xs text-slate-500">{cap.descripcion}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Módulos -->
+  <section class="py-16 sm:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10">
+        <h2 class="reveal text-3xl font-bold text-slate-900 mb-3">Módulos incluidos</h2>
+        <p class="reveal text-slate-500">Todo lo que viene en el sistema, listo para usar.</p>
+      </div>
+
+      <div class="reveal-stagger grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        {sistema.modulos.map((modulo) => (
+          <div class="flex items-center gap-3 p-4 bg-slate-50 rounded-xl border border-slate-100">
+            <svg class="w-5 h-5 text-brand-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+            </svg>
+            <span class="text-sm font-medium text-slate-700">{modulo}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaFinal />
+</Layout>

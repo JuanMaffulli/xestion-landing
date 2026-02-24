@@ -1,0 +1,38 @@
+---
+import { PASOS_PROCESO } from '@data/config';
+---
+
+<section id="proceso" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-16">
+      <h2 class="reveal text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+        Así es trabajar con Xestion
+      </h2>
+      <p class="reveal section-subheading !mb-0">
+        Un proceso simple, sin vueltas, enfocado en resolver tu problema.
+      </p>
+    </div>
+
+    <div class="reveal-stagger max-w-2xl mx-auto relative">
+      <!-- Línea vertical -->
+      <div class="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-brand-200 via-brand-400 to-brand-200 hidden sm:block"></div>
+
+      <div class="space-y-8">
+        {PASOS_PROCESO.map((paso, i) => (
+          <div class="flex items-start gap-6 group">
+            {/* Número */}
+            <div class="relative z-10 w-12 h-12 shrink-0 rounded-full bg-brand-500 text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-brand-500/30 group-hover:scale-110 transition-transform">
+              {i + 1}
+            </div>
+            {/* Contenido */}
+            <div class="pb-2 pt-1">
+              <h4 class="text-lg font-bold text-slate-800 mb-1">{paso.titulo}</h4>
+              <p class="text-sm text-slate-500 leading-relaxed">{paso.descripcion}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

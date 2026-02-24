@@ -10,12 +10,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
     
     <!-- Estilos principales -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=2026022109">
     
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Auto-actualizacion - Detecta cambios y recarga automaticamente
+        (function() {
+            const VERSION = '2026022109';
+            const STORED_VERSION = localStorage.getItem('siteVersion');
+            
+            if (STORED_VERSION && STORED_VERSION !== VERSION) {
+                // Nueva version detectada - limpiar cache y recargar
+                localStorage.setItem('siteVersion', VERSION);
+                window.location.reload(true);
+            } else if (!STORED_VERSION) {
+                // Primera visita - guardar version
+                localStorage.setItem('siteVersion', VERSION);
+            }
+        })();
+    </script>
 </head>
 <body>
 
@@ -26,10 +43,10 @@
         <div class="container">
             
             <!-- ================================================
-                 LOGO - Poné tu archivo en: img/logo.png
+                 LOGO - Poné tu archivo en: img/logo2.png
                  ================================================ -->
             <div class="logo-container">
-                <img src="img/logo.png" alt="Xestion" class="logo">
+                <img src="img/logo2.png?v=2026022105" alt="Xestion" class="logo">
             </div>
 
             <div class="hero-contenido">
@@ -47,6 +64,78 @@
                     <span>+50 Sistemas implementados</span>
                 </div>
 
+                <div class="botones-grupo">
+                    <a href="#catalogo-sistemas" class="btn btn-principal">
+                        <i data-lucide="grid" width="18" height="18"></i>
+                        Ver sistemas armados
+                    </a>
+                    <a href="https://wa.me/5491128839719" class="btn btn-secundario" target="_blank">
+                        <i data-lucide="message-circle" width="18" height="18"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         2.5 CATÁLOGO DE SISTEMAS ARMADOS
+         ============================================ -->
+    <section class="catalogo-sistemas" id="catalogo-sistemas">
+        <div class="container">
+            <h2>Si no buscás algo a medida</h2>
+            <p class="subtitulo">Estas son opciones listas para usar, pensadas por rubro y con módulos clave.</p>
+
+            <div class="catalogo-grid">
+                <a class="catalogo-card" href="sistema-grafica.html">
+                    <div class="catalogo-img">
+                        <img src="img/sistemas/grafica/presentacion.png" alt="Sistema para Gráfica">
+                    </div>
+                    <div class="catalogo-tags">
+                        <span class="catalogo-tag">Produccion</span>
+                        <span class="catalogo-tag">Pedidos</span>
+                    </div>
+                    <h3>Sistema para Grafica</h3>
+                    <p class="catalogo-desc">Gestion completa de pedidos, costos y entregas en un solo archivo.</p>
+                    <ul class="catalogo-modulos">
+                        <li>Ventas, pedidos y cotizaciones</li>
+                        <li>Control de produccion y tareas</li>
+                        <li>Clientes y proveedores con CC</li>
+                        <li>Caja, compras y gastos</li>
+                        <li>Productos e insumos</li>
+                        <li>Personal y reportes</li>
+                    </ul>
+                    <span class="catalogo-link">Ver detalles</span>
+                </a>
+
+                <a class="catalogo-card" href="sistema-pasteleria.html">
+                    <div class="catalogo-img">
+                        <img src="img/sistemas/pasteleria/presentacion.png?v=2026022105" alt="Sistema para Pasteleria">
+                    </div>
+                    <div class="catalogo-tags">
+                        <span class="catalogo-tag">Recetas</span>
+                        <span class="catalogo-tag">Costos</span>
+                    </div>
+                    <h3>Sistema para Pasteleria</h3>
+                    <p class="catalogo-desc">Con recetas, costos automaticos y control completo de produccion.</p>
+                    <ul class="catalogo-modulos">
+                        <li>Recetas con calculo de costos ⭐</li>
+                        <li>Ventas, pedidos y cotizaciones</li>
+                        <li>Insumos con stock y compras</li>
+                        <li>Clientes y proveedores con CC</li>
+                        <li>Caja, gastos y produccion</li>
+                        <li>Personal y reportes</li>
+                    </ul>
+                    <span class="catalogo-link">Ver detalles</span>
+                </a>
+            </div>
+
+            <div class="text-center mt-30">
+                <a class="btn btn-principal" href="sistemas.html">
+                    Ver catalogo completo
+                </a>
             </div>
         </div>
     </section>
@@ -64,45 +153,32 @@
             <div class="problema-grid">
                 
                 <div class="problema-item">
-                    <div class="icono-pastel pastel-naranja">
-                        <i data-lucide="folders" width="32" height="32"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <p>Tenés información en <strong>20 archivos diferentes</strong> y nunca encontrás lo que buscás.</p>
                 </div>
 
                 <div class="problema-item">
-                    <div class="icono-pastel pastel-azul">
-                        <i data-lucide="clock" width="32" height="32"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <p>Cada vez que necesitás un dato, <strong>perdés media hora</strong> buscando entre planillas.</p>
                 </div>
 
                 <div class="problema-item">
-                    <div class="icono-pastel pastel-rojo">
-                        <i data-lucide="alert-triangle" width="32" height="32"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <p>Los errores en las planillas <strong>te cuestan plata</strong> y dolores de cabeza.</p>
                 </div>
 
                 <div class="problema-item">
-                    <div class="icono-pastel pastel-morado">
-                        <i data-lucide="x-circle" width="32" height="32"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <p>Probaste sistemas de gestión pero <strong>nadie los usa</strong> porque son muy complicados.</p>
                 </div>
 
                 <div class="problema-item">
-                    <div class="icono-pastel pastel-verde">
-                        <i data-lucide="repeat" width="32" height="32"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <p>Tu equipo siempre <strong>vuelve a Excel</strong> porque es lo que conocen.</p>
                 </div>
 
-                <!-- CAMBIADO: Ahora habla de reportes gráficos -->
                 <div class="problema-item">
-                    <div class="icono-pastel pastel-amarillo">
-                        <i data-lucide="bar-chart-2" width="32" height="32"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <p>No tenés <strong>reportes claros ni gráficos</strong> para entender cómo va tu negocio de un vistazo.</p>
                 </div>
 
@@ -124,7 +200,7 @@
         <div class="container">
             
             <h2>Transformamos tu Excel en un <span class="verde">Sistema de Gestión</span> adaptado a tus necesidades</h2>
-            <p class="subtitulo">No usamos tu archivo actual. Creamos tu sistema desde una base profesional, probada y optimizada.</p>
+            <p class="subtitulo">No tocamos tu archivo actual. Armamos un sistema nuevo, claro y ordenado, pensado para el dia a dia real de un negocio.</p>
 
             <!-- DOS ÁREAS DE ENFOQUE -->
             <div class="areas-container">
@@ -133,26 +209,26 @@
                 <div class="area-card">
        
                     <h3><span class="emoji">⚙️</span> Gestión Operativa</h3>
-                    <p>Simplificamos las tareas del día a día para que puedas trabajar más rápido y con menos errores.</p>
+                    <p>Ordenamos lo operativo para que tu equipo trabaje mas tranquilo, sin pasos de mas y con todo a mano.</p>
                     <ul>
-                        <li><i data-lucide="check-circle" width="18" height="18"></i> Cargá ventas en segundos, no minutos</li>
-                        <li><i data-lucide="check-circle" width="18" height="18"></i> Buscá productos y clientes al instante</li>
-                        <li><i data-lucide="check-circle" width="18" height="18"></i> Generá presupuestos con un click</li>
-                        <li><i data-lucide="check-circle" width="18" height="18"></i> Controlá stock automáticamente</li>
-                        <li><i data-lucide="check-circle" width="18" height="18"></i> Menos clicks, menos errores, más tiempo</li>
+                        <li><i data-lucide="check-circle" width="18" height="18"></i> Un solo lugar para ventas, compras y stock</li>
+                        <li><i data-lucide="check-circle" width="18" height="18"></i> Menos planillas sueltas y menos confusiones</li>
+                        <li><i data-lucide="check-circle" width="18" height="18"></i> Tareas claras para cada persona del equipo</li>
+                        <li><i data-lucide="check-circle" width="18" height="18"></i> Datos consistentes para que no se pierda informacion</li>
+                        <li><i data-lucide="check-circle" width="18" height="18"></i> Procesos que se repiten bien, todos los dias</li>
                     </ul>
                 </div>
 
                 <!-- ÁREA 2: REPORTES E INTELIGENCIA -->
                 <div class="area-card">
                     <h3><span class="emoji">📈​</span> Reportes e Inteligencia</h3>
-                    <p>Te ayudamos a entender y proyectar tu negocio con información clara y visual.</p>
+                    <p>Te damos claridad para decidir: ver que pasa, por que pasa y que conviene hacer.</p>
                     <ul>
-                        <li><i data-lucide="check-circle" width="18" height="18"></i> Dashboards con los números que importan</li>
-                        <li><i data-lucide="check-circle" width="18" height="18"></i> Gráficos que muestran tendencias</li>
-                        <li><i data-lucide="check-circle" width="18" height="18"></i> Reportes automáticos a tu medida</li>
-                        <li><i data-lucide="check-circle" width="18" height="18"></i> Proyecciones para tomar decisiones</li>
-                        <li><i data-lucide="check-circle" width="18" height="18"></i> Todo en un solo lugar, siempre actualizado</li>
+                        <li><i data-lucide="check-circle" width="18" height="18"></i> Paneles simples con lo que necesitas mirar</li>
+                        <li><i data-lucide="check-circle" width="18" height="18"></i> Margenes, productos y clientes que mas rinden</li>
+                        <li><i data-lucide="check-circle" width="18" height="18"></i> Alertas cuando algo se sale de control</li>
+                        <li><i data-lucide="check-circle" width="18" height="18"></i> Comparativos mensuales sin trabajo extra</li>
+                        <li><i data-lucide="check-circle" width="18" height="18"></i> Informes listos para compartir o imprimir</li>
                     </ul>
                 </div>
 
@@ -189,7 +265,7 @@
                 
                 <div class="galeria-scroll" id="galeriaScroll">
                     <div class="foto-item"><img src="img/sistemas/sistema1.png" alt="Sistema"></div>
-                    <div class="foto-item"><img src="img/sistemas/sistema2.jpg" alt="Sistema"></div>
+                    <div class="foto-item"><img src="img/sistemas/pasteleria/presentacion.png?v=2026022105" alt="Sistema"></div>
                     <div class="foto-item"><img src="img/sistemas/sistema4.jpg" alt="Sistema"></div>
                     <div class="foto-item"><img src="img/sistemas/sistema5.png" alt="Sistema"></div>
                     <div class="foto-item"><img src="img/sistemas/sistema6.png" alt="Sistema"></div>
@@ -222,9 +298,7 @@
             <div class="excel-grid">
 
                 <div class="excel-item">
-                    <div class="icono-simple pastel-azul">
-                        <i data-lucide="users" width="28" height="28"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <div>
                         <h4>Tu equipo ya lo conoce</h4>
                         <p>No hay curva de aprendizaje. Todos saben usar Excel desde el día uno.</p>
@@ -232,9 +306,7 @@
                 </div>
 
                 <div class="excel-item">
-                    <div class="icono-simple pastel-verde">
-                        <i data-lucide="hard-drive" width="28" height="28"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <div>
                         <h4>Tus datos, en tu computadora</h4>
                         <p>Sin depender de internet ni de servidores de terceros. Vos controlás tu información.</p>
@@ -242,9 +314,7 @@
                 </div>
 
                 <div class="excel-item">
-                    <div class="icono-simple pastel-naranja">
-                        <i data-lucide="settings-2" width="28" height="28"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <div>
                         <h4>Flexible y adaptable</h4>
                         <p>Se ajusta a tu forma de trabajar, no al revés. Nada de "así funciona el sistema".</p>
@@ -252,9 +322,7 @@
                 </div>
 
                 <div class="excel-item">
-                    <div class="icono-simple pastel-morado">
-                        <i data-lucide="wifi-off" width="28" height="28"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <div>
                         <h4>Funciona sin internet</h4>
                         <p>Trabajá donde quieras, cuando quieras. Sin depender de la conexión.</p>
@@ -262,9 +330,7 @@
                 </div>
 
                 <div class="excel-item">
-                    <div class="icono-simple pastel-amarillo">
-                        <i data-lucide="shield-check" width="28" height="28"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <div>
                         <h4>Herramienta probada</h4>
                         <p>Excel existe hace 40 años. No va a desaparecer mañana.</p>
@@ -272,9 +338,7 @@
                 </div>
 
                 <div class="excel-item">
-                    <div class="icono-simple pastel-rojo">
-                        <i data-lucide="target" width="28" height="28"></i>
-                    </div>
+                    <span class="indicador-punto"></span>
                     <div>
                         <h4>Especialistas, no generalistas</h4>
                         <p>No hacemos de todo. Hacemos Excel profesional, y lo hacemos muy bien.</p>
@@ -296,7 +360,12 @@
             <h2>Lo que dicen nuestros clientes</h2>
             <p class="subtitulo">Empresas que ya ordenaron su gestión con Xestion y mejoraron su día a día.</p>
 
-            <div class="testimonios-carrusel">
+            <div class="testimonios-wrapper">
+                <button class="testimonios-nav prev" onclick="scrollTestimonios(-1)" aria-label="Anterior">
+                    <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+
+                <div class="testimonios-carrusel" id="testimoniosCarrusel">
                 
                 <!-- ================================================
                      CARRUSEL DE TESTIMONIOS
@@ -419,7 +488,7 @@
                         <i data-lucide="star" width="18" height="18" fill="#F6C23E"></i>
                     </div>
                     <p class="testimonio-texto">
-                        "Sistema adaptado a mi necesidad, fácil de usar sin conocimientos de Excel. Planes de financiación ideales para emprendedores."
+                        "Sistema adaptado a mi necesidad, fácil de usar sin conocimientos de Excel. Ideal para emprendedores."
                     </p>
                 </div>
 
@@ -540,6 +609,11 @@
 
             </div>
 
+                <button class="testimonios-nav next" onclick="scrollTestimonios(1)" aria-label="Siguiente">
+                    <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+            </div>
+
             <p class="scroll-hint">
                 <i data-lucide="move-horizontal" width="18" height="18"></i>
                 Deslizá para ver más testimonios
@@ -548,40 +622,6 @@
         </div>
     </section>
 
-
-    <!-- ============================================
-         4.5 SECCIÓN NUESTRO EQUIPO
-         ============================================ -->
-    <section class="equipo" id="equipo">
-        <div class="container">
-
-            <h2>Nuestro equipo</h2>
-            <p class="subtitulo">Somos pocos, pero estamos encima. Te atendemos nosotros, sin intermediarios.</p>
-
-            <div class="equipo-grid">
-
-                <div class="equipo-card">
-                    <div class="equipo-foto">
-                        <img src="img/equipo/leo.jpg" alt="Leonardo Alegre - Especialista y desarrollador de sistemas en Excel">
-                    </div>
-                    <h3 class="equipo-nombre">Leonardo Alegre</h3>
-                    <p class="equipo-rol">Especialista y desarrollador de sistemas en Excel</p>
-                    <p class="equipo-desc">Encargado del desarrollo de tu sistema en Excel y las funciones más prácticas e intuitivas para el uso.</p>
-                </div>
-
-                <div class="equipo-card">
-                    <div class="equipo-foto">
-                        <img src="img/equipo/juan2.jpeg" alt="Juan Pablo Maffulli - Especialista en análisis de datos y programación en Excel">
-                    </div>
-                    <h3 class="equipo-nombre">Juan Pablo Maffulli</h3>
-                    <p class="equipo-rol">Especialista en análisis de datos y programación en Excel</p>
-                    <p class="equipo-desc">Encargado de tomar los requerimientos que necesites y de transformar tus ideas para simplificar tu trabajo de la forma más fácil posible dentro de los sistemas. También encargado del desarrollo de tu sistema en Excel.</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
 
 
     <!-- ============================================
@@ -642,189 +682,62 @@
 
 
     <!-- ============================================
-         6. SECCIÓN PLANES Y PRECIOS
+         6. OPCIONES DE TRABAJO
          ============================================ -->
-    <section class="planes">
+    <section class="opciones">
         <div class="container">
-            
-            <h2>¿Qué plan te conviene?</h2>
-            <p class="subtitulo">Respondé 2 preguntas y te decimos por dónde arrancar.</p>
+            <h2>Opciones para implementar tu sistema</h2>
+            <p class="subtitulo">Tres formas claras de avanzar, segun tu momento y tu equipo.</p>
 
-            <!-- ============================================
-                 CUESTIONARIO RECOMENDADOR
-                 ============================================ -->
-            <div class="quiz-recomendador" id="quiz-box">
-                <div class="quiz-contenido" id="quiz-preguntas">
-                    <h3><i data-lucide="clipboard-list" width="24" height="24"></i> ¿Qué plan te conviene?</h3>
-                    <p class="quiz-bajada">Respondé 2 preguntas y te decimos por dónde arrancar.</p>
-                    
-                    <!-- Pregunta 1: Rubro -->
-                    <div class="quiz-pregunta">
-                        <label>1. ¿A qué se dedica tu negocio?</label>
-                        <select id="quiz-rubro">
-                            <option value="">Elegí tu rubro...</option>
-                            <option value="venta_compra">Venta y compra de artículos</option>
-                            <option value="venta_productos">Venta de productos (comercios, locales, distribuidores)</option>
-                            <option value="fabricacion">Fabricación propia (muebles, herrería, aberturas, producción)</option>
-                            <option value="grafica_servicios">Gráfica o servicios por pedido (diseño, imprenta, reparaciones)</option>
-                            <option value="otro">Otro / No estoy seguro</option>
-                        </select>
-                        <input type="text" id="quiz-rubro-otro" class="quiz-input-otro" placeholder="Escribí tu rubro acá..." style="display:none" aria-hidden="true" tabindex="-1">
+            <div class="opciones-grid">
+                <article class="opcion-card">
+                    <div class="opcion-icono">
+                        <i data-lucide="rocket" width="24" height="24"></i>
                     </div>
-
-                    <!-- Pregunta 2: Uso -->
-                    <div class="quiz-pregunta">
-                        <label>2. ¿Cómo lo van a usar?</label>
-                        <div class="quiz-opciones">
-                            <label class="quiz-opcion">
-                                <input type="radio" name="quiz-uso" value="solo">
-                                <span>Solo yo (una compu)</span>
-                            </label>
-                            <label class="quiz-opcion">
-                                <input type="radio" name="quiz-uso" value="turnos">
-                                <span>Somos 2 pero nos turnamos</span>
-                            </label>
-                            <label class="quiz-opcion">
-                                <input type="radio" name="quiz-uso" value="simultaneo">
-                                <span>Varias compus a la vez</span>
-                            </label>
-                        </div>
-                    </div>
-
-                    <button id="quiz-btn" class="btn btn-principal quiz-btn-disabled">
-                        <i data-lucide="sparkles" width="18" height="18"></i>
-                        Ver mi recomendación
-                    </button>
-                </div>
-
-                <!-- Resultado -->
-                <div class="quiz-resultado" id="quiz-resultado" style="display:none">
-                    <div class="quiz-resultado-icon">
-                        <i data-lucide="check-circle" width="48" height="48"></i>
-                    </div>
-                    <h4>Tu plan recomendado:</h4>
-                    <span class="quiz-plan-nombre" id="quiz-plan-nombre"></span>
-                    <ul class="quiz-porque">
-                        <li id="quiz-porque-1"></li>
-                        <li id="quiz-porque-2"></li>
+                    <h3>Excel armado</h3>
+                    <p>Ideal para arrancar rapido con un sistema ya probado y listo para usar.</p>
+                    <ul>
+                        <li>Base profesional adaptada a tu rubro</li>
+                        <li>Configuracion inicial con tus datos</li>
+                        <li>Capacitacion breve para usarlo ya</li>
                     </ul>
-                    <a id="quiz-whatsapp" href="#" class="btn btn-whatsapp" target="_blank">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
-                        Hablar por WhatsApp
+                    <a href="https://wa.me/5491128839719" class="btn btn-principal" target="_blank">
+                        Consultar disponibilidad
                     </a>
-                    <button id="quiz-reiniciar" class="btn btn-secundario">
-                        <i data-lucide="refresh-cw" width="16" height="16"></i>
-                        Cambiar respuestas
-                    </button>
-                </div>
+                </article>
+
+                <article class="opcion-card opcion-destacada">
+                    <div class="opcion-icono">
+                        <i data-lucide="sparkles" width="24" height="24"></i>
+                    </div>
+                    <h3>Excel a medida</h3>
+                    <p>Cuando tu negocio necesita algo propio, hecho a tu flujo de trabajo.</p>
+                    <ul>
+                        <li>Desarrollo 100% personalizado</li>
+                        <li>Reportes y controles a medida</li>
+                        <li>Acompanamiento durante el proceso</li>
+                    </ul>
+                    <a href="https://wa.me/5491128839719" class="btn btn-principal" target="_blank">
+                        Solicitar asesoramiento
+                    </a>
+                </article>
+
+                <article class="opcion-card">
+                    <div class="opcion-icono">
+                        <i data-lucide="cloud" width="24" height="24"></i>
+                    </div>
+                    <h3>Excel en nube</h3>
+                    <p>Para equipos que trabajan en simultaneo y necesitan acceso remoto seguro.</p>
+                    <ul>
+                        <li>Multiusuario real con permisos</li>
+                        <li>Acceso desde varias PCs</li>
+                        <li>Escalabilidad para crecer</li>
+                    </ul>
+                    <a href="https://wa.me/5491128839719" class="btn btn-principal" target="_blank">
+                        Pedir propuesta
+                    </a>
+                </article>
             </div>
-
-            <p class="quiz-skip">¿Preferís elegir vos? <a href="#planes-carrusel">Mirá los 3 planes abajo</a></p>
-
-            <div class="planes-carrusel" id="planes-carrusel">
-
-                <!-- ================================================
-                     PLAN EMPRENDEDOR
-                     ================================================ -->
-                <div class="plan-card plan-borde-blanco" id="plan-emprendedor">
-                    <span class="plan-badge plan-badge-light">🚀 Para arrancar rápido</span>
-                    
-                    <div class="plan-nombre">Excel armado</div>
-                    <p class="plan-descripcion" align="center">Listo para usar y adaptado a tu negocio</p>
-                    
-                    <!-- PRECIO -->
-                    <div class="plan-precio">
-                        <h3 align="center"><strong>Pago único:</strong> USD 300</h3>
-                    </div>
-
-                    <ul class="plan-features">
-                        <li><i data-lucide="check" width="18" height="18"></i> Excel profesional listo para usar (1-2 personas)</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Configuración inicial con tus datos, rubro y logo</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Ajustes básicos para que calce con tu forma de trabajar</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Capacitación breve para que lo uses sin vueltas</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Soporte inicial post-entrega</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> <strong>Opcional:</strong> podés sumar acompañamiento mensual para mejoras y beneficios</li>
-                    </ul>
-
-                    <p class="plan-nota"><i data-lucide="clock" width="14" height="14"></i> Entrega rápida</p>
-
-                    <a href="https://wa.me/5491128839719?text=Hola!%20Me%20interesa%20el%20Excel%20listo%20(Puesta%20a%20punto)%20USD%20300" class="btn btn-principal" target="_blank">
-                        Quiero este plan
-                    </a>
-                    <a href="https://youtube.com" class="btn btn-youtube" target="_blank">
-                        <i data-lucide="youtube" width="18" height="18"></i> Mirar en YouTube
-                    </a>
-                </div>
-
-                <!-- ================================================
-                     PLAN PYME
-                     ================================================ -->
-                <div class="plan-card plan-destacado" id="plan-pyme">
-                    <span class="plan-badge">✨ A medida</span>
-                    
-                    <div class="plan-nombre">Excel a medida</div>
-                    <p class="plan-descripcion" align="center">Cuando tu negocio necesita algo propio (1-2 personas)</p>
-                    
-                    <!-- PRECIO -->
-                    <div class="plan-precio">
-                        <h3 align="center"><strong>Desde:</strong> USD 600</h3>
-                    </div>
-
-                    <ul class="plan-features">
-                        <li><i data-lucide="check" width="18" height="18"></i> Desarrollo 100% adaptado a tu forma de trabajar</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Funcionalidades definidas junto a vos</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Reportes y controles a medida</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Ideal si lo usan 1-2 personas (sin simultáneo)</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Te acompañamos durante el desarrollo</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Si más adelante crecen, se puede migrar a multiusuario</li>
-                    </ul>
-
-                    <p class="plan-nota"><i data-lucide="file-text" width="14" height="14"></i> Presupuesto sin compromiso</p>
-
-                    <a href="https://wa.me/5491128839719?text=Hola!%20Me%20interesa%20un%20Excel%20a%20medida%20(1-2%20personas)%20desde%20USD%20600" class="btn btn-principal" target="_blank">
-                        Solicitar presupuesto
-                    </a>
-                </div>
-
-                <!-- ================================================
-                     PLAN EMPRESA
-                     ================================================ -->
-                <div class="plan-card plan-borde-blanco" id="plan-empresa">
-                    <span class="plan-badge plan-badge-light">🖥️ Varias compus</span>
-                    
-                    <div class="plan-nombre">Excel en nube</div>
-                    <p class="plan-descripcion" align="center">Para equipos trabajando a la vez</p>
-                    
-                    <!-- PRECIO -->
-                    <div class="plan-precio">
-                        <h3 align="center"><strong>Desde:</strong> USD 1.200</h3>
-                    </div>
-
-                    <ul class="plan-features">
-                        <li><i data-lucide="check" width="18" height="18"></i> Desarrollo 100% a medida para tu negocio</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Múltiples usuarios trabajando simultáneamente</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Roles y permisos diferenciados</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Acceso remoto desde cualquier PC</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Reportes y dashboards en tiempo real</li>
-                        <li><i data-lucide="check" width="18" height="18"></i> Ideal para equipos de 5+ personas</li>
-                    </ul>
-
-                    <p class="plan-nota"><i data-lucide="file-text" width="14" height="14"></i> Presupuesto sin compromiso</p>
-
-                    <a href="https://wa.me/5491128839719?text=Hola!%20Me%20interesa%20Multiusuario%20en%20nube%20desde%20USD%201.200" class="btn btn-principal" target="_blank">
-                        Solicitar presupuesto
-                    </a>
-                </div>
-
-            </div>
-
-            <p class="scroll-hint">
-                <i data-lucide="move-horizontal" width="18" height="18"></i>
-                Deslizá para ver los planes
-            </p>
-
         </div>
     </section>
 
@@ -889,11 +802,6 @@
                             <td class="advertencia">⚠️ Media (se configura para el equipo)</td>
                         </tr>
                         <tr>
-                            <td class="caracteristica">Costo inicial</td>
-                            <td><strong>Desde USD 300</strong></td>
-                            <td><strong>Desde USD 1.200</strong></td>
-                        </tr>
-                        <tr>
                             <td class="caracteristica">Requisitos</td>
                             <td>Windows + Office 365</td>
                             <td>Windows + Office 2013+</td>
@@ -908,175 +816,6 @@
     </section>
 
 
-    <!-- ============================================
-         7. SECCIÓN SOPORTE MENSUAL
-         ============================================ -->
-    <section class="soporte-section">
-        <div class="container">
-            
-            <h2><span class="soporte-opcional">OPCIONAL </span> <br>Acompañamiento mensual</h2>
-            <div class="soporte-intro">
-                <p>Si querés, podés sumarte a un plan mensual para que el sistema esté siempre prolijo, rápido y actualizado. Y si no querés plan, no pasa nada: seguís usando tu sistema y <strong>los cambios/mejoras se cotizan aparte</strong>.</p>
-            </div>
-
-            <div class="soporte-grid">
-
-                <!-- PLAN 1 -->
-                <div class="soporte-card">
-                    <span class="soporte-emoji">🧩</span>
-                    <div class="soporte-nombre">Plan Básico</div>
-                    <div class="soporte-precio">ARS 25.000 <small>/mes</small></div>
-                    <p>Para negocios chicos que quieren estar tranquilos</p>
-                    <ul>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Soporte por WhatsApp o email (respuesta dentro de 24 hs hábiles)</li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Corrección de errores del sistema</li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Ajustes menores / mejoras simples mensuales</li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Revisión y optimización (mensual o anual si lo pedís)</li>
-                    </ul>
-                </div>
-
-                <!-- PLAN 2 - DESTACADO -->
-                <div class="soporte-card destacado-azul">
-                    <span class="soporte-badge">⭐ Más elegido</span>
-                    <span class="soporte-emoji">📊</span>
-                    <div class="soporte-nombre">Plan Plus</div>
-                    <div class="soporte-precio">ARS 40.000 <small>/mes</small></div>
-                    <p>Para el que quiere mejoras y prioridad</p>
-                    <ul>
-                        <li><i data-lucide="check" width="16" height="16"></i> Todo lo del Plan Básico</li>
-                        <li><i data-lucide="check" width="16" height="16"></i> Acceso prioritario a nuevas funcionalidades</li>
-                        <li><i data-lucide="check" width="16" height="16"></i> Importación o limpieza de datos (servicio anual incluido)</li>
-                        <li><i data-lucide="check" width="16" height="16"></i> Soporte por temas externos (OneDrive/Office/red) dentro de lo razonable</li>
-                    </ul>
-                </div>
-
-                <!-- PLAN 3 -->
-                <div class="soporte-card">
-                    <span class="soporte-emoji">☁️</span>
-                    <div class="soporte-nombre">Plan Pro</div>
-                    <div class="soporte-precio">ARS 90.000 <small>/mes</small></div>
-                    <p>Para sistemas multiusuario con base de datos</p>
-                    <ul>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Hosting en servidor (base de datos) + backups semanales</li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Acceso multiusuario por red o remoto</li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Revisión y optimización mensual (si lo solicitás)</li>
-                        <li><i data-lucide="check" width="16" height="16" style="color: var(--verde-excel);"></i> Soporte directo + corrección de errores</li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="tabla-wrapper" style="margin-top: 26px;">
-                <table class="tabla-comparativa soporte-tabla">
-                    <thead>
-                        <tr>
-                            <th>Función / Servicio</th>
-                            <th>Plan Básico</th>
-                            <th>Plan Plus</th>
-                            <th>Plan Pro</th>
-                            <th>Sin suscripción</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="caracteristica">Soporte por WhatsApp o email (24 hs hábiles)</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                        </tr>
-                        <tr>
-                            <td class="caracteristica">Corrección de errores del sistema</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                        </tr>
-                        <tr>
-                            <td class="caracteristica">Ajustes menores / mejoras simples mensuales</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="no">❌</td>
-                        </tr>
-                        <tr>
-                            <td class="caracteristica">Backups automáticos</td>
-                            <td class="na">⚪ No aplica</td>
-                            <td class="na">⚪ No aplica</td>
-                            <td class="check">✅</td>
-                            <td class="no">❌</td>
-                        </tr>
-                        <tr>
-                            <td class="caracteristica">Hosting en servidor (base de datos)</td>
-                            <td class="na">⚪ No aplica</td>
-                            <td class="na">⚪ No aplica</td>
-                            <td class="check">✅</td>
-                            <td class="no">❌</td>
-                        </tr>
-                        <tr>
-                            <td class="caracteristica">Revisión y optimización (mensual o anual si se solicita)</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="no">❌</td>
-                        </tr>
-                        <tr>
-                            <td class="caracteristica">Acceso prioritario a nuevas funcionalidades</td>
-                            <td class="no">❌</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="no">❌</td>
-                        </tr>
-                        <tr>
-                            <td class="caracteristica">Importación o limpieza de datos (servicio anual incluido)</td>
-                            <td class="no">❌</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="no">❌</td>
-                        </tr>
-                        <tr>
-                            <td class="caracteristica">Acceso multiusuario por red o remoto</td>
-                            <td class="na">⚪ No aplica</td>
-                            <td class="na">⚪ No aplica</td>
-                            <td class="check">✅</td>
-                            <td class="no">❌</td>
-                        </tr>
-                        <tr>
-                            <td class="caracteristica">Transformaciones complejas o nuevos módulos</td>
-                            <td class="no">❌</td>
-                            <td class="no">❌</td>
-                            <td class="no">❌</td>
-                            <td class="no">❌</td>
-                        </tr>
-                        <tr>
-                            <td class="caracteristica">Soporte por problemas externos (red, OneDrive, Office, etc.)</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="check">✅</td>
-                            <td class="no">❌</td>
-                        </tr>
-                        <tr>
-                            <td class="caracteristica">Valor mensual</td>
-                            <td><strong>ARS 25.000</strong></td>
-                            <td><strong>ARS 40.000</strong></td>
-                            <td><strong>ARS 90.000</strong></td>
-                            <td><strong>Sin costo</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p class="scroll-hint soporte-scroll-hint">
-                <i data-lucide="move-horizontal" width="18" height="18"></i>
-                Deslizá la tabla para ver todo
-            </p>
-
-            <div class="soporte-nota">
-                <p><strong>No incluye</strong> (se cotiza aparte): módulos nuevos, cambios estructurales grandes, automatizaciones complejas o cualquier cosa que esté fuera del sistema original.</p>
-            </div>
-
-        </div>
-    </section>
 
 
     <!-- ============================================
@@ -1229,136 +968,15 @@
             }
         });
 
-        // ============================================
-        // QUIZ RECOMENDADOR DE PLANES
-        // ============================================
-        
-        // Rubros estándar (editá esta lista para agregar rubros)
-        const rubrosEstandar = [
-            'venta_compra',
-            'venta_productos',
-            'fabricacion',
-            'grafica_servicios'
-        ];
-
-        const quizRubro = document.getElementById('quiz-rubro');
-        const quizRubroOtro = document.getElementById('quiz-rubro-otro');
-        const quizBtn = document.getElementById('quiz-btn');
-        const quizPreguntas = document.getElementById('quiz-preguntas');
-        const quizResultado = document.getElementById('quiz-resultado');
-        const quizPlanNombre = document.getElementById('quiz-plan-nombre');
-        const quizPorque1 = document.getElementById('quiz-porque-1');
-        const quizPorque2 = document.getElementById('quiz-porque-2');
-        const quizWhatsapp = document.getElementById('quiz-whatsapp');
-        const quizReiniciar = document.getElementById('quiz-reiniciar');
-
-        // Para "Otro / No estoy seguro" no pedimos texto: se deriva a reunión
-        quizRubro.addEventListener('change', function() {
-            quizRubroOtro.style.display = 'none';
-            quizRubroOtro.value = '';
-            verificarQuiz();
-        });
-
-        // Verificar radios
-        document.querySelectorAll('input[name="quiz-uso"]').forEach(radio => {
-            radio.addEventListener('change', verificarQuiz);
-        });
-
-        function verificarQuiz() {
-            const rubroSeleccionado = quizRubro.value;
-            const usoSeleccionado = document.querySelector('input[name="quiz-uso"]:checked');
-            
-            // Rubro válido: seleccionó algo
-            const rubroValido = !!rubroSeleccionado;
-            
-            if (rubroValido && usoSeleccionado) {
-                quizBtn.classList.remove('quiz-btn-disabled');
-                quizBtn.disabled = false;
-            } else {
-                quizBtn.classList.add('quiz-btn-disabled');
-                quizBtn.disabled = true;
-            }
+        // Testimonios: flechas de navegación desktop
+        function scrollTestimonios(direccion) {
+            const carrusel = document.getElementById('testimoniosCarrusel');
+            const itemWidth = carrusel.querySelector('.testimonio-item').offsetWidth + 25;
+            carrusel.scrollBy({
+                left: direccion * itemWidth,
+                behavior: 'smooth'
+            });
         }
-
-        // Calcular recomendación
-        quizBtn.addEventListener('click', function() {
-            const rubroSeleccionado = quizRubro.value;
-            const usoSeleccionado = document.querySelector('input[name="quiz-uso"]:checked').value;
-            
-            // Determinar rubro final (texto para WhatsApp)
-            let rubroTexto = quizRubro.options[quizRubro.selectedIndex].text;
-            
-            // Determinar uso texto
-            let usoTexto = '';
-            if (usoSeleccionado === 'solo') usoTexto = 'Solo yo (una compu)';
-            if (usoSeleccionado === 'turnos') usoTexto = 'Somos 2 pero nos turnamos';
-            if (usoSeleccionado === 'simultaneo') usoTexto = 'Varias compus a la vez';
-
-            // LÓGICA DE RECOMENDACIÓN
-            let planRecomendado = '';
-            let porque1 = '';
-            let porque2 = '';
-            let planId = '';
-
-            // Si necesitan varias compus a la vez -> Excel en nube
-            if (usoSeleccionado === 'simultaneo') {
-                planRecomendado = 'Excel en nube';
-                porque1 = 'Lo van a usar en varias compus al mismo tiempo.';
-                porque2 = 'Así evitás que se pisen y cada uno entra desde su PC.';
-                planId = 'plan-empresa';
-            }
-            // Si el rubro es "Otro / No estoy seguro" y NO es simultáneo -> Excel a medida
-            else if (rubroSeleccionado === 'otro') {
-                planRecomendado = 'Excel a medida';
-                porque1 = 'Como tu rubro no encaja en el Excel armado, conviene hacerlo a medida.';
-                porque2 = 'Ideal si lo usan 1-2 personas (sin simultáneo).';
-                planId = 'plan-pyme';
-            }
-            // Si rubro está en lista y 1 compu o turnos -> Excel armado
-            else {
-                planRecomendado = 'Excel armado';
-                porque1 = 'Tu rubro encaja perfecto para arrancar con un Excel listo.';
-                porque2 = 'Opcional: podés sumar acompañamiento mensual para mejoras y beneficios.';
-                planId = 'plan-emprendedor';
-            }
-
-            // Mostrar resultado
-            quizPlanNombre.textContent = planRecomendado;
-            quizPorque1.textContent = porque1;
-            quizPorque2.textContent = porque2;
-
-            // Armar link WhatsApp
-            const mensaje = `Hola! Hice el cuestionario de Xestion.
-
-Mi rubro: ${rubroTexto}
-Uso: ${usoTexto}
-
-Me recomendaron: ${planRecomendado}
-
-¿Me contás los próximos pasos?`;
-            
-            quizWhatsapp.href = 'https://wa.me/5491128839719?text=' + encodeURIComponent(mensaje);
-
-            // Ocultar preguntas, mostrar resultado
-            quizPreguntas.style.display = 'none';
-            quizResultado.style.display = 'block';
-            
-            // Reiniciar iconos de lucide en el resultado
-            lucide.createIcons();
-        });
-
-        // Reiniciar quiz
-        quizReiniciar.addEventListener('click', function() {
-            quizRubro.value = '';
-            quizRubroOtro.value = '';
-            quizRubroOtro.style.display = 'none';
-            document.querySelectorAll('input[name="quiz-uso"]').forEach(r => r.checked = false);
-            quizBtn.classList.add('quiz-btn-disabled');
-            quizBtn.disabled = true;
-            
-            quizPreguntas.style.display = 'block';
-            quizResultado.style.display = 'none';
-        });
 
     </script>
 

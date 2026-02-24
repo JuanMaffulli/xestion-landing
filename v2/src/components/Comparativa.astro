@@ -1,0 +1,63 @@
+---
+/**
+ * Tabla comparativa Excel común vs Excel multiusuario
+ */
+const rows = [
+  { feature: 'Ideal para...', local: 'Negocios con 1-2 personas que trabajan por turnos', nube: 'Equipos que necesitan trabajar al mismo tiempo' },
+  { feature: 'Usuarios simultáneos', local: '1 (o 2 si se turnan)', nube: '2 a 10 simultáneos' },
+  { feature: 'Acceso desde varias PCs', local: { text: 'Solo si se turnan', type: 'warn' }, nube: { text: 'Sí (a la vez)', type: 'ok' } },
+  { feature: 'Acceso remoto', local: { text: 'Limitado', type: 'warn' }, nube: { text: 'Desde cualquier PC', type: 'ok' } },
+  { feature: 'Funciona sin internet', local: { text: 'Sí', type: 'ok' }, nube: { text: 'Depende del esquema', type: 'warn' } },
+  { feature: 'Roles y permisos', local: { text: 'No disponible', type: 'no' }, nube: { text: 'Completo', type: 'ok' } },
+  { feature: 'Escalabilidad', local: { text: 'Limitada', type: 'warn' }, nube: { text: 'Alta', type: 'ok' } },
+  { feature: 'Complejidad', local: { text: 'Baja', type: 'ok' }, nube: { text: 'Media', type: 'warn' } },
+  { feature: 'Requisitos', local: 'Windows + Office 365', nube: 'Windows + Office 2013+' },
+];
+
+function renderCell(val: string | { text: string; type: string }) {
+  if (typeof val === 'string') return val;
+  const icons: Record<string, string> = { ok: '✅', warn: '⚠️', no: '❌' };
+  return `${icons[val.type] || ''} ${val.text}`;
+}
+---
+
+<section class="py-20 sm:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-12">
+      <h2 class="reveal text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+        Tabla comparativa
+      </h2>
+      <p class="reveal section-subheading !mb-0">
+        Compará Excel común vs Excel multiusuario y elegí lo que te conviene.
+      </p>
+    </div>
+
+    <div class="reveal overflow-x-auto rounded-2xl border border-slate-200 shadow-sm max-w-4xl mx-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-slate-50">
+            <th class="text-left py-4 px-5 font-semibold text-slate-700 min-w-[180px]">Característica</th>
+            <th class="text-left py-4 px-5 font-semibold text-slate-700">
+              Excel común
+              <span class="block text-xs font-normal text-slate-400 mt-0.5">1-2 personas (sin simultáneo)</span>
+            </th>
+            <th class="text-left py-4 px-5 font-semibold text-brand-700 bg-brand-50/50">
+              Excel multiusuario
+              <span class="block text-xs font-normal text-brand-500 mt-0.5">Varias compus a la vez</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, i) => (
+            <tr class={`border-t border-slate-100 ${i % 2 === 0 ? '' : 'bg-slate-50/30'}`}>
+              <td class="py-3.5 px-5 font-medium text-slate-700">{row.feature}</td>
+              <td class="py-3.5 px-5 text-slate-600">{renderCell(row.local)}</td>
+              <td class="py-3.5 px-5 text-slate-600 bg-brand-50/20">{renderCell(row.nube)}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

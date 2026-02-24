@@ -1,0 +1,33 @@
+---
+import { PROBLEMAS } from '@data/config';
+---
+
+<section class="py-20 sm:py-28 bg-slate-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14">
+      <h2 class="reveal text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+        ¿Te suena familiar?
+      </h2>
+      <p class="reveal section-subheading !mb-0">
+        Estos son los problemas más comunes que vemos en las empresas que nos contactan.
+      </p>
+    </div>
+
+    <div class="reveal-stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-4xl mx-auto mb-12">
+      {PROBLEMAS.map((problema) => (
+        <div class="group flex items-start gap-3 p-5 bg-white rounded-xl border border-slate-100 hover:border-red-200 hover:shadow-md transition-all duration-300">
+          <div class="w-2.5 h-2.5 mt-2 rounded-full bg-red-400 shrink-0 group-hover:scale-125 transition-transform"></div>
+          <p class="text-sm text-slate-600 leading-relaxed" set:html={problema} />
+        </div>
+      ))}
+    </div>
+
+    <div class="reveal max-w-2xl mx-auto text-center bg-white p-8 rounded-2xl border border-slate-100 shadow-sm">
+      <p class="text-slate-600 leading-relaxed">
+        No estás solo. La mayoría de las PyMEs se manejan con Excel.<br /><br />
+        <strong class="text-slate-800 text-lg">El problema no es Excel: es tener todo desparramado, sin estructura.</strong>
+      </p>
+    </div>
+  </div>
+</section>

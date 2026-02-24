@@ -1,0 +1,37 @@
+# Forzar recarga de archivos - No guardar cache
+<IfModule mod_headers.c>
+    # HTML - No cachear nunca
+    <FilesMatch "\.(html|htm)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate, max-age=0"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+    
+    # CSS y JS - Cachear solo 1 hora
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=3600, must-revalidate"
+    </FilesMatch>
+    
+    # Imagenes - Cachear 1 semana
+    <FilesMatch "\.(jpg|jpeg|png|gif|svg|webp)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+</IfModule>
+
+# Si mod_headers no esta disponible, usar mod_expires
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # HTML sin cache
+    ExpiresByType text/html "access plus 0 seconds"
+    
+    # CSS y JS cache corto
+    ExpiresByType text/css "access plus 1 hour"
+    ExpiresByType application/javascript "access plus 1 hour"
+    
+    # Imagenes cache largo
+    ExpiresByType image/jpeg "access plus 1 week"
+    ExpiresByType image/png "access plus 1 week"
+    ExpiresByType image/gif "access plus 1 week"
+    ExpiresByType image/svg+xml "access plus 1 week"
+</IfModule>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Sistemas armados | Xestion</title>
+    <meta name="description" content="Catalogo de sistemas armados en Excel por rubro.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css?v=2026022109">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        // Auto-actualizacion - Detecta cambios y recarga automaticamente
+        (function() {
+            const VERSION = '2026022109';
+            const STORED_VERSION = localStorage.getItem('siteVersion');
+            
+            if (STORED_VERSION && STORED_VERSION !== VERSION) {
+                // Nueva version detectada - limpiar cache y recargar
+                localStorage.setItem('siteVersion', VERSION);
+                window.location.reload(true);
+            } else if (!STORED_VERSION) {
+                // Primera visita - guardar version
+                localStorage.setItem('siteVersion', VERSION);
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="container">
+            <div class="logo-container">
+                <img src="img/logo2.png" alt="Xestion" class="logo">
+            </div>
+
+            <div class="hero-contenido">
+                <h1>Sistemas armados en Excel</h1>
+                <p>Catalogo de soluciones listas para usar. Elegi tu rubro y mira los modulos principales.</p>
+
+                <div class="botones-grupo">
+                    <a class="btn btn-secundario" href="index.html">
+                        <i data-lucide="arrow-left" width="18" height="18"></i>
+                        Volver al inicio
+                    </a>
+                    <a class="btn btn-principal" href="https://wa.me/5491128839719" target="_blank">
+                        <i data-lucide="message-circle" width="18" height="18"></i>
+                        Consultar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="catalogo-sistemas">
+        <div class="container">
+            <h2>Catalogo</h2>
+            <p class="subtitulo">Estos son los primeros sistemas publicados. Vamos a sumar mas con el tiempo.</p>
+
+            <div class="catalogo-grid">
+                <a class="catalogo-card" href="sistema-grafica.html">
+                    <div class="catalogo-img">
+                        <img src="img/sistemas/grafica/presentacion.png" alt="Sistema para Grafica">
+                    </div>
+                    <div class="catalogo-tags">
+                        <span class="catalogo-tag">Produccion</span>
+                        <span class="catalogo-tag">Pedidos</span>
+                    </div>
+                    <h3>Sistema para Grafica</h3>
+                    <p class="catalogo-desc">Gestion completa de pedidos, costos y entregas en un solo archivo.</p>
+                    <ul class="catalogo-modulos">
+                        <li>Presupuestos y ordenes</li>
+                        <li>Control de produccion</li>
+                        <li>Clientes y proveedores</li>
+                        <li>Reportes basicos</li>
+                    </ul>
+                    <span class="catalogo-link">Ver detalles</span>
+                </a>
+
+                <a class="catalogo-card" href="sistema-pasteleria.html">
+                    <div class="catalogo-img">
+                        <img src="img/sistemas/pasteleria/presentacion.png?v=2026022105" alt="Sistema para Pasteleria">
+                    </div>
+                    <div class="catalogo-tags">
+                        <span class="catalogo-tag">Recetas</span>
+                        <span class="catalogo-tag">Costos</span>
+                    </div>
+                    <h3>Sistema para Pasteleria</h3>
+                    <p class="catalogo-desc">Con recetas, costos automaticos y control completo de produccion.</p>
+                    <ul class="catalogo-modulos">
+                        <li>Recetas con calculo de costos ⭐</li>
+                        <li>Ventas, pedidos y cotizaciones</li>
+                        <li>Insumos con stock y compras</li>
+                        <li>Clientes y proveedores con CC</li>
+                        <li>Caja, gastos y produccion</li>
+                    </ul>
+                    <span class="catalogo-link">Ver detalles</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <img src="img/logo2.png" alt="Xestion" class="logo-footer">
+            <p>© 2026 Xestion - Sistemas de Gestion sobre Excel</p>
+            <p style="margin-top: 10px;">Argentina | Latinoamerica</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

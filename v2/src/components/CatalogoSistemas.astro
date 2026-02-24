@@ -1,0 +1,81 @@
+---
+import { SISTEMAS } from '@data/config';
+---
+
+<section id="catalogo" class="py-20 sm:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14">
+      <h2 class="reveal text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+        Si no buscás algo a medida
+      </h2>
+      <p class="reveal section-subheading !mb-0">
+        Estas son opciones listas para usar, pensadas por rubro y con módulos clave.
+      </p>
+    </div>
+
+    <div class="reveal-stagger grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {SISTEMAS.map((sistema) => (
+        <a
+          href={`/${sistema.slug}`}
+          class="group card p-0 overflow-hidden hover:-translate-y-1 transition-all duration-300"
+        >
+          {/* Imagen */}
+          <div class="relative overflow-hidden aspect-video bg-slate-100">
+            <img
+              src={sistema.imagen}
+              alt={sistema.nombre}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+
+          {/* Content */}
+          <div class="p-6">
+            {/* Tags */}
+            <div class="flex gap-2 mb-3">
+              {sistema.tags.map((tag) => (
+                <span class="badge-brand text-xs">{tag}</span>
+              ))}
+            </div>
+
+            <h3 class="text-xl font-bold text-slate-800 mb-2 group-hover:text-brand-600 transition-colors">
+              {sistema.nombre}
+            </h3>
+            <p class="text-slate-500 text-sm mb-4">{sistema.descripcion}</p>
+
+            {/* Módulos */}
+            <ul class="space-y-1.5 mb-5">
+              {sistema.modulos.map((modulo) => (
+                <li class="flex items-start gap-2 text-sm text-slate-600">
+                  <svg class="w-4 h-4 text-brand-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  {modulo}
+                </li>
+              ))}
+            </ul>
+
+            {/* Link */}
+            <div class="flex items-center gap-2 text-brand-600 font-semibold text-sm group-hover:gap-3 transition-all">
+              Ver detalles
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="reveal text-center mt-10">
+      <a href="/sistemas" class="btn-secondary">
+        Ver catálogo completo
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

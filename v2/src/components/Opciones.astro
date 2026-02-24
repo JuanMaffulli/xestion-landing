@@ -1,0 +1,79 @@
+---
+import { OPCIONES_TRABAJO, CONTACTO } from '@data/config';
+
+const iconPaths: Record<string, string> = {
+  Rocket: 'M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 00-2.91-.09zM12 15l-3-3M22 2l-7.5 7.5M15 2a4 4 0 00-4 4v2l-4 4h6l4-4h2a4 4 0 004-4V2z',
+  Sparkles: 'M12 3l1.912 5.813a2 2 0 001.275 1.275L21 12l-5.813 1.912a2 2 0 00-1.275 1.275L12 21l-1.912-5.813a2 2 0 00-1.275-1.275L3 12l5.813-1.912a2 2 0 001.275-1.275L12 3zM5 3v4M19 17v4M3 5h4M17 19h4',
+  Cloud: 'M17.5 19H9a7 7 0 110-14h.5M22 10a4.5 4.5 0 00-7.5-3.4A7 7 0 009 5M17.5 19a4.5 4.5 0 100-9H9a7 7 0 000 14h8.5z',
+};
+---
+
+<section class="py-20 sm:py-28 bg-slate-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14">
+      <h2 class="reveal text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+        Opciones para implementar tu sistema
+      </h2>
+      <p class="reveal section-subheading !mb-0">
+        Tres formas claras de avanzar, según tu momento y tu equipo.
+      </p>
+    </div>
+
+    <div class="reveal-stagger grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {OPCIONES_TRABAJO.map((opcion) => (
+        <div class={`relative flex flex-col p-7 rounded-2xl transition-all duration-300 ${
+          opcion.destacado
+            ? 'bg-brand-500 text-white shadow-xl shadow-brand-500/25 scale-[1.02] hover:scale-[1.04]'
+            : 'bg-white border border-slate-100 shadow-sm hover:shadow-lg hover:-translate-y-1'
+        }`}>
+          {opcion.destacado && (
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-yellow-400 text-slate-900 text-xs font-bold rounded-full shadow-md">
+              MÁS ELEGIDO
+            </div>
+          )}
+
+          {/* Icon */}
+          <div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${
+            opcion.destacado ? 'bg-white/20' : 'bg-brand-50'
+          }`}>
+            <svg class={`w-6 h-6 ${opcion.destacado ? 'text-white' : 'text-brand-600'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d={iconPaths[opcion.icono] || iconPaths.Rocket}></path>
+            </svg>
+          </div>
+
+          <h3 class={`text-xl font-bold mb-2 ${opcion.destacado ? 'text-white' : 'text-slate-800'}`}>
+            {opcion.titulo}
+          </h3>
+          <p class={`text-sm mb-5 ${opcion.destacado ? 'text-white/80' : 'text-slate-500'}`}>
+            {opcion.descripcion}
+          </p>
+
+          <ul class="space-y-2.5 mb-7 flex-1">
+            {opcion.features.map((f) => (
+              <li class={`flex items-start gap-2 text-sm ${opcion.destacado ? 'text-white/90' : 'text-slate-600'}`}>
+                <svg class={`w-4 h-4 mt-0.5 shrink-0 ${opcion.destacado ? 'text-yellow-300' : 'text-brand-500'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                {f}
+              </li>
+            ))}
+          </ul>
+
+          <a
+            href={CONTACTO.whatsappUrl}
+            target="_blank"
+            rel="noopener"
+            class={`text-center py-3 px-5 rounded-xl font-semibold text-sm transition-all duration-200 ${
+              opcion.destacado
+                ? 'bg-white text-brand-600 hover:bg-white/90 shadow-lg'
+                : 'bg-brand-500 text-white hover:bg-brand-600 shadow-md shadow-brand-500/20'
+            }`}
+          >
+            {opcion.cta}
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

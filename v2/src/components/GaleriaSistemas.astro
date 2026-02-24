@@ -1,0 +1,85 @@
+---
+import { GALERIA_SISTEMAS } from '@data/config';
+---
+
+<section class="py-20 sm:py-28 bg-slate-50 overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="text-center mb-12">
+      <h2 class="reveal text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+        Mirá lo que podemos hacer por tu negocio
+      </h2>
+      <p class="reveal section-subheading !mb-0">
+        Algunos ejemplos de sistemas que desarrollamos para negocios como el tuyo.
+      </p>
+    </div>
+  </div>
+
+  <!-- Full-width scroll gallery -->
+  <div class="reveal relative">
+    <!-- Arrows -->
+    <button
+      id="galeria-prev"
+      class="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-colors"
+      aria-label="Anterior"
+    >
+      <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+
+    <div
+      id="galeria-scroll"
+      class="flex gap-5 overflow-x-auto px-4 sm:px-10 pb-4 snap-x snap-mandatory scrollbar-hide"
+      style="scrollbar-width: none; -ms-overflow-style: none;"
+    >
+      {GALERIA_SISTEMAS.map((img, i) => (
+        <div
+          class="shrink-0 w-72 sm:w-80 snap-center rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer bg-white"
+          data-lightbox={img}
+        >
+          <img
+            src={img}
+            alt={`Sistema ejemplo ${i + 1}`}
+            class="w-full h-52 object-cover hover:scale-105 transition-transform duration-500"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+
+    <button
+      id="galeria-next"
+      class="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-colors"
+      aria-label="Siguiente"
+    >
+      <svg class="w-5 h-5 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+
+    <p class="text-center text-sm text-slate-400 mt-4 flex items-center justify-center gap-2">
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m-6 6h6m-12 6h12"></path>
+      </svg>
+      Deslizá para ver más
+    </p>
+  </div>
+</section>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const scroll = document.getElementById('galeria-scroll');
+    const prev = document.getElementById('galeria-prev');
+    const next = document.getElementById('galeria-next');
+    const amount = 340;
+
+    prev?.addEventListener('click', () => scroll?.scrollBy({ left: -amount, behavior: 'smooth' }));
+    next?.addEventListener('click', () => scroll?.scrollBy({ left: amount, behavior: 'smooth' }));
+  });
+</script>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+</style>
