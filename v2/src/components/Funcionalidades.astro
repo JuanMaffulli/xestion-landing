@@ -1,0 +1,135 @@
+---
+const funcionalidades = [
+  {
+    icono: 'factura',
+    titulo: 'Facturación electrónica (ARCA)',
+    descripcion: 'Emitís facturas A, B, C y notas de crédito directamente desde el sistema, con integración a ARCA (ex AFIP). Sin salir del archivo, sin copiar datos.',
+    color: 'text-emerald-600',
+    bg: 'bg-emerald-50',
+    border: 'border-emerald-100',
+  },
+  {
+    icono: 'cuentascorrientes',
+    titulo: 'Cuentas corrientes',
+    descripcion: 'Saldo actualizado de cada cliente y proveedor en tiempo real. Sabés en segundos quién te debe, cuánto, y desde cuándo.',
+    color: 'text-blue-600',
+    bg: 'bg-blue-50',
+    border: 'border-blue-100',
+  },
+  {
+    icono: 'caja',
+    titulo: 'Control de caja',
+    descripcion: 'Registrá ingresos, egresos y cierre diario. Siempre sabés cuánto hay en caja, sin hacer cuentas en la cabeza al final del día.',
+    color: 'text-yellow-600',
+    bg: 'bg-yellow-50',
+    border: 'border-yellow-100',
+  },
+  {
+    icono: 'stock',
+    titulo: 'Stock e inventario',
+    descripcion: 'Movimientos de entrada y salida automáticos con cada venta o compra. Alertas cuando un producto está por terminarse.',
+    color: 'text-orange-600',
+    bg: 'bg-orange-50',
+    border: 'border-orange-100',
+  },
+  {
+    icono: 'pedidos',
+    titulo: 'Pedidos y producción',
+    descripcion: 'Seguimiento de cada pedido desde que entra hasta que sale. Ideal para talleres, fábricas y negocios con producción propia.',
+    color: 'text-violet-600',
+    bg: 'bg-violet-50',
+    border: 'border-violet-100',
+  },
+  {
+    icono: 'cotizacion',
+    titulo: 'Cotizaciones a medida',
+    descripcion: 'Armá presupuestos profesionales con tus productos, márgenes y condiciones. El cliente lo recibe listo para imprimir o compartir.',
+    color: 'text-sky-600',
+    bg: 'bg-sky-50',
+    border: 'border-sky-100',
+  },
+  {
+    icono: 'costos',
+    titulo: 'Cálculo de costos',
+    descripcion: 'Calculá el costo real de cada producto o servicio considerando insumos, mano de obra y gastos. Siempre sabés a qué precio te conviene vender.',
+    color: 'text-rose-600',
+    bg: 'bg-rose-50',
+    border: 'border-rose-100',
+  },
+  {
+    icono: 'sucursales',
+    titulo: 'Múltiples sucursales y monedas',
+    descripcion: 'Manejá distintos puntos de venta o depósitos desde un mismo sistema. Soporte para pesos, dólares y otras monedas con conversión automática.',
+    color: 'text-teal-600',
+    bg: 'bg-teal-50',
+    border: 'border-teal-100',
+  },
+  {
+    icono: 'reportes',
+    titulo: 'Reportes y paneles',
+    descripcion: 'Gráficos y tablas con los números que importan: ventas del mes, productos más vendidos, márgenes y comparativos. Todo visible de un vistazo.',
+    color: 'text-brand-600',
+    bg: 'bg-brand-50',
+    border: 'border-brand-100',
+  },
+];
+
+const iconos: Record<string, string> = {
+  factura: 'M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z',
+  cuentascorrientes: 'M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z',
+  caja: 'M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z',
+  stock: 'M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4',
+  pedidos: 'M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01',
+  cotizacion: 'M9 12h6m-6 4h6M7 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V8l-5-5H7zm5 0v5h5',
+  costos: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+  sucursales: 'M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4',
+  reportes: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z',
+};
+---
+
+<section class="py-20 sm:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="text-center mb-14 max-w-3xl mx-auto">
+      <div class="reveal inline-flex items-center gap-2 px-4 py-2 bg-brand-50 border border-brand-200 rounded-full text-sm font-medium text-brand-700 mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+        Lo que incluimos en los sistemas
+      </div>
+      <h2 class="reveal text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+        Funcionalidades que hacen la diferencia
+      </h2>
+      <p class="reveal section-subheading !mb-0">
+        No son planillas genéricas. Cada sistema integra las herramientas que un negocio real necesita para funcionar día a día.
+      </p>
+    </div>
+
+    <div class="reveal-stagger grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {funcionalidades.map((f) => (
+        <div class={`group flex flex-col gap-4 p-6 rounded-2xl border bg-white hover:shadow-lg transition-all duration-300 hover:-translate-y-1 ${f.border}`}>
+          <div class={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${f.bg}`}>
+            <svg class={`w-5 h-5 ${f.color}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d={iconos[f.icono]}></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-slate-800 mb-1.5 text-base">{f.titulo}</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">{f.descripcion}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Nota ARCA -->
+    <div class="reveal mt-10 max-w-3xl mx-auto flex items-start gap-3 p-5 bg-emerald-50 border border-emerald-200 rounded-xl">
+      <svg class="w-5 h-5 text-emerald-600 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      <p class="text-sm text-emerald-800">
+        <strong>Facturación electrónica:</strong> La integración con ARCA funciona a través del servicio web oficial. Emitís facturas sin salir del sistema y el comprobante queda guardado automáticamente. No todos los planes incluyen esta integración — consultanos si la necesitás.
+      </p>
+    </div>
+
+  </div>
+</section>

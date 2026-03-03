@@ -1,0 +1,91 @@
+---
+import { CONTACTO } from '@data/config';
+
+const valores = [
+  {
+    icono: 'M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z',
+    titulo: 'Te acompañamos de verdad',
+    texto: 'No somos una empresa que te entrega algo y desaparece. Estamos cuando necesitás ajustar algo, cuando entra alguien nuevo al equipo, o simplemente cuando tenés una duda.',
+  },
+  {
+    icono: 'M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z',
+    titulo: 'Hablamos en tu idioma',
+    texto: 'Sin tecnicismos, sin siglas raras. Te explicamos todo en palabras simples y nos aseguramos de que entiendas qué estamos haciendo y por qué.',
+  },
+  {
+    icono: 'M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z',
+    titulo: 'Comprometidos con el resultado',
+    texto: 'Nos importa que el sistema realmente se use. Si algo no funciona como esperabas, lo ajustamos. El éxito del sistema es nuestro éxito también.',
+  },
+];
+---
+
+<section class="py-20 sm:py-28 bg-slate-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6">
+
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center max-w-5xl mx-auto">
+
+      {/* Texto */}
+      <div>
+        <div class="reveal inline-flex items-center gap-2 px-4 py-2 bg-brand-50 border border-brand-200 rounded-full text-sm font-medium text-brand-700 mb-6">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+          </svg>
+          Quiénes somos
+        </div>
+
+        <h2 class="reveal text-3xl sm:text-4xl font-bold text-slate-900 mb-5 leading-tight">
+          Somos un equipo comprometido.
+        </h2>
+
+        <div class="reveal space-y-4 text-slate-600 leading-relaxed">
+          <p>
+            Xestion nació porque vimos que los dueños de negocios perdían horas en planillas que no entendían, y los sistemas comerciales eran tan genéricos que nadie los usaba.
+          </p>
+          <p>
+            Desde entonces armamos sistemas para más de 50 negocios en Argentina — distribuidoras, talleres, pastelerías, gráficas, textiles, y muchos más.
+          </p>
+          <p class="font-medium text-slate-800">
+            Cada sistema que entregamos lo firmamos con el nombre. Y eso nos obliga a hacerlo bien.
+          </p>
+        </div>
+
+        <div class="reveal mt-8">
+          <a
+            href={CONTACTO.whatsappUrl}
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 text-brand-600 font-semibold hover:text-brand-700 transition-colors"
+          >
+            Contame de tu negocio
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      {/* Foto placeholder + valores */}
+      <div class="space-y-5">
+        {/* Valores */}
+        <div class="reveal-stagger space-y-3">
+          {valores.map((v) => (
+            <div class="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-all duration-300">
+              <div class="w-9 h-9 rounded-lg bg-brand-50 flex items-center justify-center shrink-0">
+                <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d={v.icono}></path>
+                </svg>
+              </div>
+              <div>
+                <p class="font-semibold text-slate-800 text-sm mb-0.5">{v.titulo}</p>
+                <p class="text-xs text-slate-500 leading-relaxed">{v.texto}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

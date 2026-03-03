@@ -133,8 +133,6 @@ export interface SistemaCatalogo {
   imagen: string;
   tags: string[];
   modulos: string[];
-  precio: string;
-  moneda: string;
   youtubeUrl?: string;
 }
 
@@ -153,8 +151,6 @@ export const SISTEMAS: SistemaCatalogo[] = [
       'Productos e insumos',
       'Personal y reportes',
     ],
-    precio: '150.000',
-    moneda: 'ARS',
     youtubeUrl: 'https://youtube.com',
   },
   {
@@ -171,8 +167,6 @@ export const SISTEMAS: SistemaCatalogo[] = [
       'Caja, gastos y producción',
       'Personal y reportes',
     ],
-    precio: '150.000',
-    moneda: 'ARS',
     youtubeUrl: 'https://www.youtube.com/watch?v=VX9iUlqd-4I&t=277s',
   },
 ];
@@ -223,39 +217,46 @@ export const GALERIA_SISTEMAS = [
 // ---------- Opciones de trabajo ----------
 export const OPCIONES_TRABAJO = [
   {
-    icono: 'Rocket',
-    titulo: 'Excel armado',
+    icono: 'Excel',
+    titulo: 'Sistema Excel a medida',
+    descripcion: 'Cuando tu negocio necesita algo propio, hecho a tu flujo de trabajo.',
+    badge: 'Múltiples usuarios en computadoras',
+    features: [
+      'Desarrollo 100% personalizado',
+      'Solo computadoras Windows',
+      'Presupuesto medio',
+      'Escalabilidad para crecer',
+      'Acompañamiento y asesoría 1 a 1',
+    ],
+    cta: 'Solicitar asesoramiento',
+    destacado: false,
+  },
+  {
+    icono: 'Globe',
+    titulo: 'Sistema Web a medida',
+    descripcion: 'Para equipos que necesitan acceso desde cualquier dispositivo y sistema operativo.',
+    badge: 'Múltiples usuarios en computadoras y celulares',
+    features: [
+      'Desarrollo 100% personalizado',
+      'Acceso desde distintos dispositivos y sistemas operativos',
+      'Presupuesto medio',
+      'Escalabilidad para crecer',
+      'Acompañamiento y asesoría 1 a 1',
+    ],
+    cta: 'Solicitar asesoramiento',
+    destacado: false,
+  },
+  {
+    icono: 'Excel',
+    titulo: 'Sistema armado',
     descripcion: 'Ideal para arrancar rápido con un sistema ya probado y listo para usar.',
+    badge: 'Ideal para empezar de a uno',
     features: [
       'Base profesional adaptada a tu rubro',
       'Configuración inicial con tus datos',
       'Capacitación breve para usarlo ya',
     ],
     cta: 'Consultar disponibilidad',
-    destacado: false,
-  },
-  {
-    icono: 'Sparkles',
-    titulo: 'Excel a medida',
-    descripcion: 'Cuando tu negocio necesita algo propio, hecho a tu flujo de trabajo.',
-    features: [
-      'Desarrollo 100% personalizado',
-      'Reportes y controles a medida',
-      'Acompañamiento durante el proceso',
-    ],
-    cta: 'Solicitar asesoramiento',
-    destacado: true,
-  },
-  {
-    icono: 'Cloud',
-    titulo: 'Excel en nube',
-    descripcion: 'Para equipos que trabajan en simultáneo y necesitan acceso remoto seguro.',
-    features: [
-      'Multiusuario real con permisos',
-      'Acceso desde varias PCs',
-      'Escalabilidad para crecer',
-    ],
-    cta: 'Pedir propuesta',
     destacado: false,
   },
 ];
